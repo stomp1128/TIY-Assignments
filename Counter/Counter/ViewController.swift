@@ -69,11 +69,12 @@ class ViewController: UIViewController
         if countTextField.isFirstResponder()
         {
             countTextField.resignFirstResponder()
+            currentCount = Int(countTextField.text!)!
             //
             // 8. Hopefully you're seeing a pattern here. After we update the currentCount variable, what do we need to do next? Fill in
             //    the blank below.
             //
-            
+            updateViewsWithCurrentCount()
         }
     }
     
