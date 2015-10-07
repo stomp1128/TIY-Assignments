@@ -23,6 +23,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xge-W9-KYW">
+                                <rect key="frame" x="256" y="149" width="88" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Authenticate"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-lP-wNh">
+                                <rect key="frame" x="279" y="195" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PRs-Vn-HqO">
                                 <rect key="frame" x="60" y="33" width="480" height="30"/>
                                 <animations/>
@@ -33,12 +45,16 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="uA2-lP-wNh" firstAttribute="top" secondItem="Xge-W9-KYW" secondAttribute="bottom" constant="16" id="5bR-BP-69d"/>
                             <constraint firstItem="Fxz-W1-p4n" firstAttribute="top" secondItem="PRs-Vn-HqO" secondAttribute="bottom" constant="21" id="Huh-WT-F6U"/>
                             <constraint firstItem="PRs-Vn-HqO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="RNa-Md-ubB"/>
                             <constraint firstItem="PRs-Vn-HqO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="STt-YQ-Wop"/>
                             <constraint firstItem="Fxz-W1-p4n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SVf-RB-lHR"/>
                             <constraint firstItem="Fxz-W1-p4n" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="V2Y-97-8hO"/>
+                            <constraint firstItem="Xge-W9-KYW" firstAttribute="top" secondItem="Fxz-W1-p4n" secondAttribute="bottom" constant="35" id="erF-Ja-hY7"/>
                             <constraint firstItem="PRs-Vn-HqO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="iHU-t1-Crq"/>
+                            <constraint firstItem="Xge-W9-KYW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tk2-zM-9TR"/>
+                            <constraint firstItem="uA2-lP-wNh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yNM-Rj-3BT"/>
                         </constraints>
                     </view>
                 </viewController>
