@@ -11,12 +11,18 @@ import UIKit
 class MissionBriefingViewController: UIViewController
 {
     // Place IBOutlet properties below
-    
+    @IBOutlet var authenticateAgent: UITextField!
+    @IBOutlet var passwordField: UITextField!
+    @IBOutlet var authenticateLabel: UILabel!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        authenticateAgent.text = ""
+        passwordField.text = ""
+        authenticateLabel.text = ""
         
         //
         // 3. The three UI elements need to be emptied on launch
@@ -36,16 +42,18 @@ class MissionBriefingViewController: UIViewController
     @IBAction func authenticateAgent(sender: UIButton)
     {
         // This will cause the keyboard to dismiss when the authenticate button is tapped
-        if <#name text field property identifier goes here#>.isFirstResponder
+        
+        if  authenticateAgent.isFirstResponder()
         {
-            <#name text field property identifier goes here#>.resignFirstResponder
+            authenticateAgent.resignFirstResponder()
         }
         
         //
         // 4. Check whether there is text in BOTH the name and password textfields
         //
-        if <#?#>
+        if let name = authenticateAgent.text
         {
+            
             //
             // 5. The greeting label needs to be populated with the the string "Good evening, Agent #", where # is the last name of
             //    the agent logging in. The agent's full name is listed in the text field, but you need to pull out just the last
@@ -82,6 +90,8 @@ class MissionBriefingViewController: UIViewController
             
             
             
+            let nameComponents = name.characters.split(" ").map {String($0) }
+            authenticateLabel.text = "Good evening, Agent \(nameComponents[1])"
             
             
             

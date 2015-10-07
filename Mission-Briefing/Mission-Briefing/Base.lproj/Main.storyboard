@@ -5,10 +5,10 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mission Briefing View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mission_Briefing" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MissionBriefingViewController" customModule="Mission_Briefing" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -51,11 +51,11 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="480" placeholderIntrinsicHeight="150" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qNn-f3-vAA">
                                 <rect key="frame" x="60" y="249" width="480" height="150"/>
                                 <animations/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <string key="text">This mission will be an arduous one, fraught with peril. You will cover much strange and unfamiliar territory. Should you choose to accept this mission, Agent %@, you will certainly be disavowed, but you will be doing your country a great service. This message will self destruct in 5 seconds.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="TIYLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="B7S-A2-tEt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="TIY Logo" translatesAutoresizingMaskIntoConstraints="NO" id="B7S-A2-tEt">
                                 <rect key="frame" x="180" y="444" width="240" height="128"/>
                                 <animations/>
                             </imageView>
@@ -83,12 +83,17 @@
                             <constraint firstItem="uA2-lP-wNh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yNM-Rj-3BT"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="authenticateAgent" destination="PRs-Vn-HqO" id="37u-bo-xpy"/>
+                        <outlet property="authenticateLabel" destination="uA2-lP-wNh" id="5ch-sF-Yya"/>
+                        <outlet property="passwordField" destination="Fxz-W1-p4n" id="NsP-P1-lHF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
     <resources>
-        <image name="TIYLogo.png" width="240" height="212"/>
+        <image name="TIY Logo" width="240" height="212"/>
     </resources>
 </document>
