@@ -55,7 +55,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="B7S-A2-tEt">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="128" image="TIYLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="B7S-A2-tEt">
                                 <rect key="frame" x="180" y="444" width="240" height="128"/>
                                 <animations/>
                             </imageView>
@@ -88,4 +88,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="TIYLogo.png" width="240" height="212"/>
+    </resources>
 </document>

@@ -13,6 +13,7 @@
 		FE245F221BC57CE200E54A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE245F211BC57CE200E54A00 /* Assets.xcassets */; };
 		FE245F251BC57CE200E54A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE245F231BC57CE200E54A00 /* LaunchScreen.storyboard */; };
 		FE245F2F1BC59AD400E54A00 /* Mission-Briefing in Resources */ = {isa = PBXBuildFile; fileRef = FE245F2E1BC59AD400E54A00 /* Mission-Briefing */; settings = {ASSET_TAGS = (); }; };
+		FE245F311BC59CB700E54A00 /* TIYLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FE245F301BC59CB700E54A00 /* TIYLogo.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FE245F241BC57CE200E54A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE245F261BC57CE200E54A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE245F2E1BC59AD400E54A00 /* Mission-Briefing */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Mission-Briefing"; sourceTree = "<group>"; };
+		FE245F301BC59CB700E54A00 /* TIYLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TIYLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		FE245F191BC57CE200E54A00 /* Mission-Briefing */ = {
 			isa = PBXGroup;
 			children = (
+				FE245F301BC59CB700E54A00 /* TIYLogo.png */,
 				FE245F2E1BC59AD400E54A00 /* Mission-Briefing */,
 				FE245F1A1BC57CE200E54A00 /* AppDelegate.swift */,
 				FE245F1C1BC57CE200E54A00 /* MissionBriefingViewController.swift */,
@@ -125,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE245F251BC57CE200E54A00 /* LaunchScreen.storyboard in Resources */,
+				FE245F311BC59CB700E54A00 /* TIYLogo.png in Resources */,
 				FE245F2F1BC59AD400E54A00 /* Mission-Briefing in Resources */,
 				FE245F221BC57CE200E54A00 /* Assets.xcassets in Resources */,
 				FE245F201BC57CE200E54A00 /* Main.storyboard in Resources */,
