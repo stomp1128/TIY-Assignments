@@ -27,6 +27,9 @@
                                 <rect key="frame" x="256" y="149" width="88" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Authenticate"/>
+                                <connections>
+                                    <action selector="authenticateAgent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71u-00-ef9"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uA2-lP-wNh">
                                 <rect key="frame" x="279" y="195" width="42" height="21"/>
@@ -87,6 +90,7 @@
                         <outlet property="authenticateAgent" destination="PRs-Vn-HqO" id="37u-bo-xpy"/>
                         <outlet property="authenticateLabel" destination="uA2-lP-wNh" id="5ch-sF-Yya"/>
                         <outlet property="passwordField" destination="Fxz-W1-p4n" id="NsP-P1-lHF"/>
+                        <outlet property="textView" destination="qNn-f3-vAA" id="S2D-Mf-nCa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -14,6 +14,7 @@ class MissionBriefingViewController: UIViewController
     @IBOutlet var authenticateAgent: UITextField!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var authenticateLabel: UILabel!
+    @IBOutlet var textView: UITextView!
     
     override func viewDidLoad()
     {
@@ -52,6 +53,7 @@ class MissionBriefingViewController: UIViewController
         // 4. Check whether there is text in BOTH the name and password textfields
         //
         if let name = authenticateAgent.text
+        
         {
             
             //
@@ -63,7 +65,8 @@ class MissionBriefingViewController: UIViewController
             //
             
             
-            
+            let nameComponents = name.characters.split(" ").map {String($0) }
+            authenticateLabel.text = "Good evening, Agent \(nameComponents[1])"
             
             
             
@@ -74,9 +77,7 @@ class MissionBriefingViewController: UIViewController
             //    Set the textview text property to the paragraph in "MissionBriefing.txt"
             //
             
-            
-            
-            
+            textView.text = "This mission will be an arduous one, fraught with peril. You will cover much strange and unfamiliar territory. Should you choose to accept this mission, Agent \(nameComponents[1]), you will certainly be disavowed, but you will be doing your country a great service. This message will self destruct in 5 seconds."
             
             //
             // 7. The view's background color needs to switch to green to indicate a successful login by the agent.
@@ -89,11 +90,8 @@ class MissionBriefingViewController: UIViewController
             //
             
             
-            
-            let nameComponents = name.characters.split(" ").map {String($0) }
-            authenticateLabel.text = "Good evening, Agent \(nameComponents[1])"
-            
-            
+        
+            view.backgroundColor = UIColor.greenColor()
             
         }
         else
@@ -108,8 +106,7 @@ class MissionBriefingViewController: UIViewController
             //    Once you have the color object, you should be able to set the view's background color to this object.
             //
             
-            
-            
+            view.backgroundColor = UIColor.redColor()
             
             
             
