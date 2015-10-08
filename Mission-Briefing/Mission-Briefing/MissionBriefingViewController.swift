@@ -91,8 +91,7 @@ class MissionBriefingViewController: UIViewController
             
             
         
-            view.backgroundColor = UIColor.greenColor()
-            
+            view.backgroundColor = UIColor(red: 0.585, green: 0.78, blue: 0.188, alpha: 1)
         }
         else
         {
@@ -106,7 +105,7 @@ class MissionBriefingViewController: UIViewController
             //    Once you have the color object, you should be able to set the view's background color to this object.
             //
             
-            view.backgroundColor = UIColor.redColor()
+            view.backgroundColor = UIColor(red: 0.78, green: 0.188, blue: 0.188, alpha: 1)
             
             
             
