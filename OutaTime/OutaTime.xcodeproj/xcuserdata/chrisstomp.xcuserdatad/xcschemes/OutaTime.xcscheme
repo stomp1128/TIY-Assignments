@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE245F781BC6E28600E54A00"
-               BuildableName = "04 -- 1.21 Gigawatts -- Chris Stomp.app"
-               BlueprintName = "04 -- 1.21 Gigawatts -- Chris Stomp"
-               ReferencedContainer = "container:04 -- 1.21 Gigawatts -- Chris Stomp.xcodeproj">
+               BlueprintIdentifier = "FE245F981BC6E68E00E54A00"
+               BuildableName = "OutaTime.app"
+               BlueprintName = "OutaTime"
+               ReferencedContainer = "container:OutaTime.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE245F781BC6E28600E54A00"
-            BuildableName = "04 -- 1.21 Gigawatts -- Chris Stomp.app"
-            BlueprintName = "04 -- 1.21 Gigawatts -- Chris Stomp"
-            ReferencedContainer = "container:04 -- 1.21 Gigawatts -- Chris Stomp.xcodeproj">
+            BlueprintIdentifier = "FE245F981BC6E68E00E54A00"
+            BuildableName = "OutaTime.app"
+            BlueprintName = "OutaTime"
+            ReferencedContainer = "container:OutaTime.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE245F781BC6E28600E54A00"
-            BuildableName = "04 -- 1.21 Gigawatts -- Chris Stomp.app"
-            BlueprintName = "04 -- 1.21 Gigawatts -- Chris Stomp"
-            ReferencedContainer = "container:04 -- 1.21 Gigawatts -- Chris Stomp.xcodeproj">
+            BlueprintIdentifier = "FE245F981BC6E68E00E54A00"
+            BuildableName = "OutaTime.app"
+            BlueprintName = "OutaTime"
+            ReferencedContainer = "container:OutaTime.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE245F781BC6E28600E54A00"
-            BuildableName = "04 -- 1.21 Gigawatts -- Chris Stomp.app"
-            BlueprintName = "04 -- 1.21 Gigawatts -- Chris Stomp"
-            ReferencedContainer = "container:04 -- 1.21 Gigawatts -- Chris Stomp.xcodeproj">
+            BlueprintIdentifier = "FE245F981BC6E68E00E54A00"
+            BuildableName = "OutaTime.app"
+            BlueprintName = "OutaTime"
+            ReferencedContainer = "container:OutaTime.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  04 -- 1.21 Gigawatts -- Chris Stomp
+//  OutaTime
 //
 //  Created by Chris Stomp on 10/8/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.

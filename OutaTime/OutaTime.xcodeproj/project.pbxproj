@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE245F7D1BC6E28600E54A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE245F7C1BC6E28600E54A00 /* AppDelegate.swift */; };
-		FE245F7F1BC6E28600E54A00 /* OutaTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE245F7E1BC6E28600E54A00 /* OutaTimeViewController.swift */; };
-		FE245F821BC6E28600E54A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE245F801BC6E28600E54A00 /* Main.storyboard */; };
-		FE245F841BC6E28600E54A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE245F831BC6E28600E54A00 /* Assets.xcassets */; };
-		FE245F871BC6E28600E54A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE245F851BC6E28600E54A00 /* LaunchScreen.storyboard */; };
+		FE245F9D1BC6E68E00E54A00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE245F9C1BC6E68E00E54A00 /* AppDelegate.swift */; };
+		FE245F9F1BC6E68E00E54A00 /* OutaTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE245F9E1BC6E68E00E54A00 /* OutaTimeViewController.swift */; };
+		FE245FA21BC6E68E00E54A00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE245FA01BC6E68E00E54A00 /* Main.storyboard */; };
+		FE245FA41BC6E68E00E54A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE245FA31BC6E68E00E54A00 /* Assets.xcassets */; };
+		FE245FA71BC6E68E00E54A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE245FA51BC6E68E00E54A00 /* LaunchScreen.storyboard */; };
+		FE245FAF1BC6E80C00E54A00 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE245FAE1BC6E80C00E54A00 /* digital-7.ttf */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE245F791BC6E28600E54A00 /* 04 -- 1.21 Gigawatts -- Chris Stomp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04 -- 1.21 Gigawatts -- Chris Stomp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE245F7C1BC6E28600E54A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE245F7E1BC6E28600E54A00 /* OutaTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutaTimeViewController.swift; sourceTree = "<group>"; };
-		FE245F811BC6E28600E54A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE245F831BC6E28600E54A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE245F861BC6E28600E54A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FE245F881BC6E28600E54A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE245F991BC6E68E00E54A00 /* OutaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutaTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE245F9C1BC6E68E00E54A00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE245F9E1BC6E68E00E54A00 /* OutaTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutaTimeViewController.swift; sourceTree = "<group>"; };
+		FE245FA11BC6E68E00E54A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE245FA31BC6E68E00E54A00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE245FA61BC6E68E00E54A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE245FA81BC6E68E00E54A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE245FAE1BC6E80C00E54A00 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE245F761BC6E28600E54A00 /* Frameworks */ = {
+		FE245F961BC6E68E00E54A00 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,70 +37,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE245F701BC6E28600E54A00 = {
+		FE245F901BC6E68E00E54A00 = {
 			isa = PBXGroup;
 			children = (
-				FE245F7B1BC6E28600E54A00 /* 04 -- 1.21 Gigawatts -- Chris Stomp */,
-				FE245F7A1BC6E28600E54A00 /* Products */,
+				FE245F9B1BC6E68E00E54A00 /* OutaTime */,
+				FE245F9A1BC6E68E00E54A00 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FE245F7A1BC6E28600E54A00 /* Products */ = {
+		FE245F9A1BC6E68E00E54A00 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE245F791BC6E28600E54A00 /* 04 -- 1.21 Gigawatts -- Chris Stomp.app */,
+				FE245F991BC6E68E00E54A00 /* OutaTime.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE245F7B1BC6E28600E54A00 /* 04 -- 1.21 Gigawatts -- Chris Stomp */ = {
+		FE245F9B1BC6E68E00E54A00 /* OutaTime */ = {
 			isa = PBXGroup;
 			children = (
-				FE245F7C1BC6E28600E54A00 /* AppDelegate.swift */,
-				FE245F7E1BC6E28600E54A00 /* OutaTimeViewController.swift */,
-				FE245F801BC6E28600E54A00 /* Main.storyboard */,
-				FE245F831BC6E28600E54A00 /* Assets.xcassets */,
-				FE245F851BC6E28600E54A00 /* LaunchScreen.storyboard */,
-				FE245F881BC6E28600E54A00 /* Info.plist */,
+				FE245FAE1BC6E80C00E54A00 /* digital-7.ttf */,
+				FE245F9C1BC6E68E00E54A00 /* AppDelegate.swift */,
+				FE245F9E1BC6E68E00E54A00 /* OutaTimeViewController.swift */,
+				FE245FA01BC6E68E00E54A00 /* Main.storyboard */,
+				FE245FA31BC6E68E00E54A00 /* Assets.xcassets */,
+				FE245FA51BC6E68E00E54A00 /* LaunchScreen.storyboard */,
+				FE245FA81BC6E68E00E54A00 /* Info.plist */,
 			);
-			path = "04 -- 1.21 Gigawatts -- Chris Stomp";
+			path = OutaTime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE245F781BC6E28600E54A00 /* 04 -- 1.21 Gigawatts -- Chris Stomp */ = {
+		FE245F981BC6E68E00E54A00 /* OutaTime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE245F8B1BC6E28600E54A00 /* Build configuration list for PBXNativeTarget "04 -- 1.21 Gigawatts -- Chris Stomp" */;
+			buildConfigurationList = FE245FAB1BC6E68E00E54A00 /* Build configuration list for PBXNativeTarget "OutaTime" */;
 			buildPhases = (
-				FE245F751BC6E28600E54A00 /* Sources */,
-				FE245F761BC6E28600E54A00 /* Frameworks */,
-				FE245F771BC6E28600E54A00 /* Resources */,
+				FE245F951BC6E68E00E54A00 /* Sources */,
+				FE245F961BC6E68E00E54A00 /* Frameworks */,
+				FE245F971BC6E68E00E54A00 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "04 -- 1.21 Gigawatts -- Chris Stomp";
-			productName = "04 -- 1.21 Gigawatts -- Chris Stomp";
-			productReference = FE245F791BC6E28600E54A00 /* 04 -- 1.21 Gigawatts -- Chris Stomp.app */;
+			name = OutaTime;
+			productName = OutaTime;
+			productReference = FE245F991BC6E68E00E54A00 /* OutaTime.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FE245F711BC6E28600E54A00 /* Project object */ = {
+		FE245F911BC6E68E00E54A00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
-					FE245F781BC6E28600E54A00 = {
+					FE245F981BC6E68E00E54A00 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
 				};
 			};
-			buildConfigurationList = FE245F741BC6E28600E54A00 /* Build configuration list for PBXProject "04 -- 1.21 Gigawatts -- Chris Stomp" */;
+			buildConfigurationList = FE245F941BC6E68E00E54A00 /* Build configuration list for PBXProject "OutaTime" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -106,54 +109,55 @@
 				en,
 				Base,
 			);
-			mainGroup = FE245F701BC6E28600E54A00;
-			productRefGroup = FE245F7A1BC6E28600E54A00 /* Products */;
+			mainGroup = FE245F901BC6E68E00E54A00;
+			productRefGroup = FE245F9A1BC6E68E00E54A00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE245F781BC6E28600E54A00 /* 04 -- 1.21 Gigawatts -- Chris Stomp */,
+				FE245F981BC6E68E00E54A00 /* OutaTime */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FE245F771BC6E28600E54A00 /* Resources */ = {
+		FE245F971BC6E68E00E54A00 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE245F871BC6E28600E54A00 /* LaunchScreen.storyboard in Resources */,
-				FE245F841BC6E28600E54A00 /* Assets.xcassets in Resources */,
-				FE245F821BC6E28600E54A00 /* Main.storyboard in Resources */,
+				FE245FA71BC6E68E00E54A00 /* LaunchScreen.storyboard in Resources */,
+				FE245FA41BC6E68E00E54A00 /* Assets.xcassets in Resources */,
+				FE245FA21BC6E68E00E54A00 /* Main.storyboard in Resources */,
+				FE245FAF1BC6E80C00E54A00 /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FE245F751BC6E28600E54A00 /* Sources */ = {
+		FE245F951BC6E68E00E54A00 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE245F7F1BC6E28600E54A00 /* OutaTimeViewController.swift in Sources */,
-				FE245F7D1BC6E28600E54A00 /* AppDelegate.swift in Sources */,
+				FE245F9F1BC6E68E00E54A00 /* OutaTimeViewController.swift in Sources */,
+				FE245F9D1BC6E68E00E54A00 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE245F801BC6E28600E54A00 /* Main.storyboard */ = {
+		FE245FA01BC6E68E00E54A00 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE245F811BC6E28600E54A00 /* Base */,
+				FE245FA11BC6E68E00E54A00 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FE245F851BC6E28600E54A00 /* LaunchScreen.storyboard */ = {
+		FE245FA51BC6E68E00E54A00 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE245F861BC6E28600E54A00 /* Base */,
+				FE245FA61BC6E68E00E54A00 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -161,7 +165,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FE245F891BC6E28600E54A00 /* Debug */ = {
+		FE245FA91BC6E68E00E54A00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		FE245F8A1BC6E28600E54A00 /* Release */ = {
+		FE245FAA1BC6E68E00E54A00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,24 +246,24 @@
 			};
 			name = Release;
 		};
-		FE245F8C1BC6E28600E54A00 /* Debug */ = {
+		FE245FAC1BC6E68E00E54A00 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "04 -- 1.21 Gigawatts -- Chris Stomp/Info.plist";
+				INFOPLIST_FILE = OutaTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-4----1-21-Gigawatts----Chris-Stomp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.OutaTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		FE245F8D1BC6E28600E54A00 /* Release */ = {
+		FE245FAD1BC6E68E00E54A00 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "04 -- 1.21 Gigawatts -- Chris Stomp/Info.plist";
+				INFOPLIST_FILE = OutaTime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-4----1-21-Gigawatts----Chris-Stomp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiy.OutaTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -267,24 +271,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE245F741BC6E28600E54A00 /* Build configuration list for PBXProject "04 -- 1.21 Gigawatts -- Chris Stomp" */ = {
+		FE245F941BC6E68E00E54A00 /* Build configuration list for PBXProject "OutaTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE245F891BC6E28600E54A00 /* Debug */,
-				FE245F8A1BC6E28600E54A00 /* Release */,
+				FE245FA91BC6E68E00E54A00 /* Debug */,
+				FE245FAA1BC6E68E00E54A00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE245F8B1BC6E28600E54A00 /* Build configuration list for PBXNativeTarget "04 -- 1.21 Gigawatts -- Chris Stomp" */ = {
+		FE245FAB1BC6E68E00E54A00 /* Build configuration list for PBXNativeTarget "OutaTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE245F8C1BC6E28600E54A00 /* Debug */,
-				FE245F8D1BC6E28600E54A00 /* Release */,
+				FE245FAC1BC6E68E00E54A00 /* Debug */,
+				FE245FAD1BC6E68E00E54A00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FE245F711BC6E28600E54A00 /* Project object */;
+	rootObject = FE245F911BC6E68E00E54A00 /* Project object */;
 }
