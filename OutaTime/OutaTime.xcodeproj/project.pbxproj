@@ -13,6 +13,7 @@
 		FE245FA41BC6E68E00E54A00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE245FA31BC6E68E00E54A00 /* Assets.xcassets */; };
 		FE245FA71BC6E68E00E54A00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE245FA51BC6E68E00E54A00 /* LaunchScreen.storyboard */; };
 		FE245FAF1BC6E80C00E54A00 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE245FAE1BC6E80C00E54A00 /* digital-7.ttf */; settings = {ASSET_TAGS = (); }; };
+		FE245FB11BC6FC8100E54A00 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE245FB01BC6FC8100E54A00 /* DatePickerViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FE245FA61BC6E68E00E54A00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE245FA81BC6E68E00E54A00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE245FAE1BC6E80C00E54A00 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		FE245FB01BC6FC8100E54A00 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FE245FAE1BC6E80C00E54A00 /* digital-7.ttf */,
 				FE245F9C1BC6E68E00E54A00 /* AppDelegate.swift */,
 				FE245F9E1BC6E68E00E54A00 /* OutaTimeViewController.swift */,
+				FE245FB01BC6FC8100E54A00 /* DatePickerViewController.swift */,
 				FE245FA01BC6E68E00E54A00 /* Main.storyboard */,
 				FE245FA31BC6E68E00E54A00 /* Assets.xcassets */,
 				FE245FA51BC6E68E00E54A00 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				FE245F9F1BC6E68E00E54A00 /* OutaTimeViewController.swift in Sources */,
 				FE245F9D1BC6E68E00E54A00 /* AppDelegate.swift in Sources */,
+				FE245FB11BC6FC8100E54A00 /* DatePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

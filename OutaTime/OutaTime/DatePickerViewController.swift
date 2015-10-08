@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DatePickerViewController.swift
 //  OutaTime
 //
 //  Created by Chris Stomp on 10/8/15.
@@ -8,24 +8,23 @@
 
 import UIKit
 
-class OutaTimeViewController: UIViewController {
-
+class DatePickerViewController: UIViewController
+{
+    
+    @IBOutlet var datePicker:UIDatePicker!
+    
+    let dateFormatter = NSDateFormatter()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    @IBOutlet var destinationTime: UILabel!
-    @IBOutlet var presentTime: UILabel!
-    @IBOutlet var speed: UILabel!
     
-
 }
-
