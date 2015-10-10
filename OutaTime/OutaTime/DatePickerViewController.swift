@@ -13,12 +13,20 @@ class DatePickerViewController: UIViewController
     
     @IBOutlet var datePicker:UIDatePicker!
     
-    let dateFormatter = NSDateFormatter()
+    var delegate: DatePickerDelegate?
+    
     
     override func viewDidLoad()
     {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        delegate?.dateWasChosen(datePicker.date)
     }
     
     override func didReceiveMemoryWarning()
@@ -26,5 +34,6 @@ class DatePickerViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 }

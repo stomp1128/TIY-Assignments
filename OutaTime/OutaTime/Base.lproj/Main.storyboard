@@ -93,6 +93,9 @@
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="TRAVEL BACK"/>
+                                <connections>
+                                    <action selector="travelBackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bfp-1z-i6c"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -222,8 +225,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="2zv-dk-jhC"/>
                     <connections>
-                        <outlet property="dateDisplay" destination="mc6-vN-KqS" id="b8a-ob-mzZ"/>
                         <outlet property="destinationTime" destination="mc6-vN-KqS" id="nSH-rn-ezf"/>
+                        <outlet property="lastTimeDeparted" destination="iRf-GX-F50" id="gWl-6V-2LN"/>
                         <outlet property="presentTime" destination="8fg-Mx-MOX" id="MvA-yp-peP"/>
                         <outlet property="speed" destination="7jX-S4-YZ9" id="Meb-U6-Hjc"/>
                     </connections>
