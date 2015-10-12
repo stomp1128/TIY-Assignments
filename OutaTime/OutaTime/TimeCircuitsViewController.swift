@@ -13,7 +13,7 @@ import UIKit
     func dateWasChosen(date: NSDate)
 }
 
-class OutaTimeViewController: UIViewController, DatePickerDelegate
+class TimeCircuitsViewController: UIViewController, DatePickerDelegate
 {
     
     @IBOutlet var destinationTime: UILabel!
@@ -24,6 +24,10 @@ class OutaTimeViewController: UIViewController, DatePickerDelegate
     var timer: NSTimer?
     var currentSpeed = 0
     let dateFormatter : NSDateFormatter = NSDateFormatter()
+    
+    {
+    return currentSpeed + 1
+    }
     
     override func viewDidLoad()
     {
@@ -49,7 +53,9 @@ class OutaTimeViewController: UIViewController, DatePickerDelegate
     {
         if segue.identifier == "ShowOutaTimePickerSegue"
         {
-            let datePickerVC = segue.destinationViewController as! DatePickerViewController
+            let datePickerVC = segue.destinationViewController
+                //'as!' casts to DatePickerViewController
+                as! DatePickerViewController
             datePickerVC.delegate = self
         }
     }
@@ -58,7 +64,7 @@ class OutaTimeViewController: UIViewController, DatePickerDelegate
     
     func dateWasChosen(date: NSDate)
     {
-        destinationTime.text = "\(date)"
+        destinationTime.text = dateFormatter.stringFromDate(date)
     }
     
     //MARK: - Action Handlers
@@ -66,6 +72,7 @@ class OutaTimeViewController: UIViewController, DatePickerDelegate
     @IBAction func travelBackPressed(sender: UIButton)
     {
         startTimer()
+        
         
     }
     
@@ -79,26 +86,52 @@ class OutaTimeViewController: UIViewController, DatePickerDelegate
         return String(formattedTime)
     }
     
-    private func startTimer()
-
+    func startTimer()
+    
+    if timer == nil
     
     {
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateSpeed", userInfo: nil, repeats: true)
+        
     }
     
     func updateSpeed()
     
     
+    if currentSpeed < 88
+    
     {
-       // let newSpeed = (Int(speed.text!)! + 1)
-       // speed.text = String(newSpeed)
-        
+    currentSpeed += 1
+    speedLabel.text = String(currentSpeed)
     }
+    else
+    {
+    stopTimer()
+    
+    
+    
     
     private func stopTimer()
     {
         timer?.invalidate()
         timer = nil
+    }
+    
+    func updateSpeed()
+    
+    if currentSpeed != 88
+    {
+    currentSpeed += 1
+    speedLabel.text = String(currentSpeed)
+    }
+    
+    else
+    {
+    stopTimer()
+    lastTimeDepartedLabel.text = presentTimeLabel.text
+    presentTimeLabel.text = destinationTimeLabel.text
+    currentSpeed = 0
+    speedLabel.text = String(currentSpeed)
     }
     
 

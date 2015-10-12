@@ -14,7 +14,7 @@ class DatePickerViewController: UIViewController
     @IBOutlet var datePicker:UIDatePicker!
     
     var delegate: DatePickerDelegate?
-    
+    //optional ? because it does not need to have a value
     
     override func viewDidLoad()
     {
@@ -25,8 +25,10 @@ class DatePickerViewController: UIViewController
     
     override func viewWillDisappear(animated: Bool)
     {
-        super.viewWillDisappear(animated)
+        super.viewWillDisappear(animated)//do whatever the super class does then add functionality, line 29
         delegate?.dateWasChosen(datePicker.date)
+        //this data will be sent to TimeCircutsViewController
+        //optional says if there is a value run the func, if not do not run
     }
     
     override func didReceiveMemoryWarning()
