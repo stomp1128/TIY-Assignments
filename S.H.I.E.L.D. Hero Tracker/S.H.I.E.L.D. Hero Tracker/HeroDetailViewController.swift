@@ -10,5 +10,10 @@ import Foundation
 
 class Hero
 {
+   
+    @IBOutlet var nameLabel: UILabel!
+    
+    
+    
     
 }

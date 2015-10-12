@@ -9,9 +9,15 @@
 import UIKit
 
 class HeroTableViewController: UITableViewController {
+    
+    var hero = Array<Hero>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "S.H.I.E.L.D. Hero Tracker"
+        
+        loadHeroes()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,15 +35,15 @@ class HeroTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 10
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
@@ -45,7 +51,7 @@ class HeroTableViewController: UITableViewController {
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +97,32 @@ class HeroTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func loadHeroes()
+    {
+        do
+            {
+                let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json")
+                let dataFromFile = NSData(contentsOfFile: filePath!)
+                let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+                // 9 pull data out of the JSON file below
+                for heroDictionary in heroData
+                {
+                    // 11 below
+                    let aHero = Hero(dictionary: HeroDictionary as! NSDictionary)
+                    
+                    //14 below
+                    heroes.append(aHero)
+                }
+            }
+            
+        catch let error as NSError
+            {
+            print(error)
+            }
+
+
+        
+        }
 
 }
