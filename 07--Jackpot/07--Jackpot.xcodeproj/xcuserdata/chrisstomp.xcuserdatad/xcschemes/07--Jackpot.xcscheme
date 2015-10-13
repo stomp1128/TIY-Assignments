@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FEA8E5B21BCD7D16006BF6F0"
+               BlueprintIdentifier = "FE2C53D21BCD8AD900B4CBF0"
                BuildableName = "07--Jackpot.app"
                BlueprintName = "07--Jackpot"
                ReferencedContainer = "container:07--Jackpot.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEA8E5B21BCD7D16006BF6F0"
+            BlueprintIdentifier = "FE2C53D21BCD8AD900B4CBF0"
             BuildableName = "07--Jackpot.app"
             BlueprintName = "07--Jackpot"
             ReferencedContainer = "container:07--Jackpot.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEA8E5B21BCD7D16006BF6F0"
+            BlueprintIdentifier = "FE2C53D21BCD8AD900B4CBF0"
             BuildableName = "07--Jackpot.app"
             BlueprintName = "07--Jackpot"
             ReferencedContainer = "container:07--Jackpot.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEA8E5B21BCD7D16006BF6F0"
+            BlueprintIdentifier = "FE2C53D21BCD8AD900B4CBF0"
             BuildableName = "07--Jackpot.app"
             BlueprintName = "07--Jackpot"
             ReferencedContainer = "container:07--Jackpot.xcodeproj">

@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FEA8E5B71BCD7D16006BF6F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA8E5B61BCD7D16006BF6F0 /* AppDelegate.swift */; };
-		FEA8E5B91BCD7D16006BF6F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA8E5B81BCD7D16006BF6F0 /* ViewController.swift */; };
-		FEA8E5BC1BCD7D16006BF6F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA8E5BA1BCD7D16006BF6F0 /* Main.storyboard */; };
-		FEA8E5BE1BCD7D16006BF6F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA8E5BD1BCD7D16006BF6F0 /* Assets.xcassets */; };
-		FEA8E5C11BCD7D16006BF6F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA8E5BF1BCD7D16006BF6F0 /* LaunchScreen.storyboard */; };
+		FE2C53D71BCD8AD900B4CBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C53D61BCD8AD900B4CBF0 /* AppDelegate.swift */; };
+		FE2C53DE1BCD8AD900B4CBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2C53DD1BCD8AD900B4CBF0 /* Assets.xcassets */; };
+		FE2C53E11BCD8AD900B4CBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C53DF1BCD8AD900B4CBF0 /* LaunchScreen.storyboard */; };
+		FE2C53E91BCD8B4100B4CBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FE2C53EB1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FEA8E5B31BCD7D16006BF6F0 /* 07--Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "07--Jackpot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEA8E5B61BCD7D16006BF6F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEA8E5B81BCD7D16006BF6F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FEA8E5BB1BCD7D16006BF6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FEA8E5BD1BCD7D16006BF6F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FEA8E5C01BCD7D16006BF6F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FEA8E5C21BCD7D16006BF6F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE2C53D31BCD8AD900B4CBF0 /* 07--Jackpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "07--Jackpot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2C53D61BCD8AD900B4CBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE2C53DD1BCD8AD900B4CBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE2C53E01BCD8AD900B4CBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE2C53E21BCD8AD900B4CBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPickTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FEA8E5B01BCD7D16006BF6F0 /* Frameworks */ = {
+		FE2C53D01BCD8AD900B4CBF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,31 +35,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FEA8E5AA1BCD7D16006BF6F0 = {
+		FE2C53CA1BCD8AD900B4CBF0 = {
 			isa = PBXGroup;
 			children = (
-				FEA8E5B51BCD7D16006BF6F0 /* 07--Jackpot */,
-				FEA8E5B41BCD7D16006BF6F0 /* Products */,
+				FE2C53D51BCD8AD900B4CBF0 /* 07--Jackpot */,
+				FE2C53D41BCD8AD900B4CBF0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FEA8E5B41BCD7D16006BF6F0 /* Products */ = {
+		FE2C53D41BCD8AD900B4CBF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FEA8E5B31BCD7D16006BF6F0 /* 07--Jackpot.app */,
+				FE2C53D31BCD8AD900B4CBF0 /* 07--Jackpot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FEA8E5B51BCD7D16006BF6F0 /* 07--Jackpot */ = {
+		FE2C53D51BCD8AD900B4CBF0 /* 07--Jackpot */ = {
 			isa = PBXGroup;
 			children = (
-				FEA8E5B61BCD7D16006BF6F0 /* AppDelegate.swift */,
-				FEA8E5B81BCD7D16006BF6F0 /* ViewController.swift */,
-				FEA8E5BA1BCD7D16006BF6F0 /* Main.storyboard */,
-				FEA8E5BD1BCD7D16006BF6F0 /* Assets.xcassets */,
-				FEA8E5BF1BCD7D16006BF6F0 /* LaunchScreen.storyboard */,
-				FEA8E5C21BCD7D16006BF6F0 /* Info.plist */,
+				FE2C53D61BCD8AD900B4CBF0 /* AppDelegate.swift */,
+				FE2C53DD1BCD8AD900B4CBF0 /* Assets.xcassets */,
+				FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */,
+				FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */,
+				FE2C53DF1BCD8AD900B4CBF0 /* LaunchScreen.storyboard */,
+				FE2C53E21BCD8AD900B4CBF0 /* Info.plist */,
 			);
 			path = "07--Jackpot";
 			sourceTree = "<group>";
@@ -67,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FEA8E5B21BCD7D16006BF6F0 /* 07--Jackpot */ = {
+		FE2C53D21BCD8AD900B4CBF0 /* 07--Jackpot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FEA8E5C51BCD7D16006BF6F0 /* Build configuration list for PBXNativeTarget "07--Jackpot" */;
+			buildConfigurationList = FE2C53E51BCD8AD900B4CBF0 /* Build configuration list for PBXNativeTarget "07--Jackpot" */;
 			buildPhases = (
-				FEA8E5AF1BCD7D16006BF6F0 /* Sources */,
-				FEA8E5B01BCD7D16006BF6F0 /* Frameworks */,
-				FEA8E5B11BCD7D16006BF6F0 /* Resources */,
+				FE2C53CF1BCD8AD900B4CBF0 /* Sources */,
+				FE2C53D01BCD8AD900B4CBF0 /* Frameworks */,
+				FE2C53D11BCD8AD900B4CBF0 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -81,25 +81,25 @@
 			);
 			name = "07--Jackpot";
 			productName = "07--Jackpot";
-			productReference = FEA8E5B31BCD7D16006BF6F0 /* 07--Jackpot.app */;
+			productReference = FE2C53D31BCD8AD900B4CBF0 /* 07--Jackpot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FEA8E5AB1BCD7D16006BF6F0 /* Project object */ = {
+		FE2C53CB1BCD8AD900B4CBF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
-					FEA8E5B21BCD7D16006BF6F0 = {
+					FE2C53D21BCD8AD900B4CBF0 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = W89Q7DEDF7;
 					};
 				};
 			};
-			buildConfigurationList = FEA8E5AE1BCD7D16006BF6F0 /* Build configuration list for PBXProject "07--Jackpot" */;
+			buildConfigurationList = FE2C53CE1BCD8AD900B4CBF0 /* Build configuration list for PBXProject "07--Jackpot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -107,54 +107,46 @@
 				en,
 				Base,
 			);
-			mainGroup = FEA8E5AA1BCD7D16006BF6F0;
-			productRefGroup = FEA8E5B41BCD7D16006BF6F0 /* Products */;
+			mainGroup = FE2C53CA1BCD8AD900B4CBF0;
+			productRefGroup = FE2C53D41BCD8AD900B4CBF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FEA8E5B21BCD7D16006BF6F0 /* 07--Jackpot */,
+				FE2C53D21BCD8AD900B4CBF0 /* 07--Jackpot */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FEA8E5B11BCD7D16006BF6F0 /* Resources */ = {
+		FE2C53D11BCD8AD900B4CBF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEA8E5C11BCD7D16006BF6F0 /* LaunchScreen.storyboard in Resources */,
-				FEA8E5BE1BCD7D16006BF6F0 /* Assets.xcassets in Resources */,
-				FEA8E5BC1BCD7D16006BF6F0 /* Main.storyboard in Resources */,
+				FE2C53E91BCD8B4100B4CBF0 /* Main.storyboard in Resources */,
+				FE2C53E11BCD8AD900B4CBF0 /* LaunchScreen.storyboard in Resources */,
+				FE2C53DE1BCD8AD900B4CBF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FEA8E5AF1BCD7D16006BF6F0 /* Sources */ = {
+		FE2C53CF1BCD8AD900B4CBF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEA8E5B91BCD7D16006BF6F0 /* ViewController.swift in Sources */,
-				FEA8E5B71BCD7D16006BF6F0 /* AppDelegate.swift in Sources */,
+				FE2C53EB1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift in Sources */,
+				FE2C53D71BCD8AD900B4CBF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FEA8E5BA1BCD7D16006BF6F0 /* Main.storyboard */ = {
+		FE2C53DF1BCD8AD900B4CBF0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FEA8E5BB1BCD7D16006BF6F0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FEA8E5BF1BCD7D16006BF6F0 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FEA8E5C01BCD7D16006BF6F0 /* Base */,
+				FE2C53E01BCD8AD900B4CBF0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +154,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FEA8E5C31BCD7D16006BF6F0 /* Debug */ = {
+		FE2C53E31BCD8AD900B4CBF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,7 +198,7 @@
 			};
 			name = Debug;
 		};
-		FEA8E5C41BCD7D16006BF6F0 /* Release */ = {
+		FE2C53E41BCD8AD900B4CBF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -243,7 +235,7 @@
 			};
 			name = Release;
 		};
-		FEA8E5C61BCD7D16006BF6F0 /* Debug */ = {
+		FE2C53E61BCD8AD900B4CBF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -254,7 +246,7 @@
 			};
 			name = Debug;
 		};
-		FEA8E5C71BCD7D16006BF6F0 /* Release */ = {
+		FE2C53E71BCD8AD900B4CBF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -268,24 +260,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FEA8E5AE1BCD7D16006BF6F0 /* Build configuration list for PBXProject "07--Jackpot" */ = {
+		FE2C53CE1BCD8AD900B4CBF0 /* Build configuration list for PBXProject "07--Jackpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FEA8E5C31BCD7D16006BF6F0 /* Debug */,
-				FEA8E5C41BCD7D16006BF6F0 /* Release */,
+				FE2C53E31BCD8AD900B4CBF0 /* Debug */,
+				FE2C53E41BCD8AD900B4CBF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FEA8E5C51BCD7D16006BF6F0 /* Build configuration list for PBXNativeTarget "07--Jackpot" */ = {
+		FE2C53E51BCD8AD900B4CBF0 /* Build configuration list for PBXNativeTarget "07--Jackpot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FEA8E5C61BCD7D16006BF6F0 /* Debug */,
-				FEA8E5C71BCD7D16006BF6F0 /* Release */,
+				FE2C53E61BCD8AD900B4CBF0 /* Debug */,
+				FE2C53E71BCD8AD900B4CBF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FEA8E5AB1BCD7D16006BF6F0 /* Project object */;
+	rootObject = FE2C53CB1BCD8AD900B4CBF0 /* Project object */;
 }
