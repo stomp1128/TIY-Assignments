@@ -1,5 +1,5 @@
 //
-//  HeroTableViewController.swift
+//  HeroDetailViewController.swift
 //  S.H.I.E.L.D. Hero Tracker
 //
 //  Created by Chris Stomp on 10/12/15.
@@ -8,18 +8,17 @@
 
 import UIKit
 
-class HeroTableViewController: UITableViewController
+class HeroDetailViewController: UITableViewController
 {
-    
-    var heroes = Array<Hero>() //create a variable for each hero in the array
 
-    override func viewDidLoad()
-    {
+    @IBOutlet weak var HomeworldLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var powersLabel: UILabel!
+    
+    var hero = Hero?()
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "S.H.I.E.L.D. Hero Tracker"
-        
-        loadHeroes()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,38 +36,23 @@ class HeroTableViewController: UITableViewController
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return heroes.count //return the number of heroes in the array
-        
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    
-    {
-        
-        let cell = tableView.dequeueReusableCellWithIdentifier("HeroCell", forIndexPath: indexPath)
-        
-        let aHero = heroes[indexPath.row]
-        cell.textLabel?.text = aHero.name
-        cell.detailTextLabel?.text = aHero.homeworld
-        
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
+
         return cell
     }
-               // Configure the cell...
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath(indexPath: NSIndexPath)
-    
-    {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let selectedHero = heroes[indexPath.row]
-        let detailVC = storyboard?.instantiateViewControllerWithIndentifier("HeroDetailViewController") as! HeroDetailViewController
-    }
-
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -105,44 +89,14 @@ class HeroTableViewController: UITableViewController
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
-    //In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == ""
-            {
-                
-            }
     }
-    
-    
-private func loadHeroes()
-    {
-        o
-            {
-                let filePath = NSBundle.mainBundle().pathForResource("NOC", ofType: "json")
-                let dataFromFile = NSData(contentsOfFile: filePath!)
-                let agentData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
-                // 9 pull data out of the JSON file below
-                for agentDictionary in agentData
-                {
-                    // 11 below
-                    let anAgent = Agent(dictionary: agentDictionary as! NSDictionary)
-                    
-                    //14 below
-                    agents.append(anAgent)
-                }
-        }
-        catch let error as NSError
-        {
-            print(error)
-        }
+    */
 
-    }
-    
-    
 }

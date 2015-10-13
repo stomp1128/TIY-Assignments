@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		FE1657081BCC2AAD00A71ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1657071BCC2AAD00A71ACD /* AppDelegate.swift */; };
-		FE16570D1BCC2AAD00A71ACD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16570B1BCC2AAD00A71ACD /* Main.storyboard */; };
 		FE16570F1BCC2AAD00A71ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16570E1BCC2AAD00A71ACD /* Assets.xcassets */; };
 		FE1657121BCC2AAD00A71ACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1657101BCC2AAD00A71ACD /* LaunchScreen.storyboard */; };
 		FE16571A1BCC2FF800A71ACD /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1657191BCC2FF800A71ACD /* HeroTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FE16571E1BCC322500A71ACD /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16571D1BCC322500A71ACD /* HeroDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FE1657201BCC356100A71ACD /* heroes.json.webloc in Resources */ = {isa = PBXBuildFile; fileRef = FE16571F1BCC356100A71ACD /* heroes.json.webloc */; settings = {ASSET_TAGS = (); }; };
+		FE19BD9F1BCC531A00EA9ABC /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19BD9E1BCC531A00EA9ABC /* HeroDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FE19BDA11BCC589B00EA9ABC /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19BDA01BCC589B00EA9ABC /* Hero.swift */; settings = {ASSET_TAGS = (); }; };
+		FE19BDC11BCD587000EA9ABC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19BDC01BCD587000EA9ABC /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE1657041BCC2AAD00A71ACD /* S.H.I.E.L.D. Hero Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "S.H.I.E.L.D. Hero Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE1657071BCC2AAD00A71ACD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE16570C1BCC2AAD00A71ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE16570E1BCC2AAD00A71ACD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE1657111BCC2AAD00A71ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE1657131BCC2AAD00A71ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1657191BCC2FF800A71ACD /* HeroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeroTableViewController.swift; path = ../HeroTableViewController.swift; sourceTree = "<group>"; };
-		FE16571D1BCC322500A71ACD /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroDetailViewController.swift; sourceTree = "<group>"; };
 		FE16571F1BCC356100A71ACD /* heroes.json.webloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = heroes.json.webloc; sourceTree = "<group>"; };
+		FE19BD9E1BCC531A00EA9ABC /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeroDetailViewController.swift; path = ../HeroDetailViewController.swift; sourceTree = "<group>"; };
+		FE19BDA01BCC589B00EA9ABC /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		FE19BDC01BCD587000EA9ABC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 			children = (
 				FE1657071BCC2AAD00A71ACD /* AppDelegate.swift */,
 				FE1657191BCC2FF800A71ACD /* HeroTableViewController.swift */,
-				FE16571D1BCC322500A71ACD /* HeroDetailViewController.swift */,
-				FE16570B1BCC2AAD00A71ACD /* Main.storyboard */,
+				FE19BD9E1BCC531A00EA9ABC /* HeroDetailViewController.swift */,
+				FE19BDA01BCC589B00EA9ABC /* Hero.swift */,
+				FE19BDC01BCD587000EA9ABC /* Main.storyboard */,
 				FE16570E1BCC2AAD00A71ACD /* Assets.xcassets */,
 				FE1657101BCC2AAD00A71ACD /* LaunchScreen.storyboard */,
 				FE16571F1BCC356100A71ACD /* heroes.json.webloc */,
@@ -130,7 +133,7 @@
 				FE1657121BCC2AAD00A71ACD /* LaunchScreen.storyboard in Resources */,
 				FE16570F1BCC2AAD00A71ACD /* Assets.xcassets in Resources */,
 				FE1657201BCC356100A71ACD /* heroes.json.webloc in Resources */,
-				FE16570D1BCC2AAD00A71ACD /* Main.storyboard in Resources */,
+				FE19BDC11BCD587000EA9ABC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,23 +144,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE19BD9F1BCC531A00EA9ABC /* HeroDetailViewController.swift in Sources */,
 				FE1657081BCC2AAD00A71ACD /* AppDelegate.swift in Sources */,
 				FE16571A1BCC2FF800A71ACD /* HeroTableViewController.swift in Sources */,
-				FE16571E1BCC322500A71ACD /* HeroDetailViewController.swift in Sources */,
+				FE19BDA11BCC589B00EA9ABC /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE16570B1BCC2AAD00A71ACD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE16570C1BCC2AAD00A71ACD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FE1657101BCC2AAD00A71ACD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,6 +287,7 @@
 				FE1657181BCC2AAD00A71ACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
