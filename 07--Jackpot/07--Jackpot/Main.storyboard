@@ -14,15 +14,36 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuickPick Cell" id="Sc3-xR-MaV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuickPick Cell" textLabel="Tkd-j8-bi7" detailTextLabel="32Z-yE-lAM" style="IBUITableViewCellStyleValue1" id="Sc3-xR-MaV">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sc3-xR-MaV" id="yj1-hR-uk0">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Check Numbers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tkd-j8-bi7">
+                                            <rect key="frame" x="15" y="12" width="117" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="32Z-yE-lAM">
+                                            <rect key="frame" x="543" y="12" width="42" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="gVD-t5-q1c" kind="show" id="aCc-OS-XE0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,6 +60,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sil-xW-LX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1243" y="366"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jls-Sv-TQY">
+            <objects>
+                <viewController id="gVD-t5-q1c" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GjE-t0-4MR"/>
+                        <viewControllerLayoutGuide type="bottom" id="70k-Tx-EeF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rof-GV-C7s">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iK-pR-p25">
+                                <rect key="frame" x="100" y="416" width="400" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Submit Numbers"/>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Sz-Br-7E2">
+                                <rect key="frame" x="20" y="140" width="560" height="216"/>
+                                <animations/>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Sz-Br-7E2" firstAttribute="centerX" secondItem="rof-GV-C7s" secondAttribute="centerX" id="AAC-Sh-xiR"/>
+                            <constraint firstAttribute="trailing" secondItem="9iK-pR-p25" secondAttribute="trailing" constant="100" id="Fev-M1-4uZ"/>
+                            <constraint firstItem="9iK-pR-p25" firstAttribute="leading" secondItem="rof-GV-C7s" secondAttribute="leading" constant="100" id="GnM-K4-x5b"/>
+                            <constraint firstItem="5Sz-Br-7E2" firstAttribute="leading" secondItem="rof-GV-C7s" secondAttribute="leading" constant="20" id="ZFE-sd-waK"/>
+                            <constraint firstItem="9iK-pR-p25" firstAttribute="top" secondItem="5Sz-Br-7E2" secondAttribute="bottom" constant="60" id="cJl-aZ-kqN"/>
+                            <constraint firstAttribute="trailing" secondItem="5Sz-Br-7E2" secondAttribute="trailing" constant="20" id="llx-Bc-kjK"/>
+                            <constraint firstItem="5Sz-Br-7E2" firstAttribute="top" secondItem="GjE-t0-4MR" secondAttribute="bottom" constant="120" id="t3q-Hx-LaY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1f9-8D-O0J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1928" y="366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PlH-pR-EQO">
