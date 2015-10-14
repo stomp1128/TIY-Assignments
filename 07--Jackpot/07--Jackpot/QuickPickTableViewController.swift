@@ -8,8 +8,10 @@
 
 import UIKit
 
-class QuickPickTableViewController: UITableViewController {
-
+class QuickPickTableViewController: UITableViewController
+{
+    var tickets = Array<Ticket>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,23 +31,25 @@ class QuickPickTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return tickets.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("QuickPickCell", forIndexPath: indexPath)
 
         // Configure the cell...
-
+        
+        let aTicket = tickets[indexPath.row]
+        cell.textLabel?.text = aTicket.description()
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +96,10 @@ class QuickPickTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func plusTapped(sender: UIBarButtonItem)
+    {
+        let aTicket = Ticket()
+        tickets.append(aTicket)
+        tableView.reloadData()
+    }
 }

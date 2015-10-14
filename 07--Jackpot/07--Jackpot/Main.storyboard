@@ -7,14 +7,14 @@
         <!--Quick Pick Table View Controller-->
         <scene sceneID="spC-7c-xGy">
             <objects>
-                <tableViewController id="DrZ-I9-sAP" customClass="QuickPickTableViewController" sceneMemberID="viewController">
+                <tableViewController id="DrZ-I9-sAP" customClass="QuickPickTableViewController" customModule="_7__Jackpot" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="A3q-WK-59J">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuickPick Cell" textLabel="Tkd-j8-bi7" detailTextLabel="32Z-yE-lAM" style="IBUITableViewCellStyleValue1" id="Sc3-xR-MaV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuickPickCell" textLabel="Tkd-j8-bi7" detailTextLabel="32Z-yE-lAM" style="IBUITableViewCellStyleValue1" id="Sc3-xR-MaV">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sc3-xR-MaV" id="yj1-hR-uk0">
@@ -53,7 +53,11 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="KRC-7R-uJz">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cBD-8z-3Zg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cBD-8z-3Zg">
+                            <connections>
+                                <action selector="plusTapped:" destination="DrZ-I9-sAP" id="4d9-k2-zR1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
