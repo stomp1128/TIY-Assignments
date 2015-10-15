@@ -31,8 +31,8 @@ class Ticket
                 ticketNumbers.append(aPick)
                 pickFound = true
             }
-        } while !pickFound
-        
+        } 
+        while !pickFound
     }
     
     func description() -> String

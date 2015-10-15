@@ -13,6 +13,7 @@
 		FE2C53E91BCD8B4100B4CBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		FE2C53EB1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FE6D54DF1BCEC75500AA34DD /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6D54DE1BCEC75500AA34DD /* Ticket.swift */; settings = {ASSET_TAGS = (); }; };
+		FE6D54E11BCEE51000AA34DD /* WinningTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6D54E01BCEE51000AA34DD /* WinningTicketViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPickTableViewController.swift; sourceTree = "<group>"; };
 		FE6D54DE1BCEC75500AA34DD /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		FE6D54E01BCEE51000AA34DD /* WinningTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinningTicketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FE2C53D61BCD8AD900B4CBF0 /* AppDelegate.swift */,
 				FE2C53DD1BCD8AD900B4CBF0 /* Assets.xcassets */,
 				FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */,
+				FE6D54E01BCEE51000AA34DD /* WinningTicketViewController.swift */,
 				FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */,
 				FE6D54DE1BCEC75500AA34DD /* Ticket.swift */,
 				FE2C53DF1BCD8AD900B4CBF0 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6D54E11BCEE51000AA34DD /* WinningTicketViewController.swift in Sources */,
 				FE2C53EB1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift in Sources */,
 				FE6D54DF1BCEC75500AA34DD /* Ticket.swift in Sources */,
 				FE2C53D71BCD8AD900B4CBF0 /* AppDelegate.swift in Sources */,

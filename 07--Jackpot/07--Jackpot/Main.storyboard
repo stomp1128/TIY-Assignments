@@ -63,12 +63,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sil-xW-LX0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1243" y="366"/>
+            <point key="canvasLocation" x="1251" y="366"/>
         </scene>
-        <!--View Controller-->
+        <!--Number Picker View Controller-->
         <scene sceneID="Jls-Sv-TQY">
             <objects>
-                <viewController id="gVD-t5-q1c" sceneMemberID="viewController">
+                <viewController id="gVD-t5-q1c" customClass="NumberPickerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GjE-t0-4MR"/>
                         <viewControllerLayoutGuide type="bottom" id="70k-Tx-EeF"/>
@@ -78,12 +78,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iK-pR-p25">
-                                <rect key="frame" x="100" y="416" width="400" height="30"/>
+                                <rect key="frame" x="100" y="460" width="400" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Submit Numbers"/>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Sz-Br-7E2">
-                                <rect key="frame" x="20" y="140" width="560" height="216"/>
+                                <rect key="frame" x="20" y="184" width="560" height="216"/>
                                 <animations/>
                             </pickerView>
                         </subviews>
