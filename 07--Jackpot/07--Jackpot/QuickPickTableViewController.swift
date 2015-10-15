@@ -47,10 +47,10 @@ class QuickPickTableViewController: UITableViewController
         
         let aTicket = tickets[indexPath.row]
         cell.textLabel?.text = aTicket.description()
-        if aTicket.winner
-        {
-            cell.backgroundColor = UI 
-        }
+        //if aTicket.winner
+       // {
+       //     cell.backgroundColor = UI
+        //}
         return cell
     }
     
