@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Hero List View Controller-->
+        <!--Hero Table View Controller-->
         <scene sceneID="DKR-RG-Akk">
             <objects>
-                <tableViewController id="34u-fk-FTB" customClass="HeroListViewController" sceneMemberID="viewController">
+                <tableViewController id="34u-fk-FTB" customClass="HeroTableViewController" customModule="S_H_I_E_L_D__Hero_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZC6-Q5-Mkh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

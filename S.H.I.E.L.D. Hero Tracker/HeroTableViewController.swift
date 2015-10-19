@@ -12,6 +12,10 @@ class HeroTableViewController: UITableViewController
 {
     
     var heroes = Array<Hero>() //create a variable for each hero in the array
+    
+    var name: String = ""
+    var homeworld: String = ""
+    var power: String = ""
 
     override func viewDidLoad()
     {
@@ -21,11 +25,7 @@ class HeroTableViewController: UITableViewController
         
         loadHeroes()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,90 +59,41 @@ class HeroTableViewController: UITableViewController
         
         return cell
     }
-               // Configure the cell...
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath(indexPath: NSIndexPath)
     
+    
+    
+    func loadHeroes()
     {
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        let selectedHero = heroes[indexPath.row]
-        let detailVC = storyboard?.instantiateViewControllerWithIndentifier("HeroDetailViewController") as! HeroDetailViewController
-    }
-
-    
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    
-    // MARK: - Navigation
-
-    //In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == ""
+        do
+        {
+            /*let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json") //inside the main app bundle, there's a file called NOC, that's of type JSON. assign that filepath to filePath
+            let dataFromFile = NSData(contentsOfFile: filePath!)
+            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            
+            for heroDictionary in heroData
             {
+                let aHero = Hero(heroDictionary: heroDictionary as! NSDictionary)
                 
-            }
-    }
-    
-    
-private func loadHeroes()
-    {
-        o
+                heroes.append(aHero)*/
+            let filePath = NSBundle.mainBundle().pathForResource("heroes", ofType: "json")
+            let dataFromFile = NSData(contentsOfFile: filePath!)
+            let heroData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            // 9 pull data out of the JSON file below
+            for heroDictionary in heroData
             {
-                let filePath = NSBundle.mainBundle().pathForResource("NOC", ofType: "json")
-                let dataFromFile = NSData(contentsOfFile: filePath!)
-                let agentData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
-                // 9 pull data out of the JSON file below
-                for agentDictionary in agentData
-                {
-                    // 11 below
-                    let anAgent = Agent(dictionary: agentDictionary as! NSDictionary)
-                    
-                    //14 below
-                    agents.append(anAgent)
-                }
+                // 11 below
+                let aHero = Hero(heroDictionary: heroDictionary as! NSDictionary)
+                
+                //14 below
+                heroes.append(aHero)
+        
+        }
+                        
         }
         catch let error as NSError
         {
             print(error)
         }
-
     }
-    
     
 }
