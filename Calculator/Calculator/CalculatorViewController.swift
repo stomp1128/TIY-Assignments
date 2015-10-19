@@ -8,18 +8,52 @@
 
 import UIKit
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController
 
-    override func viewDidLoad() {
+{
+    var brain = CalculatorBrain()
+    
+    
+    @IBOutlet weak var displayWindow: UILabel!
+    
+    
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBAction func operatorButtonTapped(sender: UIButton)
+    {
+        let symbol = sender.currentTitle
+        brain.addOperate(symbol!)
+    }
 
-
+    @IBAction func numberButtonTapped(sender: UIButton)
+    
+    {
+        
+        let number = sender.currentTitle
+        displayWindow.text = brain.addDigit(number!)
+        
+        
+    }
+    
+    @IBAction func clearButtonTapped(sender: UIButton)
+    
+        {
+            let clear = sender.currentTitle
+            displayWindow.text = String(0)
+        }
+    
+    
 }
 
