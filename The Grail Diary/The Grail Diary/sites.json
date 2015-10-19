@@ -1,71 +1,71 @@
 [
  {
-  “name”: “Christ The Redeemer”
-  "location": "Rio De Janeiro, Brazil"
-  "distance from Orlando": "4,364 miles"
+  "name": "Christ The Redeemer", 
+  "location": "Rio De Janeiro, Brazil",
+  "distance from Orlando": "4,364 miles",
   "fact": "Christ The Redeemer stands 125 feet tall"
  },
 
  {
-  “name”: “Great Pyramids”
-  "location": "Giza, Egypt"
-  "distance from Orlando": "6,533 miles"
+  "name": "Great Pyramids",
+  "location": "Giza, Egypt",
+  "distance from Orlando": "6,533 miles",
   "fact": "The Egyptian Pyramids were used as tombs for Pharoahs."
  },
  
  {
-  “name: “Stonehenge”
-  "location": "Amesbury, United Kingdom"
-  "distance from Orlando": "4272 miles"
+  "name": "Stonehenge",
+  "location": "Amesbury, United Kingdom",
+  "distance from Orlando": "4272 miles",
   "fact": "Construction started in 2600BC"
  },
  
  {
-  “name: “Statue Of Liberty”
-  "location": "New York City, United States"
-  "distance from Orlando": "1,077 miles"
+  "name": "Statue Of Liberty",
+  "location": "New York City, United States",
+  "distance from Orlando": "1,077 miles",
   "fact": "The Statue has a 35-foot waistline."
  },
  
  {
-  “name: “Niagara Falls”
-  "location": "Niagara Falls, Canada"
-  "distance from Orlando": "1,204 miles"
+  "name": "Niagara Falls",
+  "location": "Niagara Falls, Canada",
+  "distance from Orlando": "1,204 miles",
   "fact": "The highest drop is 167 feet."
  },
  
  {
-  “name: “Grand Canyon”
-  "location": "Arizona, United States"
-  "distance from Orlando": "2,118 miles"
+  "name": "Grand Canyon",
+  "location": "Arizona, United States",
+  "distance from Orlando": "2,118 miles",
   "fact": "The Grand Canyone is over a mile deep in some areas."
  },
  
  {
-  “name: “Great Wall Of China”
-  "location": "China"
-  "distance from Orlando": "7,530 miles"
+  "name": "Great Wall Of China",
+  "location": "China",
+  "distance from Orlando": "7,530 miles",
   "fact": "The Great Wall crosses 9 provinces and municipalities"
  },
  
  {
-  “name: “Roman Colesseum”
-  "location": "Rome, Italy"
-  "distance from Orlando": "5,113 miles"
+  "name": "Roman Colesseum",
+  "location": "Rome, Italy",
+  "distance from Orlando": "5,113 miles",
   "fact": "There were 36 trap doors allowing for elaborate special effects"
  },
  
  {
-  “name: “Machu Piccu”
-  "location": "Machu Piccu, Peru"
-  "distance from Orlando": "2,939 miles"
+  "name": "Machu Piccu",
+  "location": "Machu Piccu, Peru",
+  "distance from Orlando": "2,939 miles",
   "fact": "n 2007, Machu Picchu was voted one of the New Seven Wonders of the World in a worldwide Internet poll."
  },
  
  {
-  “name: “Eiffel Tower”
-  "location": "Paris, France"
-  "distance from Orlando": "4,487 miles"
+  "name": "Eiffel Tower",
+  "location": "Paris, France",
+  "distance from Orlando": "4,487 miles",
   "fact": "The Eiffel Tower was going to be demolished in 1909, but was saved because it was repurposed as a giant radio antenna."
- },
+ }
 ]
