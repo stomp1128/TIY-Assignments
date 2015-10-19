@@ -13,6 +13,8 @@
 		FE6B6B541BD54DD300844783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6B6B521BD54DD300844783 /* LaunchScreen.storyboard */; };
 		FE6B6B5C1BD550CD00844783 /* SitesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B6B5B1BD550CD00844783 /* SitesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FE6B6B5E1BD5627900844783 /* Sites.json in Resources */ = {isa = PBXBuildFile; fileRef = FE6B6B5D1BD5627900844783 /* Sites.json */; settings = {ASSET_TAGS = (); }; };
+		FE6B6B601BD5635700844783 /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B6B5F1BD5635700844783 /* Sites.swift */; settings = {ASSET_TAGS = (); }; };
+		FE6B6B621BD5647000844783 /* SitesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B6B611BD5647000844783 /* SitesDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FE6B6B551BD54DD300844783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE6B6B5B1BD550CD00844783 /* SitesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SitesTableViewController.swift; path = ../SitesTableViewController.swift; sourceTree = "<group>"; };
 		FE6B6B5D1BD5627900844783 /* Sites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sites.json; sourceTree = "<group>"; };
+		FE6B6B5F1BD5635700844783 /* Sites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sites.swift; sourceTree = "<group>"; };
+		FE6B6B611BD5647000844783 /* SitesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitesDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				FE6B6B491BD54DD300844783 /* AppDelegate.swift */,
 				FE6B6B5B1BD550CD00844783 /* SitesTableViewController.swift */,
+				FE6B6B611BD5647000844783 /* SitesDetailViewController.swift */,
+				FE6B6B5F1BD5635700844783 /* Sites.swift */,
 				FE6B6B4D1BD54DD300844783 /* Main.storyboard */,
 				FE6B6B501BD54DD300844783 /* Assets.xcassets */,
 				FE6B6B521BD54DD300844783 /* LaunchScreen.storyboard */,
@@ -139,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6B6B621BD5647000844783 /* SitesDetailViewController.swift in Sources */,
 				FE6B6B5C1BD550CD00844783 /* SitesTableViewController.swift in Sources */,
+				FE6B6B601BD5635700844783 /* Sites.swift in Sources */,
 				FE6B6B4A1BD54DD300844783 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

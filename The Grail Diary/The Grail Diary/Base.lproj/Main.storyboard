@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1312" y="368"/>
         </scene>
-        <!--View Controller-->
+        <!--Sites Detail View Controller-->
         <scene sceneID="TCZ-4e-VFJ">
             <objects>
-                <viewController id="Q5m-tf-44W" sceneMemberID="viewController">
+                <viewController id="Q5m-tf-44W" customClass="SitesDetailViewController" customModule="The_Grail_Diary" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="beN-fP-50X"/>
                         <viewControllerLayoutGuide type="bottom" id="yeD-lX-oO6"/>
@@ -102,6 +102,11 @@
                             <constraint firstItem="D8n-mF-jNB" firstAttribute="leading" secondItem="x7g-wn-hoZ" secondAttribute="leading" constant="70" id="t8Q-No-JPW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="distanceLabel" destination="BA1-VP-Lde" id="4nf-u4-ufc"/>
+                        <outlet property="factLabel" destination="D8n-mF-jNB" id="bLy-ku-9Nm"/>
+                        <outlet property="locationLabel" destination="tXH-tT-YhX" id="bcQ-zh-CaX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqg-iM-GBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
