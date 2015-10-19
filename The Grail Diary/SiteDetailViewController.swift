@@ -1,5 +1,6 @@
+
 //
-//  SiteDetailViewController.swift
+//  SiteDetailTableViewController.swift
 //  The Grail Diary
 //
 //  Created by Chris Stomp on 10/19/15.
@@ -8,11 +9,9 @@
 
 import UIKit
 
-class SitesDetailViewController: UITableViewController
-{
-    @IBOutlet weak var locationLabel: UILabel!
-    @IBOutlet weak var distanceLabel: UILabel!
-    @IBOutlet weak var factLabel: UILabel!
+class SiteDetailViewController: UITableViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

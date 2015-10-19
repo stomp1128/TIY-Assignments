@@ -8,12 +8,17 @@
 
 import UIKit
 
-class SitesTableViewController: UITableViewController
+class SiteTableViewController: UITableViewController
 {
+    
+    var site = Array<Sites>()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        title = "Sites"
+        loadSiteList()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,17 +41,27 @@ class SitesTableViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 10
+        return site.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCellWithIdentifier("SiteCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        
+        let aSite = site[indexPath.row]
+        cell.textLabel?.text = aSite.name
+        cell.detailTextLabel?.text = aSite.location
+        
+        //"Name \(indexPath.row)"
 
         return cell
     }
+    
+    // MARK: - Action Handlers
+    
+    
     
 
     /*
@@ -93,5 +108,28 @@ class SitesTableViewController: UITableViewController
         // Pass the selected object to the new view controller.
     }
     */
+    func loadSiteList()
+    {
+        do
+        {
+            let filePath = NSBundle.mainBundle().pathForResource("sites", ofType: "json")
+            let dataFromFile = NSData(contentsOfFile: filePath!)
+            let siteData: NSArray! = try NSJSONSerialization.JSONObjectWithData(dataFromFile!, options: []) as! NSArray
+            // 9 pull data out of the JSON file below
+            for siteDictionary in siteData
+            {
+                
+                let aSite = Sites(dictionary: siteDictionary as! NSDictionary)
+                
+                //14 below
+                site.append(aSite)
+            }
+        }
+        catch let error as NSError
+        {
+            print(error)
+        }
+    }
 
-}
+
+    }

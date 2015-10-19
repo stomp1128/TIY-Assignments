@@ -10,17 +10,19 @@ import Foundation
 
 class Sites
 {
+    
+    var name: String
     var location: String
     var distanceFromOrlando: String
     var fact: String
-    
-    init(siteDictionary: NSDictionary)
         
-    {
-        location = siteDictionary["name"] as! String
-        distanceFromOrlando = siteDictionary["homeworld"] as! String
-        fact = siteDictionary["powers"] as! String
-    }
+        init(dictionary: NSDictionary)
+        {
+            name = dictionary["name"] as! String
+            location = dictionary["location"] as! String
+            distanceFromOrlando = dictionary["distanceFromOrlando"] as! String
+            fact = dictionary["fact"] as! String
+        }
     
 }
 
