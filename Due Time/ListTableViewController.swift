@@ -14,16 +14,24 @@ class ListTableViewController: UITableViewController, UITextFieldDelegate {
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var lists = Array<List>()
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         title = "Todo List"
+        
+        let fetchRequest = NSFetchRequest(entityName: "List") //step 27
+        do {
+            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [List]
+            lists = fetchResults!
+        }
+        catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,25 +61,32 @@ class ListTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
 
-    /*
-    // Override to support conditional editing of the table view.
+    
+    /*Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
-    }
-    */
+    }*/
+    
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
+        if editingStyle == .Delete
+        {
+            
+            let aList = lists[indexPath.row]
+            lists.removeAtIndex(indexPath.row)
+            managedObjectContext.deleteObject(aList)
+            saveContext()
+
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
