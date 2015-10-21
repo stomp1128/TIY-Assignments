@@ -12,6 +12,12 @@ import UIKit
 class SiteDetailViewController: UITableViewController {
     
     
+    @IBOutlet weak var Name: UILabel!
+    @IBOutlet weak var Location: UILabel!
+    @IBOutlet weak var distanceFromOrlando: UILabel!
+    @IBOutlet weak var Fact: UILabel!
+    
+    var sites = Sites?()
 
     override func viewDidLoad() {
         super.viewDidLoad()
