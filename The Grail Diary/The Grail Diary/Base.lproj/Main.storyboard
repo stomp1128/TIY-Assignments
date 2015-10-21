@@ -40,9 +40,15 @@
                                     <constraints>
                                         <constraint firstItem="q9x-k8-eGv" firstAttribute="leading" secondItem="q0E-nQ-PdJ" secondAttribute="leading" constant="15" id="2iQ-E2-pzC"/>
                                         <constraint firstItem="q9x-k8-eGv" firstAttribute="centerY" secondItem="q0E-nQ-PdJ" secondAttribute="centerY" id="6qj-zC-Epc"/>
+                                        <constraint firstItem="ckJ-Y3-hA4" firstAttribute="centerY" secondItem="q0E-nQ-PdJ" secondAttribute="centerY" id="8zx-M3-G9l"/>
                                         <constraint firstAttribute="trailing" secondItem="ckJ-Y3-hA4" secondAttribute="trailing" constant="15" id="Xg2-h3-9p4"/>
                                         <constraint firstItem="ckJ-Y3-hA4" firstAttribute="centerY" secondItem="q0E-nQ-PdJ" secondAttribute="centerY" id="ctS-wj-97C"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="8zx-M3-G9l"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
