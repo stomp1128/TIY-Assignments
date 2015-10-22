@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE22021A1BD950FB008FF382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202191BD950FB008FF382 /* AppDelegate.swift */; };
+		FE22021F1BD950FB008FF382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE22021D1BD950FB008FF382 /* Main.storyboard */; };
+		FE2202211BD950FB008FF382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2202201BD950FB008FF382 /* Assets.xcassets */; };
+		FE2202241BD950FB008FF382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2202221BD950FB008FF382 /* LaunchScreen.storyboard */; };
+		FE22022C1BD95301008FF382 /* EquationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22022B1BD95301008FF382 /* EquationTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FE2202301BD95ADF008FF382 /* EquationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22022F1BD95ADF008FF382 /* EquationCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FE2202321BD95B7C008FF382 /* EquationBrainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202311BD95B7C008FF382 /* EquationBrainViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE2202161BD950FB008FF382 /* 13-High-Voltage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "13-High-Voltage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2202191BD950FB008FF382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE22021E1BD950FB008FF382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE2202201BD950FB008FF382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE2202231BD950FB008FF382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE2202251BD950FB008FF382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE22022B1BD95301008FF382 /* EquationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquationTableViewController.swift; sourceTree = "<group>"; };
+		FE22022F1BD95ADF008FF382 /* EquationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EquationCell.swift; path = ../EquationCell.swift; sourceTree = "<group>"; };
+		FE2202311BD95B7C008FF382 /* EquationBrainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquationBrainViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE2202131BD950FB008FF382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE22020D1BD950FB008FF382 = {
+			isa = PBXGroup;
+			children = (
+				FE2202181BD950FB008FF382 /* 13-High-Voltage */,
+				FE2202171BD950FB008FF382 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE2202171BD950FB008FF382 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE2202161BD950FB008FF382 /* 13-High-Voltage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE2202181BD950FB008FF382 /* 13-High-Voltage */ = {
+			isa = PBXGroup;
+			children = (
+				FE2202191BD950FB008FF382 /* AppDelegate.swift */,
+				FE22022F1BD95ADF008FF382 /* EquationCell.swift */,
+				FE22022B1BD95301008FF382 /* EquationTableViewController.swift */,
+				FE2202311BD95B7C008FF382 /* EquationBrainViewController.swift */,
+				FE22021D1BD950FB008FF382 /* Main.storyboard */,
+				FE2202201BD950FB008FF382 /* Assets.xcassets */,
+				FE2202221BD950FB008FF382 /* LaunchScreen.storyboard */,
+				FE2202251BD950FB008FF382 /* Info.plist */,
+			);
+			path = "13-High-Voltage";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE2202151BD950FB008FF382 /* 13-High-Voltage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE2202281BD950FB008FF382 /* Build configuration list for PBXNativeTarget "13-High-Voltage" */;
+			buildPhases = (
+				FE2202121BD950FB008FF382 /* Sources */,
+				FE2202131BD950FB008FF382 /* Frameworks */,
+				FE2202141BD950FB008FF382 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "13-High-Voltage";
+			productName = "13-High-Voltage";
+			productReference = FE2202161BD950FB008FF382 /* 13-High-Voltage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE22020E1BD950FB008FF382 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "The Iron Yard";
+				TargetAttributes = {
+					FE2202151BD950FB008FF382 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = W89Q7DEDF7;
+					};
+				};
+			};
+			buildConfigurationList = FE2202111BD950FB008FF382 /* Build configuration list for PBXProject "13-High-Voltage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE22020D1BD950FB008FF382;
+			productRefGroup = FE2202171BD950FB008FF382 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE2202151BD950FB008FF382 /* 13-High-Voltage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE2202141BD950FB008FF382 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE2202241BD950FB008FF382 /* LaunchScreen.storyboard in Resources */,
+				FE2202211BD950FB008FF382 /* Assets.xcassets in Resources */,
+				FE22021F1BD950FB008FF382 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE2202121BD950FB008FF382 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE22021A1BD950FB008FF382 /* AppDelegate.swift in Sources */,
+				FE22022C1BD95301008FF382 /* EquationTableViewController.swift in Sources */,
+				FE2202321BD95B7C008FF382 /* EquationBrainViewController.swift in Sources */,
+				FE2202301BD95ADF008FF382 /* EquationCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE22021D1BD950FB008FF382 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE22021E1BD950FB008FF382 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE2202221BD950FB008FF382 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE2202231BD950FB008FF382 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE2202261BD950FB008FF382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE2202271BD950FB008FF382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE2202291BD950FB008FF382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "13-High-Voltage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-3-High-Voltage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE22022A1BD950FB008FF382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "13-High-Voltage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-3-High-Voltage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE2202111BD950FB008FF382 /* Build configuration list for PBXProject "13-High-Voltage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE2202261BD950FB008FF382 /* Debug */,
+				FE2202271BD950FB008FF382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE2202281BD950FB008FF382 /* Build configuration list for PBXNativeTarget "13-High-Voltage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE2202291BD950FB008FF382 /* Debug */,
+				FE22022A1BD950FB008FF382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE22020E1BD950FB008FF382 /* Project object */;
+}
