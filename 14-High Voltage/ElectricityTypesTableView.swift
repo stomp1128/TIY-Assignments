@@ -1,6 +1,6 @@
 //
-//  TableViewController.swift
-//  13-High-Voltage
+//  ElectricityTypesTableView.swift
+//  14-High Voltage
 //
 //  Created by Chris Stomp on 10/22/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EquationTableViewController: UITableViewController {
+class ElectricityTypesTableView: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +29,12 @@ class EquationTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return v
+        return 0
     }
 
     /*

@@ -1,6 +1,6 @@
 //
-//  ValueTypeCell.swift
-//  13-High-Voltage
+//  ElectricityTypesCell.swift
+//  14-High Voltage
 //
 //  Created by Chris Stomp on 10/22/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EquationCell: UITableViewCell {
+class ElectricityTypesCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

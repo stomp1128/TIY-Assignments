@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>13-High-Voltage.xcscheme</key>
+		<key>14-High Voltage.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>FE2202151BD950FB008FF382</key>
+		<key>FE22023D1BD9670D008FF382</key>
 		<dict>
 			<key>primary</key>
 			<true/>
