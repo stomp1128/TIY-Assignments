@@ -52,7 +52,10 @@
                                 <rect key="frame" x="301" y="140" width="149" height="90"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.84700346359220313" green="0.84924658017853405" blue="0.80580745913471663" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="%"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="operatorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="glX-cV-wmO"/>
                                 </connections>
@@ -246,6 +249,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="equalButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vH-3p-TQx"/>
                                     <action selector="operatorButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kbf-nJ-1Kn"/>
                                 </connections>
                             </button>
