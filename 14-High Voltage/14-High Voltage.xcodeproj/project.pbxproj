@@ -11,10 +11,11 @@
 		FE2202471BD9670D008FF382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2202451BD9670D008FF382 /* Main.storyboard */; };
 		FE2202491BD9670D008FF382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2202481BD9670D008FF382 /* Assets.xcassets */; };
 		FE22024C1BD9670D008FF382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE22024A1BD9670D008FF382 /* LaunchScreen.storyboard */; };
-		FE2202541BD96754008FF382 /* ElectricityCalculatorTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202531BD96754008FF382 /* ElectricityCalculatorTable.swift */; settings = {ASSET_TAGS = (); }; };
+		FE2202541BD96754008FF382 /* ElectricityCalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FE2202561BD96B13008FF382 /* ElectricityCalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */; settings = {ASSET_TAGS = (); }; };
-		FE2202581BD96B59008FF382 /* ElectricityTypesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202571BD96B59008FF382 /* ElectricityTypesTableView.swift */; settings = {ASSET_TAGS = (); }; };
+		FE2202581BD96B59008FF382 /* ElectricityTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		FE22025A1BD96B86008FF382 /* ElectricityTypesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FE22025C1BDA6533008FF382 /* CalculatorEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +25,11 @@
 		FE2202481BD9670D008FF382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE22024B1BD9670D008FF382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE22024D1BD9670D008FF382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE2202531BD96754008FF382 /* ElectricityCalculatorTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityCalculatorTable.swift; path = ../ElectricityCalculatorTable.swift; sourceTree = "<group>"; };
+		FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityCalculatorTableViewController.swift; path = ../ElectricityCalculatorTableViewController.swift; sourceTree = "<group>"; };
 		FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityCalculatorCell.swift; path = ../ElectricityCalculatorCell.swift; sourceTree = "<group>"; };
-		FE2202571BD96B59008FF382 /* ElectricityTypesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityTypesTableView.swift; path = ../ElectricityTypesTableView.swift; sourceTree = "<group>"; };
+		FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityTypesTableViewController.swift; path = ../ElectricityTypesTableViewController.swift; sourceTree = "<group>"; };
 		FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityTypesCell.swift; path = ../ElectricityTypesCell.swift; sourceTree = "<group>"; };
+		FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorEquations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				FE2202411BD9670D008FF382 /* AppDelegate.swift */,
-				FE2202531BD96754008FF382 /* ElectricityCalculatorTable.swift */,
+				FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */,
 				FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */,
-				FE2202571BD96B59008FF382 /* ElectricityTypesTableView.swift */,
+				FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */,
 				FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */,
+				FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */,
 				FE2202451BD9670D008FF382 /* Main.storyboard */,
 				FE2202481BD9670D008FF382 /* Assets.xcassets */,
 				FE22024A1BD9670D008FF382 /* LaunchScreen.storyboard */,
@@ -146,9 +149,10 @@
 			files = (
 				FE22025A1BD96B86008FF382 /* ElectricityTypesCell.swift in Sources */,
 				FE2202421BD9670D008FF382 /* AppDelegate.swift in Sources */,
+				FE22025C1BDA6533008FF382 /* CalculatorEquations.swift in Sources */,
 				FE2202561BD96B13008FF382 /* ElectricityCalculatorCell.swift in Sources */,
-				FE2202541BD96754008FF382 /* ElectricityCalculatorTable.swift in Sources */,
-				FE2202581BD96B59008FF382 /* ElectricityTypesTableView.swift in Sources */,
+				FE2202541BD96754008FF382 /* ElectricityCalculatorTableViewController.swift in Sources */,
+				FE2202581BD96B59008FF382 /* ElectricityTypesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +302,7 @@
 				FE2202521BD9670D008FF382 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

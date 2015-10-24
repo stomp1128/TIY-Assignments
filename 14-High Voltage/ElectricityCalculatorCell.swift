@@ -8,8 +8,14 @@
 
 import UIKit
 
-class ElectricityCalculatorCell: UITableViewCell {
+class ElectricityCalculatorCell: UITableViewCell
+{
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var textField: UITextField?
 
+  
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

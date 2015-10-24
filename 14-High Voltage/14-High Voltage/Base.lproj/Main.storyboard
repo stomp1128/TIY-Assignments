@@ -5,28 +5,28 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Electricity Calculator Table-->
+        <!--Electricity Calculator Table View Controller-->
         <scene sceneID="VXr-CC-4B1">
             <objects>
-                <tableViewController id="3NT-7p-ahj" customClass="ElectricityCalculatorTable" customModule="_4_High_Voltage" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="3NT-7p-ahj" customClass="ElectricityCalculatorTableViewController" customModule="_4_High_Voltage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="idb-aU-a6o">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZC5-SU-cj7" customClass="ElectricityCalculatorCell" customModule="_4_High_Voltage" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ElectricityCalculatorCell" id="ZC5-SU-cj7" customClass="ElectricityCalculatorCell" customModule="_4_High_Voltage" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZC5-SU-cj7" id="UtZ-pY-LMw">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Value Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-jw-z40">
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Value Here" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I1U-jw-z40">
                                             <rect key="frame" x="460" y="7" width="130" height="30"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                         </textField>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyy-kY-fDl">
                                             <rect key="frame" x="51" y="11" width="42" height="21"/>
@@ -40,6 +40,7 @@
                                     <constraints>
                                         <constraint firstItem="I1U-jw-z40" firstAttribute="centerY" secondItem="UtZ-pY-LMw" secondAttribute="centerY" id="5GG-hQ-mjF"/>
                                         <constraint firstItem="Yyy-kY-fDl" firstAttribute="leading" secondItem="UtZ-pY-LMw" secondAttribute="leadingMargin" constant="43" id="WS1-YQ-Bfs"/>
+                                        <constraint firstItem="I1U-jw-z40" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Yyy-kY-fDl" secondAttribute="trailing" constant="8" id="WaW-VG-u7w"/>
                                         <constraint firstItem="I1U-jw-z40" firstAttribute="leading" secondItem="Yyy-kY-fDl" secondAttribute="trailing" constant="367" id="gky-ZI-T5o"/>
                                         <constraint firstItem="Yyy-kY-fDl" firstAttribute="centerY" secondItem="UtZ-pY-LMw" secondAttribute="centerY" id="k6u-Tu-OuG"/>
                                         <constraint firstItem="Yyy-kY-fDl" firstAttribute="leading" secondItem="UtZ-pY-LMw" secondAttribute="leading" constant="51" id="qQw-we-uoI"/>
@@ -48,10 +49,15 @@
                                     <variation key="default">
                                         <mask key="constraints">
                                             <exclude reference="WS1-YQ-Bfs"/>
+                                            <exclude reference="gky-ZI-T5o"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Yyy-kY-fDl" id="RmX-ZS-By8"/>
+                                    <outlet property="textField" destination="I1U-jw-z40" id="oye-eY-H28"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -60,24 +66,33 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="7vi-Kx-m9s">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0R6-X4-WHU"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0R6-X4-WHU">
+                            <connections>
+                                <segue destination="zUF-jp-rXD" kind="popoverPresentation" identifier="ShowElectricityTypesPopoverSegue" popoverAnchorBarButtonItem="0R6-X4-WHU" id="76i-FW-iFu">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="plusButton" destination="0R6-X4-WHU" id="y3l-bv-znH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suH-nW-EBi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1367" y="371"/>
         </scene>
-        <!--Electricity Types Table View-->
+        <!--Electricity Types Table View Controller-->
         <scene sceneID="0jM-nl-23i">
             <objects>
-                <tableViewController id="zUF-jp-rXD" customClass="ElectricityTypesTableView" customModule="_4_High_Voltage" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="zUF-jp-rXD" customClass="ElectricityTypesTableViewController" customModule="_4_High_Voltage" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WbC-Z3-ib6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="chP-w4-Zr0" customClass="ElectricityTypesCell" customModule="_4_High_Voltage" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ElectricityTypesCell" id="chP-w4-Zr0" customClass="ElectricityTypesCell" customModule="_4_High_Voltage" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="chP-w4-Zr0" id="pVM-Tb-Hcx">
