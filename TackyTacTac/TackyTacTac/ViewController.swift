@@ -157,6 +157,7 @@ class ViewController: UIViewController
 {
     
     var grid = [[0,0,0], [0,0,0], [0,0,0]]
+    var playButtons = [TTTButton]()
     
     var isPlayer1Turn = true
     
@@ -164,10 +165,12 @@ class ViewController: UIViewController
     var player2Score = 0
     var stalemateScore = 0
     
+    
     let gameStatusLabel = UILabel(frame: CGRect(x: 0, y: 80, width: 200, height: 50))
     let player1ScoreLabel = UILabel(frame: CGRect(x: 0, y: 560, width: 200, height: 50))
     let player2ScoreLabel = UILabel(frame: CGRect(x: 0, y: 580, width: 200, height: 50))
     let stalemateScoreLabel = UILabel(frame: CGRect(x: 0, y: 620, width: 200, height: 50))
+    
     
     override func viewDidLoad()
     {
@@ -186,11 +189,18 @@ class ViewController: UIViewController
         player2ScoreLabel.textAlignment = .Center
         player2ScoreLabel.center.x = view.center.x
         
-        stalemateScoreLabel.text = "Stalemate Score = 0"
+        stalemateScoreLabel.text = "Stalemate = 0"
         stalemateScoreLabel.textAlignment = .Center
         stalemateScoreLabel.center.x = view.center.x
         
-        
+        let resetButton   = UIButton(type: UIButtonType.System) as UIButton
+        resetButton.frame = CGRectMake(0, 660, 100, 50)
+        resetButton.backgroundColor = UIColor.cyanColor()
+        resetButton.setTitle("Reset", forState: UIControlState.Normal)
+        resetButton.addTarget(self, action: "resetButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        resetButton.center.x = view.center.x
+        self.view.addSubview(resetButton)
+    
         view.addSubview(gameStatusLabel)
         view.addSubview(player1ScoreLabel)
         view.addSubview(player2ScoreLabel)
@@ -222,6 +232,8 @@ class ViewController: UIViewController
                 
                 button.addTarget(self, action: "spacePressed:", forControlEvents: .TouchUpInside)
                 view.addSubview(button)
+                
+                playButtons.append(button)
             }
         }
     }
@@ -252,16 +264,37 @@ class ViewController: UIViewController
             
             isPlayer1Turn = !isPlayer1Turn
             
+            if isPlayer1Turn == true
+            {
+                gameStatusLabel.text = "Player 1 Turn"
+            }
+            if isPlayer1Turn == false
+            {
+                gameStatusLabel.text = "Player 2 Turn"
+            }
+            
+            
             checkForWinner()
         }
+    }
+    
+    func resetButton(sender:UIButton!)
+    {
+        for aButton in playButtons
+        {
+            grid = [[0,0,0], [0,0,0], [0,0,0]]
+            aButton.player = 0
+        }
+        
     }
     
     // MARK: - Misc.
     
     func checkForWinner()
+    
+        
     {
-        
-        
+        var stalemateCount = 0
         let possibilities = [
             ((0,0),(0,1),(0,2)),
             ((1,0),(1,1),(1,2)),
@@ -281,62 +314,73 @@ class ViewController: UIViewController
             let value2 = grid[p2.0][p2.1]
             let value3 = grid[p3.0][p3.1]
             
-            
             if value1 == value2 && value2 == value3
             {
                 if value1 != 0
                 {
-                    if isPlayer1Turn == true
+                  //winner
+                
+                
+                    if value1 == 1
                     {
+                        gameStatusLabel.text = "Player \(value1) wins"
                         player1Score++
+                        player1ScoreLabel.text = "Player 1 Score = \(player1Score)"
+                        
                     }
-                    else
+                        
+                    
+                    else if  value1 == 2
+                        
                     {
+                        gameStatusLabel.text = "Player \(value1) wins"
                         player2Score++
+                        player2ScoreLabel.text = "Player 2 Score = \(player2Score)"
+                        
+                        
                     }
                 }
-                else
-                {
-                    print("No winner: all zeros")
-                }
+                
             }
             else
             {
-                stalemateScore++
-                
+                if value1 != 0 && value2 != 0 && value3 != 0
+                {
+                    stalemateCount++
+                }
             }
         }
-    }
-    func scoreboard()
-    {
+        
+        if stalemateCount >= 7
+        {
+            stalemateScore++
+            stalemateScoreLabel.text = "Stalemate = \(stalemateScore)"
+            gameStatusLabel.text = "Stalemate"
+        }
         
     }
     
     
 }
 
-
-    
-    
-    
-
-
 class TTTButton: UIButton
 {
     var row = 0
     var col = 0
     
+    
     var player = 0 {
         didSet {
             switch player {
-            case 1: backgroundColor = getRandomColor()//UIColor.magentaColor()
-            case 2: backgroundColor = getRandomColor() //UIColor.yellowColor()
-            default: backgroundColor = getRandomColor()//UIColor.cyanColor()
+            case 1: backgroundColor = UIColor.magentaColor()
+            case 2: backgroundColor = UIColor.yellowColor()
+            default: backgroundColor = UIColor.cyanColor()
             }
         }
     }
     
-    func getRandomColor() -> UIColor{
+    func getRandomColor() -> UIColor
+    {
         
         let randomRed:CGFloat = CGFloat(drand48())
         
@@ -345,8 +389,8 @@ class TTTButton: UIButton
         let randomBlue:CGFloat = CGFloat(drand48())
         
         return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-        
-    }
+   }
+    
+    
+
 }
-
-
