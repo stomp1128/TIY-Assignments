@@ -8,12 +8,25 @@
 
 import UIKit
 
-class GithubFriendsTableViewController: UITableViewController
+protocol APIControllerProtocol
 {
+    func didReceiveAPIResults(results: NSArray)
+}
 
+class GithubFriendsTableViewController: UITableViewController, APIControllerProtocol
+{
+   // let textField = UITextField(frame: CGRect(x: 0, y: 160, width: 200, height: 50))
+    
+    var api: APIController!
+    var friends = [Friend]()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        
+        api = APIController(delegate: self)
+        api.searchGitHubFor("")
         // Do any additional setup after loading the view, typically from a nib.
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "FriendCell")
     }
@@ -39,6 +52,18 @@ class GithubFriendsTableViewController: UITableViewController
         
         return cell
     }
+    
+    // MARK: - API Controller Protocol
+    
+    func didReceiveAPIResults(results: NSArray)
+    {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.friends = Friend.friendsWithJson(results)
+            self.tableView.reloadData()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+    }
+
 
 
 }

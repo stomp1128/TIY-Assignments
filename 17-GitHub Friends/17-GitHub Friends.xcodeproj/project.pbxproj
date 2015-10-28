@@ -12,6 +12,8 @@
 		FE7B5AF71BE00855000ECB43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE7B5AF61BE00855000ECB43 /* Assets.xcassets */; };
 		FE7B5AFA1BE00855000ECB43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE7B5AF81BE00855000ECB43 /* LaunchScreen.storyboard */; };
 		FE7B5B021BE00C9E000ECB43 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5B011BE00C9E000ECB43 /* APIController.swift */; };
+		FE7B5B041BE01AF8000ECB43 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5B031BE01AF8000ECB43 /* Friend.swift */; };
+		FE7B5B061BE0F64E000ECB43 /* NewFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B5B051BE0F64D000ECB43 /* NewFriendViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FE7B5AF91BE00855000ECB43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE7B5AFB1BE00855000ECB43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE7B5B011BE00C9E000ECB43 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		FE7B5B031BE01AF8000ECB43 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		FE7B5B051BE0F64D000ECB43 /* NewFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFriendViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				FE7B5AEF1BE00855000ECB43 /* AppDelegate.swift */,
 				FE7B5AF11BE00855000ECB43 /* GithubFriendsTableViewController.swift */,
+				FE7B5B051BE0F64D000ECB43 /* NewFriendViewController.swift */,
+				FE7B5B031BE01AF8000ECB43 /* Friend.swift */,
 				FE7B5B011BE00C9E000ECB43 /* APIController.swift */,
 				FE7B5AF61BE00855000ECB43 /* Assets.xcassets */,
 				FE7B5AF81BE00855000ECB43 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 				FE7B5AF21BE00855000ECB43 /* GithubFriendsTableViewController.swift in Sources */,
 				FE7B5AF01BE00855000ECB43 /* AppDelegate.swift in Sources */,
 				FE7B5B021BE00C9E000ECB43 /* APIController.swift in Sources */,
+				FE7B5B061BE0F64E000ECB43 /* NewFriendViewController.swift in Sources */,
+				FE7B5B041BE01AF8000ECB43 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +285,7 @@
 				FE7B5B001BE00855000ECB43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
