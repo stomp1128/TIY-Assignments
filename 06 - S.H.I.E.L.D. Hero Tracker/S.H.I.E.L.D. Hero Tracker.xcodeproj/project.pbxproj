@@ -10,11 +10,11 @@
 		FE1657081BCC2AAD00A71ACD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1657071BCC2AAD00A71ACD /* AppDelegate.swift */; };
 		FE16570F1BCC2AAD00A71ACD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16570E1BCC2AAD00A71ACD /* Assets.xcassets */; };
 		FE1657121BCC2AAD00A71ACD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1657101BCC2AAD00A71ACD /* LaunchScreen.storyboard */; };
-		FE16571A1BCC2FF800A71ACD /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1657191BCC2FF800A71ACD /* HeroTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FE1657201BCC356100A71ACD /* heroes.json.webloc in Resources */ = {isa = PBXBuildFile; fileRef = FE16571F1BCC356100A71ACD /* heroes.json.webloc */; settings = {ASSET_TAGS = (); }; };
-		FE19BD9F1BCC531A00EA9ABC /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19BD9E1BCC531A00EA9ABC /* HeroDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FE19BDA11BCC589B00EA9ABC /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19BDA01BCC589B00EA9ABC /* Hero.swift */; settings = {ASSET_TAGS = (); }; };
-		FE19BDC11BCD587000EA9ABC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19BDC01BCD587000EA9ABC /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		FE16571A1BCC2FF800A71ACD /* HeroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1657191BCC2FF800A71ACD /* HeroTableViewController.swift */; };
+		FE19BD9F1BCC531A00EA9ABC /* HeroDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19BD9E1BCC531A00EA9ABC /* HeroDetailViewController.swift */; };
+		FE19BDA11BCC589B00EA9ABC /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19BDA01BCC589B00EA9ABC /* Hero.swift */; };
+		FE19BDC11BCD587000EA9ABC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE19BDC01BCD587000EA9ABC /* Main.storyboard */; };
+		FE7B5B741BE2D3DA000ECB43 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = FE7B5B731BE2D3DA000ECB43 /* heroes.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +24,10 @@
 		FE1657111BCC2AAD00A71ACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE1657131BCC2AAD00A71ACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1657191BCC2FF800A71ACD /* HeroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeroTableViewController.swift; path = ../HeroTableViewController.swift; sourceTree = "<group>"; };
-		FE16571F1BCC356100A71ACD /* heroes.json.webloc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = heroes.json.webloc; sourceTree = "<group>"; };
 		FE19BD9E1BCC531A00EA9ABC /* HeroDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HeroDetailViewController.swift; path = ../HeroDetailViewController.swift; sourceTree = "<group>"; };
 		FE19BDA01BCC589B00EA9ABC /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		FE19BDC01BCD587000EA9ABC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		FE7B5B731BE2D3DA000ECB43 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +67,7 @@
 				FE19BDC01BCD587000EA9ABC /* Main.storyboard */,
 				FE16570E1BCC2AAD00A71ACD /* Assets.xcassets */,
 				FE1657101BCC2AAD00A71ACD /* LaunchScreen.storyboard */,
-				FE16571F1BCC356100A71ACD /* heroes.json.webloc */,
+				FE7B5B731BE2D3DA000ECB43 /* heroes.json */,
 				FE1657131BCC2AAD00A71ACD /* Info.plist */,
 			);
 			path = "S.H.I.E.L.D. Hero Tracker";
@@ -131,8 +131,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE1657121BCC2AAD00A71ACD /* LaunchScreen.storyboard in Resources */,
+				FE7B5B741BE2D3DA000ECB43 /* heroes.json in Resources */,
 				FE16570F1BCC2AAD00A71ACD /* Assets.xcassets in Resources */,
-				FE1657201BCC356100A71ACD /* heroes.json.webloc in Resources */,
 				FE19BDC11BCD587000EA9ABC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
