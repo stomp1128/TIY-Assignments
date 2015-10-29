@@ -1,5 +1,5 @@
 //
-//  WeatherViewController.swift
+//  WeatherDetailViewController.swift
 //  Forecaster
 //
 //  Created by Chris Stomp on 10/29/15.
@@ -8,10 +8,12 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+class WeatherDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Current City"
 
         // Do any additional setup after loading the view.
     }

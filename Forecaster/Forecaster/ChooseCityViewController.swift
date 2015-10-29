@@ -1,5 +1,5 @@
 //
-//  CityViewController.swift
+//  ChooseCityViewController.swift
 //  Forecaster
 //
 //  Created by Chris Stomp on 10/29/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CityViewController: UIViewController {
+class ChooseCityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
