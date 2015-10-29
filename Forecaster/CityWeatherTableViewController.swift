@@ -1,5 +1,5 @@
 //
-//  WeatherTableViewController.swift
+//  CityWeatherTableViewController.swift
 //  Forecaster
 //
 //  Created by Chris Stomp on 10/29/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherTableViewController: UITableViewController
+class CityWeatherTableViewController: UITableViewController
 {
     var cities = Array<City>()
 
@@ -39,11 +39,12 @@ class WeatherTableViewController: UITableViewController
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 1
+        
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CityWeatherTableViewCell", forIndexPath: indexPath) as! CityWeatherTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CityWeatherCell", forIndexPath: indexPath) as! CityWeatherCell
         
       
         cell.city.text = "Orlando"

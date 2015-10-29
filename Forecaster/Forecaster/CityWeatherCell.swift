@@ -1,5 +1,5 @@
 //
-//  CityWeatherTableViewCell.swift
+//  CityWeatherCell.swift
 //  Forecaster
 //
 //  Created by Chris Stomp on 10/29/15.
@@ -8,15 +8,13 @@
 
 import UIKit
 
-class CityWeatherTableViewCell: UITableViewCell {
+class CityWeatherCell: UITableViewCell {
     
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var weatherCondition: UILabel!
     @IBOutlet weak var temperature: UILabel!
     
     
-    
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
