@@ -10,7 +10,7 @@ import UIKit
 
 class PopoverTableViewController: UITableViewController, UITextFieldDelegate
 {
-    
+    var textFieldArray = Array<String>()
     var delegate: PopoverTableViewControllerDelegate?
     
     @IBOutlet weak var textFieldOne: UITextField!
@@ -48,6 +48,10 @@ class PopoverTableViewController: UITableViewController, UITextFieldDelegate
                 {
                     textFieldTwo.resignFirstResponder()
                     self.dismissViewControllerAnimated(true, completion: {})
+                    
+                    textFieldArray.append(textFieldOne.text!)
+                    textFieldArray.append(textFieldTwo.text!)
+                    delegate?.citiesWereChosen(textFieldArray)
                 }
                 else
                 {

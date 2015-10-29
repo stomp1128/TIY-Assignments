@@ -16,14 +16,19 @@ protocol PopoverTableViewControllerDelegate
 
 class MapViewController: UIViewController, UIPopoverPresentationControllerDelegate, PopoverTableViewControllerDelegate
 {
-    
+    var annotations = [MKPointAnnotation]()
+    var placemarks = [CLPlacemark]()
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var distance: UILabel!
+    
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+    }
         
-        let geocoder = CLGeocoder()
+       /* let geocoder = CLGeocoder()
         geocoder.geocodeAddressString("Lakeland, FL", completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
             if let placemark = placemarks?[0]
             {
@@ -52,13 +57,9 @@ class MapViewController: UIViewController, UIPopoverPresentationControllerDelega
         mapView.camera.altitude *= 2
         
         //        let viewRegion = MKCoordinateRegionMakeWithDistance(tiyOrlando, 2000, 2000)
-        //        mapView.setRegion(viewRegion, animated: true)
+        //        mapView.setRegion(viewRegion, animated: true) */
         
-        let orlandoLocation = CLLocation(coordinate: tiyOrlando, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: NSDate())
-        let tampaLocation = CLLocation(coordinate: tiyTampa, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: NSDate())
-        let lineOfSightDistance = orlandoLocation.distanceFromLocation(tampaLocation)
-        print("distance between \(tiyOrlandoAnnotation.subtitle!) and \(tiyTampaAnnotation.subtitle!): " + String(format: "%.2f", lineOfSightDistance * 0.00062137) + " miles")
-    }
+    
     
     override func didReceiveMemoryWarning()
     {
@@ -91,9 +92,41 @@ class MapViewController: UIViewController, UIPopoverPresentationControllerDelega
     
     func citiesWereChosen(cities: [String])
     {
+        navigationController?.dismissViewControllerAnimated(true, completion: nil) //step 37 //closes the popover
         
+        for city in cities
+        {
+            let geocoder = CLGeocoder()
+            geocoder.geocodeAddressString(city, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+                if let placemark = placemarks?[0]
+                {
+                    self.placemarks.append(placemark)
+                    
+                    let annotation = MKPointAnnotation()
+                    annotation.coordinate = (placemark.location?.coordinate)!
+                    annotation.title = city
+                    self.mapView.addAnnotation(annotation)
+                    self.annotations.append(annotation)
+                    if self.annotations.count == 2
+                    {
+                        self.mapView.addAnnotations(self.annotations)
+                        self.mapView.showAnnotations(self.annotations, animated: true)
+                        self.calculateDistance()
+                    }
+                }
+            })
+
+        }
     }
 
-    
+    func calculateDistance ()
+    {
+        let location1 = CLLocation(coordinate: (placemarks[0].location?.coordinate)!, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: NSDate())
+        let location2 = CLLocation(coordinate: (placemarks[1].location?.coordinate)!, altitude: 0, horizontalAccuracy: 0, verticalAccuracy: 0, timestamp: NSDate())
+        let lineOfSightDistance = location1.distanceFromLocation(location2)
+        
+        distance.text = (String(format: "%.2f", lineOfSightDistance * 0.00062137) + " miles")
+ 
+    }
     
 }

@@ -21,11 +21,20 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <animations/>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DpA-uf-WH6">
+                                <rect key="frame" x="267" y="532" width="67" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ghR-oz-Vvl" secondAttribute="bottom" id="139-yD-Au7"/>
+                            <constraint firstItem="DpA-uf-WH6" firstAttribute="top" secondItem="ghR-oz-Vvl" secondAttribute="bottom" constant="-68" id="3Ov-sd-YZE"/>
+                            <constraint firstItem="DpA-uf-WH6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4uH-Kz-XRs"/>
                             <constraint firstAttribute="trailing" secondItem="ghR-oz-Vvl" secondAttribute="trailing" id="PTn-Ne-uq6"/>
                             <constraint firstItem="ghR-oz-Vvl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l4I-F7-0Nd"/>
                             <constraint firstItem="ghR-oz-Vvl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rAR-Ut-WwN"/>
@@ -41,6 +50,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="Distance" destination="DpA-uf-WH6" id="rap-66-DlH"/>
                         <outlet property="mapView" destination="ghR-oz-Vvl" id="WVo-C9-v1Y"/>
                     </connections>
                 </viewController>
@@ -66,7 +76,20 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XYt-oq-7tO" id="sFZ-lY-XHM">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Two Locations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmC-0e-5vq">
+                                                    <rect key="frame" x="227" y="11" width="147" height="21"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="mmC-0e-5vq" firstAttribute="centerY" secondItem="sFZ-lY-XHM" secondAttribute="centerY" id="D5u-lg-1QP"/>
+                                                <constraint firstItem="mmC-0e-5vq" firstAttribute="centerX" secondItem="sFZ-lY-XHM" secondAttribute="centerX" id="Z8k-Iw-g9c"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                     </tableViewCell>
