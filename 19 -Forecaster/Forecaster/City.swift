@@ -11,4 +11,9 @@ import Foundation
 class City
 {
     
+    static func citiesWithJson(results: NSArray) -> [City]
+    {
+      return Array<City>()
+    }
+    
 }

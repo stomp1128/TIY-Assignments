@@ -117,6 +117,9 @@
                                 <rect key="frame" x="270" y="110" width="61" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Find City"/>
+                                <connections>
+                                    <action selector="findCity:" destination="L3K-Iq-uNo" eventType="touchUpInside" id="AsP-hx-tsJ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Sml-J4-fFL">
                                 <rect key="frame" x="200" y="55" width="200" height="30"/>
@@ -127,11 +130,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="L3K-Iq-uNo" id="96h-Mq-nTX"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-e8-EnK">
                                 <rect key="frame" x="276" y="153" width="48" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancel:" destination="L3K-Iq-uNo" eventType="touchUpInside" id="lNE-5d-GXy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -148,6 +157,9 @@
                     <navigationItem key="navigationItem" id="4kA-ox-4sJ">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ern-Dc-Val"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="zipTextField" destination="Sml-J4-fFL" id="rar-D5-IDI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUW-Uf-RQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

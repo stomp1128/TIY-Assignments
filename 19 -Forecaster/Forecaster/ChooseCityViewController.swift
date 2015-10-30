@@ -8,12 +8,22 @@
 
 import UIKit
 
-class ChooseCityViewController: UIViewController {
+class ChooseCityViewController: UIViewController, UITextFieldDelegate
+    
+{
+    
+    @IBOutlet weak var zipTextField: UITextField!
+    
+    var delegate: ChooseCityViewControllerDelegate?
+    //var  api: APIController!
+    
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+    zipTextField.becomeFirstResponder()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +31,46 @@ class ChooseCityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func validateZipCode(zipCode: String) -> Bool
+    {
+        let characterSet = NSCharacterSet(charactersInString: "0123456789")
+        if zipCode.characters.count == 5 && zipCode.rangeOfCharacterFromSet(characterSet)?.count == 0
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+        
+    }
 
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool
+    {
+        if zipTextField.text != ""
+        {
+            validateZipCode
+         //   api.searchForCity(zipTextField.text!)
+            
+        }
+        return true
+    }
+    
+    // MARK: - Action Handlers
+    
+    @IBAction func findCity(sender: UIButton)
+    {
+        
+    }
+    
+    @IBAction func cancel(sender: UIButton)
+    {
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
