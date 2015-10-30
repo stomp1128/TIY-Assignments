@@ -11,6 +11,7 @@ import Foundation
 class APIController
 {
     var delegate: APIControllerProtocol
+    var task: NSURLSessionDataTask!
     
     init(delegate: APIControllerProtocol)
     {
@@ -21,15 +22,14 @@ class APIController
     {
         
         
-        let escapedSearchTerm = searchTerm.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet()) //taking the search term converting them to be used in the URL
+       // let githubSearchTerm = searchTerm.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet()) //taking the search term converting them to be used in the URL
         // %20 is an example as a replacement for a space in the URL
         
-       // {
-            let urlPath = "https://api.github.com/users/search?term=\(escapedSearchTerm)jcgohlke" //anything after search? begins the request
-            let url = NSURL(string: urlPath) //step 10 creat NSURL object
-            let session = NSURLSession.sharedSession() //step 10
-            let task = session.dataTaskWithURL(url! /*object from above */, completionHandler: {data, response, error -> Void in
-                print("Task completed") //useful for debugging
+        let url = NSURL(string: "https://api.github.com/users/\(searchTerm)")
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
+           
+                print("Task completed") //useful for debugging 
                 if error != nil
                 {
                     print(error!.localizedDescription)

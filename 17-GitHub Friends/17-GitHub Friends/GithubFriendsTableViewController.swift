@@ -58,7 +58,7 @@ class GithubFriendsTableViewController: UITableViewController, APIControllerProt
     func didReceiveAPIResults(results: NSArray)
     {
         dispatch_async(dispatch_get_main_queue(), {
-            self.friends = Friend.friendsWithJson(results)
+      //      self.friends = Friend.friendsWithJson(results)
             self.tableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
