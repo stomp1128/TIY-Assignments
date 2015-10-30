@@ -114,12 +114,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an3-tv-7A3">
-                                <rect key="frame" x="270" y="154" width="61" height="30"/>
+                                <rect key="frame" x="270" y="110" width="61" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Find City"/>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Sml-J4-fFL">
-                                <rect key="frame" x="200" y="99" width="200" height="30"/>
+                                <rect key="frame" x="200" y="55" width="200" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="40N-4a-QYH"/>
@@ -128,14 +128,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tb7-e8-EnK">
+                                <rect key="frame" x="276" y="153" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Tb7-e8-EnK" firstAttribute="top" secondItem="an3-tv-7A3" secondAttribute="bottom" constant="13" id="P6R-Qz-7m3"/>
                             <constraint firstItem="an3-tv-7A3" firstAttribute="centerX" secondItem="E5j-Nf-vAp" secondAttribute="centerX" id="TSE-KC-kQB"/>
                             <constraint firstItem="Sml-J4-fFL" firstAttribute="top" secondItem="NeA-da-QDF" secondAttribute="bottom" constant="35" id="Z19-8F-0eB"/>
                             <constraint firstItem="Sml-J4-fFL" firstAttribute="centerX" secondItem="E5j-Nf-vAp" secondAttribute="centerX" id="iGd-Hc-a8B"/>
                             <constraint firstItem="an3-tv-7A3" firstAttribute="top" secondItem="Sml-J4-fFL" secondAttribute="bottom" constant="25" id="ilw-hg-91g"/>
+                            <constraint firstItem="Tb7-e8-EnK" firstAttribute="centerX" secondItem="E5j-Nf-vAp" secondAttribute="centerX" id="tAq-UZ-ReJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4kA-ox-4sJ">
