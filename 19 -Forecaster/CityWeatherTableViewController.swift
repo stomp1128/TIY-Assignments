@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol ChooseCityViewControllerDelegate
+{
+    func didReceiveZip(zip: String)
+}
+
 protocol APIControllerProtocol //step 13, add below in class list as well
 {
     func didReceiveAPIResults(results: NSArray)
 }
 
-class CityWeatherTableViewController: UITableViewController, APIControllerProtocol
+class CityWeatherTableViewController: UITableViewController, APIControllerProtocol, ChooseCityViewControllerDelegate
 {
     var api: APIController!
     var cities = Array<City>()
@@ -56,13 +61,33 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
         let cell = tableView.dequeueReusableCellWithIdentifier("CityWeatherCell", forIndexPath: indexPath) as! CityWeatherCell
 
         
-      
-        cell.city.text = "Orlando"
-        cell.weatherCondition.text = "Sunny"
-        cell.temperature.text = "90°F"
+        let city = cities[indexPath.row]
         
+        cell.cityLabel?.text = city.cityName
+        cell.weatherCondition.text = city.lat
+        cell.temperature.text = city.long
 
+        
         return cell
+    }
+    
+    func didReceiveZip(zip: String)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        api = APIController(delegate: self)
+        api.searchForCity(zip)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ZipSegue"
+        {
+            let zipVC = segue.destinationViewController as! ChooseCityViewController
+            zipVC.delegate = self
+            
+            
+        }
     }
     
     // MARK: - API Controller Protocol
@@ -70,7 +95,12 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
     func didReceiveAPIResults(results: NSArray)
     {
         dispatch_async(dispatch_get_main_queue(), {
-            self.cities = City.citiesWithJson(results)
+//            self.cities.append(City.citiesWithJson(results))
+            
+            let city = City.citiesWithJson(results)
+            self.cities.append(city)
+            
+            print(results)
             self.tableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })

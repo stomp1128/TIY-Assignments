@@ -22,7 +22,7 @@ class APIController
     func searchForCity(zipCode: String)
     {
     
-        let urlPath = "http://maps.googleapis.com/maps/api/geocode/json?address=santa+cruz&components=postal_code:\(zipCode)&sensor=false"
+        let urlPath = "https://maps.googleapis.com/maps/api/geocode/json?address=santa+cruz&components=postal_code:\(zipCode)&sensor=false"
         let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
@@ -38,6 +38,7 @@ class APIController
                 if let results : NSArray = dictionary["results"] /*get value of results key */ as? NSArray //step 12 if we get dictionary use this to view results key
                 {
                     self.delegate.didReceiveAPIResults(results)
+                    print(results)
                 }
             }
         }

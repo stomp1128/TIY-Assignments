@@ -66,20 +66,28 @@
 		FE7B5B521BE26A44000ECB43 /* Forecaster */ = {
 			isa = PBXGroup;
 			children = (
-				FE7B5B531BE26A44000ECB43 /* AppDelegate.swift */,
 				FE7B5B651BE26AEE000ECB43 /* CityWeatherTableViewController.swift */,
+				FE7B5B691BE2723D000ECB43 /* ChooseCityViewController.swift */,
 				FE7B5B711BE274D6000ECB43 /* CityWeatherCell.swift */,
 				FE7B5B671BE27210000ECB43 /* WeatherDetailViewController.swift */,
-				FE7B5B691BE2723D000ECB43 /* ChooseCityViewController.swift */,
 				FE7B5B571BE26A44000ECB43 /* Main.storyboard */,
 				FE7B5B6B1BE273A8000ECB43 /* City.swift */,
 				FE7B5B6D1BE273C2000ECB43 /* Weather.swift */,
 				FE7B5B6F1BE27465000ECB43 /* APIController.swift */,
+				FE7B5B751BE69DF0000ECB43 /* garbage */,
+			);
+			path = Forecaster;
+			sourceTree = "<group>";
+		};
+		FE7B5B751BE69DF0000ECB43 /* garbage */ = {
+			isa = PBXGroup;
+			children = (
 				FE7B5B5A1BE26A44000ECB43 /* Assets.xcassets */,
 				FE7B5B5C1BE26A44000ECB43 /* LaunchScreen.storyboard */,
 				FE7B5B5F1BE26A44000ECB43 /* Info.plist */,
+				FE7B5B531BE26A44000ECB43 /* AppDelegate.swift */,
 			);
-			path = Forecaster;
+			name = garbage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

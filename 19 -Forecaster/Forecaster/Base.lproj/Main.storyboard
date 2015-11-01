@@ -77,7 +77,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="city" destination="sMk-fk-OUF" id="6Ui-cW-cCG"/>
+                                    <outlet property="cityLabel" destination="sMk-fk-OUF" id="Itl-sa-eIt"/>
                                     <outlet property="temperature" destination="QnD-4g-Krw" id="p5b-RG-og1"/>
                                     <outlet property="weatherCondition" destination="4EL-Fp-Bfl" id="jm2-ei-abU"/>
                                     <segue destination="VNd-d3-34E" kind="show" id="We6-ac-7ds"/>
@@ -92,7 +92,7 @@
                     <navigationItem key="navigationItem" id="i1U-lI-Mxs">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6cj-BL-kb3">
                             <connections>
-                                <segue destination="L3K-Iq-uNo" kind="presentation" id="p4O-G2-HeV"/>
+                                <segue destination="L3K-Iq-uNo" kind="presentation" identifier="ZipSegue" id="p4O-G2-HeV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -168,7 +168,7 @@
         <!--Weather Detail View Controller-->
         <scene sceneID="Q5E-76-dLC">
             <objects>
-                <viewController id="VNd-d3-34E" customClass="WeatherDetailViewController" customModule="Forecaster" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherDetail" id="VNd-d3-34E" customClass="WeatherDetailViewController" customModule="Forecaster" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aNf-8c-s1B"/>
                         <viewControllerLayoutGuide type="bottom" id="wQw-td-IJc"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
 {
@@ -15,14 +16,15 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     @IBOutlet weak var zipTextField: UITextField!
     
     var delegate: ChooseCityViewControllerDelegate?
-    //var  api: APIController!
+    
+//    var  api: APIController!
     
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-    zipTextField.becomeFirstResponder()
+        zipTextField.becomeFirstResponder()
         
     }
 
@@ -49,25 +51,47 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
     func textFieldShouldReturn(textField: UITextField) -> Bool
     {
+        var rc = false
+        
         if zipTextField.text != ""
         {
-            validateZipCode
-         //   api.searchForCity(zipTextField.text!)
+            if validateZipCode(zipTextField.text!) == true
+            {
+                rc = true
+                search(zipTextField.text!)
+            }
             
         }
-        return true
+        
+        else
+        {
+            zipTextField.text = ""
+            zipTextField.placeholder = "Enter a valid zip"
+        }
+        
+        return rc
     }
     
     // MARK: - Action Handlers
     
     @IBAction func findCity(sender: UIButton)
     {
-        
+        search(zipTextField.text!)
     }
     
     @IBAction func cancel(sender: UIButton)
     {
         
+    }
+    
+    func search(zip: String)
+    {
+        print(zip)
+        
+        
+        delegate?.didReceiveZip(zip)
+        self.dismissViewControllerAnimated(true, completion: nil)
+
     }
     
     

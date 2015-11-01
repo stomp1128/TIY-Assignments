@@ -10,7 +10,7 @@ import UIKit
 
 class CityWeatherCell: UITableViewCell {
     
-    @IBOutlet weak var city: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var weatherCondition: UILabel!
     @IBOutlet weak var temperature: UILabel!
     
