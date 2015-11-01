@@ -56,7 +56,7 @@ class City
             }
         }
         
-        print(cityName) ; print(latStr) ; print(lngStr)
+       // print(cityName) ; print(latStr) ; print(lngStr)
 
         city = City(cityName: cityName, lat: latStr, long: lngStr)
         return city

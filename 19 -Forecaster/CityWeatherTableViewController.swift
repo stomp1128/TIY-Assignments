@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 protocol ChooseCityViewControllerDelegate
 {
     func didReceiveZip(zip: String)
@@ -17,6 +18,7 @@ protocol APIControllerProtocol //step 13, add below in class list as well
 {
     func didReceiveAPIResults(results: NSArray)
 }
+
 
 class CityWeatherTableViewController: UITableViewController, APIControllerProtocol, ChooseCityViewControllerDelegate
 {
@@ -64,8 +66,8 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
         let city = cities[indexPath.row]
         
         cell.cityLabel?.text = city.cityName
-        cell.weatherCondition.text = city.lat
-        cell.temperature.text = city.long
+        cell.weatherCondition.text = "Sunny"
+        cell.temperature.text = "90°"
 
         
         return cell
@@ -85,10 +87,11 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
         {
             let zipVC = segue.destinationViewController as! ChooseCityViewController
             zipVC.delegate = self
-            
-            
         }
+        
     }
+    
+    
     
     // MARK: - API Controller Protocol
     
@@ -100,10 +103,18 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
             let city = City.citiesWithJson(results)
             self.cities.append(city)
             
-            print(results)
+           // print(results)
             self.tableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let city = cities[indexPath.row]
+        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("WeatherDetail") as! WeatherDetailViewController
+        detailVC.city = city
+        navigationController?.pushViewController(detailVC, animated: true)
     }
     
 }

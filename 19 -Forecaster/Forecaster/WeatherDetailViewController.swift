@@ -7,14 +7,25 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class WeatherDetailViewController: UIViewController {
-
+class WeatherDetailViewController: UIViewController
+{
+    @IBOutlet weak var detailMap: MKMapView!
+    @IBOutlet weak var currentTemp: UILabel!
+    @IBOutlet weak var icon: UIImageView!
+    @IBOutlet weak var condition: UILabel!
+    @IBOutlet weak var chanceOfRain: UILabel!
+    @IBOutlet weak var feelsLike: UILabel!
+    @IBOutlet weak var temp: UILabel!
+    
+    var city = City?()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Current City"
-
+        
         // Do any additional setup after loading the view.
     }
 

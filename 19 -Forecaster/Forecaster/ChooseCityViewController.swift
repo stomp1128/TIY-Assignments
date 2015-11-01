@@ -24,6 +24,7 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     {
         super.viewDidLoad()
         
+        
         zipTextField.becomeFirstResponder()
         
     }
@@ -76,12 +77,13 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func findCity(sender: UIButton)
     {
+       
         search(zipTextField.text!)
     }
     
     @IBAction func cancel(sender: UIButton)
     {
-        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func search(zip: String)
@@ -93,16 +95,5 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
         self.dismissViewControllerAnimated(true, completion: nil)
 
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
