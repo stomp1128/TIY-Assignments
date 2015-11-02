@@ -24,7 +24,7 @@ class WeatherDetailViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        dropAPin()
         
         // Do any additional setup after loading the view.
     }
@@ -34,15 +34,25 @@ class WeatherDetailViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func dropAPin()
+    {
+        let geocoder = CLGeocoder()
+//        let location =
+        geocoder.geocodeAddressString(city!.cityName, completionHandler: {(placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            if let placemark = placemarks?[0]
+            {
+                let annotation = MKPointAnnotation()
+                annotation.coordinate = (placemark.location?.coordinate)!
+                annotation.title = self.city!.cityName
+                self.detailMap.addAnnotation(annotation)
+                let annotations = [annotation]
+                
+                self.detailMap.showAnnotations(annotations, animated: true)
+               
+                
+            }
+        })
+            
     }
-    */
 
 }

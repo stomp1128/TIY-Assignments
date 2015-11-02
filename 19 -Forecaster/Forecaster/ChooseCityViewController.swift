@@ -37,16 +37,19 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
     func validateZipCode(zipCode: String) -> Bool
     {
+        var rc = false
         let characterSet = NSCharacterSet(charactersInString: "0123456789")
-        if zipCode.characters.count == 5 && zipCode.rangeOfCharacterFromSet(characterSet)?.count == 0
+        if zipCode.characters.count == 5/* && zipCode.rangeOfCharacterFromSet(characterSet)?.count == 0*/ && zipTextField.text != ""
         {
-            return true
+            rc = true
         }
         else
         {
-            return false
+            zipTextField.text = ""
+            zipTextField.placeholder = "Enter a valid zip"
         }
-        
+
+        return rc
     }
 
     
@@ -54,20 +57,10 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     {
         var rc = false
         
-        if zipTextField.text != ""
+        if validateZipCode(zipTextField.text!)
         {
-            if validateZipCode(zipTextField.text!) == true
-            {
-                rc = true
-                search(zipTextField.text!)
-            }
-            
-        }
-        
-        else
-        {
-            zipTextField.text = ""
-            zipTextField.placeholder = "Enter a valid zip"
+            rc = true
+            search(zipTextField.text!)
         }
         
         return rc
@@ -77,8 +70,10 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
     @IBAction func findCity(sender: UIButton)
     {
-       
-        search(zipTextField.text!)
+        if validateZipCode(zipTextField.text!)
+        {
+            search(zipTextField.text!)
+        }
     }
     
     @IBAction func cancel(sender: UIButton)
@@ -88,7 +83,7 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
     func search(zip: String)
     {
-        print(zip)
+       // print(zip)
         
         
         delegate?.didReceiveZip(zip)

@@ -13,12 +13,23 @@ class City
     let cityName: String
     let lat: String
     let long: String
+    var weather: Weather?
     
-    init(cityName: String, lat: String, long: String)
+    init(cityName: String, lat: String, long: String, weather: Weather?)
     {
-    self.cityName = cityName
-    self.lat = lat
-    self.long = long
+        self.cityName = cityName
+        self.lat = lat
+        self.long = long
+            
+        if weather != nil
+        {
+            self.weather = weather
+        }
+        else
+        {
+            self.weather = nil
+        }
+        
     }
     
     static func citiesWithJson(results: NSArray) -> City
@@ -58,7 +69,7 @@ class City
         
        // print(cityName) ; print(latStr) ; print(lngStr)
 
-        city = City(cityName: cityName, lat: latStr, long: lngStr)
+        city = City(cityName: cityName, lat: latStr, long: lngStr, weather: nil)
         return city
     }
     

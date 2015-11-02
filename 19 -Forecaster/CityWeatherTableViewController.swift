@@ -17,6 +17,7 @@ protocol ChooseCityViewControllerDelegate
 protocol APIControllerProtocol //step 13, add below in class list as well
 {
     func didReceiveAPIResults(results: NSArray)
+    func didReceiveDarkSkyAPIResults(results: NSDictionary, city: City)
 }
 
 
@@ -31,6 +32,8 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
         api = APIController(delegate: self)
         
         title = "Forecaster"
+        
+        didReceiveZip("32801")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -66,8 +69,21 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
         let city = cities[indexPath.row]
         
         cell.cityLabel?.text = city.cityName
-        cell.weatherCondition.text = "Sunny"
-        cell.temperature.text = "90°"
+        
+        if city.weather != nil
+        {
+            cell.weatherCondition.text = city.weather!.condition
+            
+            let fullTemp = String(city.weather!.temperature).componentsSeparatedByString(".")
+            var formattedTemp = Int(fullTemp[0])
+            let decimalPlace = fullTemp[1]
+            if Int(decimalPlace) > 50
+            {
+                formattedTemp! += 1
+            }
+            
+            cell.temperature.text = String(formattedTemp!)
+        }
 
         
         return cell
@@ -103,7 +119,31 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
             let city = City.citiesWithJson(results)
             self.cities.append(city)
             
+            let api = APIController(delegate: self)
+            api.searchForWeather(city)
+            
+            
            // print(results)
+            self.tableView.reloadData()
+//            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
+    }
+    
+    func didReceiveDarkSkyAPIResults(currently: NSDictionary, city: City)
+    {
+        dispatch_async(dispatch_get_main_queue(),
+            {
+                
+            let weather = Weather.WeatherWithJson(currently)
+            
+            for eachCity in self.cities
+            {
+                if city.cityName == eachCity.cityName
+                {
+                    eachCity.weather = weather
+                }
+            }
+            // print(results)
             self.tableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })

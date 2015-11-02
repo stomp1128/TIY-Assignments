@@ -26,7 +26,7 @@ class APIController
         let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-            print("Task completed")
+            //print("Task completed")
         if error != nil
         {
            print(error!.localizedDescription) //we can unwrap error because we know its not nil
@@ -38,7 +38,7 @@ class APIController
                 if let results : NSArray = dictionary["results"] /*get value of results key */ as? NSArray //step 12 if we get dictionary use this to view results key
                 {
                     self.delegate.didReceiveAPIResults(results)
-                    print(results)
+                   // print(results)
                 }
             }
         }
@@ -61,7 +61,7 @@ class APIController
         let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-            print("Task completed")
+           // print("Task completed")
             if error != nil
             {
                 print(error!.localizedDescription) //we can unwrap error because we know its not nil
@@ -70,10 +70,10 @@ class APIController
             {
                 if let dictionary = self.parseJSON(data!) //must use self because we are inside of a closure
                 {
-                    if let data : NSArray = dictionary["data"] /*get value of results key */ as? NSArray //step 12 if we get dictionary use this to view results key
+                    if let currently : NSDictionary = dictionary["currently"] /*get value of results key */ as? NSDictionary //step 12 if we get dictionary use this to view results key
                     {
-                        self.delegate.didReceiveAPIResults(data)
-                        print(data)
+                        self.delegate.didReceiveDarkSkyAPIResults(currently, city: city)
+                        //print(data)
                     }
                 }
             }
