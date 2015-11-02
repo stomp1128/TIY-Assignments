@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -234,6 +235,14 @@
                                 <color key="textColor" red="0.18039215689999999" green="0.56470588239999997" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="lzG-J2-51d">
+                                <rect key="frame" x="35" y="80" width="116" height="107"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="lzG-J2-51d" secondAttribute="height" multiplier="116:107" id="4K5-ez-lJq"/>
+                                    <constraint firstAttribute="width" constant="116" id="c99-iD-DHq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -242,6 +251,7 @@
                             <constraint firstItem="fdt-VW-xc2" firstAttribute="leading" secondItem="AX4-aX-Uig" secondAttribute="trailing" constant="228" id="1ad-iJ-KMJ"/>
                             <constraint firstItem="JtV-Bm-hqn" firstAttribute="top" secondItem="AX4-aX-Uig" secondAttribute="bottom" constant="98" id="3PT-AV-Yhx"/>
                             <constraint firstItem="VZq-Y6-qtq" firstAttribute="trailing" secondItem="lkl-ui-exE" secondAttribute="trailing" id="6yc-yX-FgE"/>
+                            <constraint firstItem="lzG-J2-51d" firstAttribute="top" secondItem="lkl-ui-exE" secondAttribute="top" id="8OW-8f-ZME"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fdt-VW-xc2" secondAttribute="trailing" constant="38" id="8aM-Dj-ngu"/>
                             <constraint firstItem="VZq-Y6-qtq" firstAttribute="top" secondItem="lkl-ui-exE" secondAttribute="bottom" constant="6" id="BW9-Jk-cEV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lkl-ui-exE" secondAttribute="trailing" constant="50" id="DDp-dW-OMs"/>
@@ -252,6 +262,7 @@
                             <constraint firstItem="fdt-VW-xc2" firstAttribute="top" secondItem="VZq-Y6-qtq" secondAttribute="bottom" constant="46" id="O0V-KU-sGD"/>
                             <constraint firstAttribute="trailing" secondItem="JtV-Bm-hqn" secondAttribute="trailing" id="Q5o-Sc-0HW"/>
                             <constraint firstItem="lkl-ui-exE" firstAttribute="top" secondItem="aNf-8c-s1B" secondAttribute="bottom" constant="60" id="QAd-sC-piG"/>
+                            <constraint firstItem="lzG-J2-51d" firstAttribute="leading" secondItem="3be-Ke-SRF" secondAttribute="leading" id="R9y-pa-uGi"/>
                             <constraint firstItem="fdt-VW-xc2" firstAttribute="top" secondItem="VZq-Y6-qtq" secondAttribute="bottom" constant="52" id="TRg-AH-BJQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lkl-ui-exE" secondAttribute="trailing" constant="50" id="aCi-EZ-IfC"/>
                             <constraint firstItem="AX4-aX-Uig" firstAttribute="leading" secondItem="tO5-tT-Qq7" secondAttribute="leadingMargin" constant="15" id="avt-6D-3eD"/>
@@ -272,6 +283,7 @@
                             <constraint firstItem="3be-Ke-SRF" firstAttribute="top" secondItem="aNf-8c-s1B" secondAttribute="bottom" constant="30" id="qjB-Td-EAp"/>
                             <constraint firstItem="fdt-VW-xc2" firstAttribute="leading" secondItem="AX4-aX-Uig" secondAttribute="trailing" constant="228" id="qpI-p6-OZh"/>
                             <constraint firstItem="JtV-Bm-hqn" firstAttribute="leading" secondItem="tO5-tT-Qq7" secondAttribute="leading" id="rwJ-g2-YPd"/>
+                            <constraint firstItem="AX4-aX-Uig" firstAttribute="top" secondItem="lzG-J2-51d" secondAttribute="bottom" constant="20" id="tj7-ek-X3d"/>
                             <constraint firstItem="fdt-VW-xc2" firstAttribute="top" secondItem="VZq-Y6-qtq" secondAttribute="bottom" constant="52" id="trA-1x-8Bn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fdt-VW-xc2" secondAttribute="trailing" constant="50" id="yNV-US-ud5"/>
                             <constraint firstItem="fdt-VW-xc2" firstAttribute="top" secondItem="VZq-Y6-qtq" secondAttribute="bottom" constant="52" id="zjs-IS-8HV"/>
@@ -279,6 +291,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="avt-6D-3eD"/>
+                                <exclude reference="tj7-ek-X3d"/>
                                 <exclude reference="3PT-AV-Yhx"/>
                                 <exclude reference="cQZ-SB-OfG"/>
                                 <exclude reference="hJt-j1-CLo"/>
@@ -337,4 +350,7 @@
             <point key="canvasLocation" x="268" y="338"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Sun" width="351" height="341"/>
+    </resources>
 </document>
