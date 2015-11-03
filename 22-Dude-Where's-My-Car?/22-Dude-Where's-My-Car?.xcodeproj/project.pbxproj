@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		FEBC7DCF1BE927C40013DB53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC7DCE1BE927C40013DB53 /* AppDelegate.swift */; };
-		FEBC7DD11BE927C40013DB53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC7DD01BE927C40013DB53 /* ViewController.swift */; };
+		FEBC7DD11BE927C40013DB53 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC7DD01BE927C40013DB53 /* MapViewController.swift */; };
 		FEBC7DD41BE927C40013DB53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBC7DD21BE927C40013DB53 /* Main.storyboard */; };
 		FEBC7DD61BE927C40013DB53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEBC7DD51BE927C40013DB53 /* Assets.xcassets */; };
 		FEBC7DD91BE927C40013DB53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEBC7DD71BE927C40013DB53 /* LaunchScreen.storyboard */; };
+		FEBC7DE51BE962FA0013DB53 /* LocationPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC7DE41BE962FA0013DB53 /* LocationPopoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FEBC7DCB1BE927C40013DB53 /* 22-Dude-Where's-My-Car?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "22-Dude-Where's-My-Car?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEBC7DCE1BE927C40013DB53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEBC7DD01BE927C40013DB53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEBC7DD01BE927C40013DB53 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		FEBC7DD31BE927C40013DB53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEBC7DD51BE927C40013DB53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEBC7DD81BE927C40013DB53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEBC7DDA1BE927C40013DB53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEBC7DE41BE962FA0013DB53 /* LocationPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationPopoverViewController.swift; path = ../LocationPopoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +56,10 @@
 		FEBC7DCD1BE927C40013DB53 /* 22-Dude-Where's-My-Car? */ = {
 			isa = PBXGroup;
 			children = (
-				FEBC7DCE1BE927C40013DB53 /* AppDelegate.swift */,
-				FEBC7DD01BE927C40013DB53 /* ViewController.swift */,
+				FEBC7DD01BE927C40013DB53 /* MapViewController.swift */,
+				FEBC7DE41BE962FA0013DB53 /* LocationPopoverViewController.swift */,
 				FEBC7DD21BE927C40013DB53 /* Main.storyboard */,
+				FEBC7DCE1BE927C40013DB53 /* AppDelegate.swift */,
 				FEBC7DD51BE927C40013DB53 /* Assets.xcassets */,
 				FEBC7DD71BE927C40013DB53 /* LaunchScreen.storyboard */,
 				FEBC7DDA1BE927C40013DB53 /* Info.plist */,
@@ -136,7 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEBC7DD11BE927C40013DB53 /* ViewController.swift in Sources */,
+				FEBC7DE51BE962FA0013DB53 /* LocationPopoverViewController.swift in Sources */,
+				FEBC7DD11BE927C40013DB53 /* MapViewController.swift in Sources */,
 				FEBC7DCF1BE927C40013DB53 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +289,7 @@
 				FEBC7DDF1BE927C40013DB53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
