@@ -16,11 +16,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Xo3-0X-yal">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <animations/>
+                            </mapView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Xo3-0X-yal" secondAttribute="trailing" id="GYJ-5X-Hgp"/>
+                            <constraint firstItem="Xo3-0X-yal" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lcv-hn-kSU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xo3-0X-yal" secondAttribute="bottom" id="S5R-Ar-A3n"/>
+                            <constraint firstItem="Xo3-0X-yal" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Uzj-cC-QWo"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bay-Fd-wRG">
-                        <barButtonItem key="rightBarButtonItem" title="Add Location" id="iqw-HG-eKB">
+                        <barButtonItem key="rightBarButtonItem" title="Add Location" systemItem="add" id="iqw-HG-eKB">
                             <connections>
                                 <segue destination="q07-NT-sCi" kind="popoverPresentation" identifier="showPopoverSegue" popoverAnchorBarButtonItem="iqw-HG-eKB" id="Xpe-MO-uDk">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -28,6 +40,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Xo3-0X-yal" id="BxA-ya-qtV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,23 +60,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnR-c9-uuX">
-                                <rect key="frame" x="200" y="34" width="200" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hn7-EV-m0d">
+                                <rect key="frame" x="219" y="262" width="163" height="33"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add Current Location"/>
+                                <connections>
+                                    <action selector="addLocationTapped:" destination="q07-NT-sCi" eventType="touchUpInside" id="LpZ-3v-dHq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHm-92-VYG">
+                                <rect key="frame" x="289" y="296" width="22" height="10"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Title Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vnR-c9-uuX">
+                                <rect key="frame" x="200" y="305" width="200" height="21"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="ylD-Wr-OIP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="aHm-92-VYG" firstAttribute="centerY" secondItem="1c4-rn-SpU" secondAttribute="centerY" id="0Fm-AT-KMb"/>
+                            <constraint firstItem="vnR-c9-uuX" firstAttribute="top" secondItem="Hn7-EV-m0d" secondAttribute="bottom" constant="8" id="3g5-tO-HbW"/>
+                            <constraint firstItem="vnR-c9-uuX" firstAttribute="top" secondItem="aHm-92-VYG" secondAttribute="bottom" id="8uK-QE-cHc"/>
+                            <constraint firstItem="aHm-92-VYG" firstAttribute="centerX" secondItem="1c4-rn-SpU" secondAttribute="centerX" id="Pm8-nS-dKJ"/>
+                            <constraint firstItem="aHm-92-VYG" firstAttribute="top" secondItem="Hn7-EV-m0d" secondAttribute="bottom" id="S3E-6a-MVm"/>
                             <constraint firstItem="vnR-c9-uuX" firstAttribute="top" secondItem="D5A-ZB-AqH" secondAttribute="bottom" constant="14" id="TYa-pm-qmE"/>
+                            <constraint firstItem="vnR-c9-uuX" firstAttribute="centerY" secondItem="1c4-rn-SpU" secondAttribute="centerY" id="UPJ-9b-hgg"/>
+                            <constraint firstItem="Hn7-EV-m0d" firstAttribute="centerX" secondItem="1c4-rn-SpU" secondAttribute="centerX" id="avW-n4-Bgu"/>
+                            <constraint firstItem="VJw-5z-gHf" firstAttribute="top" secondItem="vnR-c9-uuX" secondAttribute="bottom" constant="536" id="eLG-gz-yMf"/>
                             <constraint firstItem="vnR-c9-uuX" firstAttribute="centerX" secondItem="1c4-rn-SpU" secondAttribute="centerX" id="vvA-Q8-SBF"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3g5-tO-HbW"/>
+                                <exclude reference="TYa-pm-qmE"/>
+                                <exclude reference="UPJ-9b-hgg"/>
+                                <exclude reference="eLG-gz-yMf"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="addCurrentLocationButton" destination="Hn7-EV-m0d" id="9Kh-pU-EZF"/>
+                        <outlet property="locationTextField" destination="vnR-c9-uuX" id="fch-k2-vGp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="92z-p7-a5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,14 +10,21 @@ import UIKit
 import MapKit
 import CoreLocation
 
+let kLocationsKey = "locations"
+
 protocol LocationPopoverViewControllerDelegate //step 31
 {
-    func locationWasChosen(chosenLocation: String)
+    func locationWasChosen(location: Location)
 }
 
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate
+class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverPresentationControllerDelegate, LocationPopoverViewControllerDelegate
 {
+    
+    var locations = Array<Location>()
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,16 +43,46 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, UIPopoverP
             let destinationViewController = segue.destinationViewController as!LocationPopoverViewController
             
             destinationViewController.popoverPresentationController?.delegate = self
-            //destinationViewController.delegate = self //step 33
-            let contentHeight =  CGFloat(44.0)
-            destinationViewController.preferredContentSize = CGSizeMake(200.0, contentHeight)
+            destinationViewController.delegate = self //step 33
+            destinationViewController.preferredContentSize = CGSizeMake(200.0, 100.0)
+            
         }
     }
     
-    func locationWasChosen(chosenLocation: String)
+   func locationWasChosen(location: Location)
     {
-        
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
+        locations.append(location)
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
+    {
+        return .None
+    }
+    
+    //MARK: - Misc.
+    
+    func loadLocationData() //step 15
+    {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey(kLocationsKey) as? NSData
+        {
+            if let savedLocations = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? [Location]
+            {
+                locations = savedLocations
+                //reloadData()
+            }
+        }
     }
 
+    
+    
+    func saveLocationData() //step 13
+    {
+        let locationData = NSKeyedArchiver.archivedDataWithRootObject(locations)
+        NSUserDefaults.standardUserDefaults().setObject(locationData, forKey: kLocationsKey)
+    }
+
+    
+   
 }
 
