@@ -99,8 +99,7 @@ class HeroTableViewController: UITableViewController
             let aHero = heroes[indexPath.row]
             let vc = storyboard?.instantiateViewControllerWithIdentifier("HeroDetailViewController") as! HeroDetailViewController
             vc.hero = aHero
-            presentViewController(vc, animated: true, completion: nil)
-        
+            navigationController?.pushViewController(vc, animated: true)        
             }
     
 

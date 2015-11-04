@@ -13,6 +13,7 @@ class Hero
     var name: String
     var homeworld: String
     var powers: String
+    var image: String
     
     init(heroDictionary: NSDictionary)
         
@@ -20,6 +21,7 @@ class Hero
         name = heroDictionary["name"] as! String
         homeworld = heroDictionary["homeworld"] as! String
         powers = heroDictionary["powers"] as! String
+        image = heroDictionary["image"] as! String
     }
 
 }

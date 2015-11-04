@@ -14,15 +14,18 @@ class HeroDetailViewController: UIViewController
     @IBOutlet weak var homeworldLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var powersLabel: UILabel!
+    @IBOutlet weak var heroImage: UIImageView!
     
-    var hero = Hero?()
+
+    var hero: Hero?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = hero!.name
-        homeworldLabel.text = hero!.homeworld
+        nameLabel.text = "Name: \(hero!.name)"
+        homeworldLabel.text = "Homeworld: \(hero!.homeworld)"
         powersLabel.text = hero!.powers
+        heroImage.image = UIImage(named: hero!.image)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
