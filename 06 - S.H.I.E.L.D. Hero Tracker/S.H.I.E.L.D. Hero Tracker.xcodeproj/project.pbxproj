@@ -19,7 +19,6 @@
 		FE3EC4371BEA906C000DD54E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC4361BEA906C000DD54E /* RegisterViewController.swift */; };
 		FE3EC4441BEAA748000DD54E /* RocketRacoon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4431BEAA748000DD54E /* RocketRacoon.png */; };
 		FE3EC44A1BEAA76A000DD54E /* Gamora.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4491BEAA76A000DD54E /* Gamora.png */; };
-		FE3EC4521BEAB749000DD54E /* Groot.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4511BEAB749000DD54E /* Groot.png */; };
 		FE3EC4541BEAB7AF000DD54E /* Thor.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4531BEAB7AF000DD54E /* Thor.png */; };
 		FE3EC4561BEAB80E000DD54E /* IronMan.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4551BEAB80E000DD54E /* IronMan.png */; };
 		FE3EC4581BEAB8CB000DD54E /* StarLord.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4571BEAB8CB000DD54E /* StarLord.png */; };
@@ -27,6 +26,7 @@
 		FE3EC45C1BEAB9EB000DD54E /* DraxTheDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC45B1BEAB9EB000DD54E /* DraxTheDestroyer.png */; };
 		FE3EC4641BEABB41000DD54E /* Hulk.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4631BEABB41000DD54E /* Hulk.png */; };
 		FE3EC4681BEAC2FC000DD54E /* whiteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4671BEAC2FC000DD54E /* whiteStar.png */; };
+		FE3EC46A1BEAE176000DD54E /* Groot.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4691BEAE176000DD54E /* Groot.png */; };
 		FE7B5B741BE2D3DA000ECB43 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = FE7B5B731BE2D3DA000ECB43 /* heroes.json */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,6 @@
 		FE3EC4361BEA906C000DD54E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FE3EC4431BEAA748000DD54E /* RocketRacoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketRacoon.png; sourceTree = "<group>"; };
 		FE3EC4491BEAA76A000DD54E /* Gamora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gamora.png; sourceTree = "<group>"; };
-		FE3EC4511BEAB749000DD54E /* Groot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Groot.png; sourceTree = "<group>"; };
 		FE3EC4531BEAB7AF000DD54E /* Thor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Thor.png; sourceTree = "<group>"; };
 		FE3EC4551BEAB80E000DD54E /* IronMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IronMan.png; sourceTree = "<group>"; };
 		FE3EC4571BEAB8CB000DD54E /* StarLord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarLord.png; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		FE3EC45B1BEAB9EB000DD54E /* DraxTheDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DraxTheDestroyer.png; sourceTree = "<group>"; };
 		FE3EC4631BEABB41000DD54E /* Hulk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hulk.png; sourceTree = "<group>"; };
 		FE3EC4671BEAC2FC000DD54E /* whiteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteStar.png; sourceTree = "<group>"; };
+		FE3EC4691BEAE176000DD54E /* Groot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Groot.png; sourceTree = "<group>"; };
 		FE7B5B731BE2D3DA000ECB43 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +123,7 @@
 				FE3EC4311BEA7E84000DD54E /* S.H.I.E.L.D. Hero Tracker-Bridging-Header.h */,
 				FE3EC4531BEAB7AF000DD54E /* Thor.png */,
 				FE3EC4551BEAB80E000DD54E /* IronMan.png */,
-				FE3EC4511BEAB749000DD54E /* Groot.png */,
+				FE3EC4691BEAE176000DD54E /* Groot.png */,
 				FE3EC4431BEAA748000DD54E /* RocketRacoon.png */,
 				FE3EC45B1BEAB9EB000DD54E /* DraxTheDestroyer.png */,
 				FE3EC4571BEAB8CB000DD54E /* StarLord.png */,
@@ -170,6 +170,7 @@
 				TargetAttributes = {
 					FE1657031BCC2AAD00A71ACD = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = W89Q7DEDF7;
 					};
 				};
 			};
@@ -197,9 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE3EC4541BEAB7AF000DD54E /* Thor.png in Resources */,
-				FE3EC4521BEAB749000DD54E /* Groot.png in Resources */,
 				FE3EC4441BEAA748000DD54E /* RocketRacoon.png in Resources */,
 				FE3EC45A1BEAB93C000DD54E /* CaptainAmerica.png in Resources */,
+				FE3EC46A1BEAE176000DD54E /* Groot.png in Resources */,
 				FE3EC4561BEAB80E000DD54E /* IronMan.png in Resources */,
 				FE3EC4581BEAB8CB000DD54E /* StarLord.png in Resources */,
 				FE3EC44A1BEAA76A000DD54E /* Gamora.png in Resources */,
@@ -378,10 +379,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "S.H.I.E.L.D. Hero Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.S-H-I-E-L-D--Hero-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "S.H.I.E.L.D. Hero Tracker/S.H.I.E.L.D. Hero Tracker-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -393,10 +397,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "S.H.I.E.L.D. Hero Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.S-H-I-E-L-D--Hero-Tracker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "S.H.I.E.L.D. Hero Tracker/S.H.I.E.L.D. Hero Tracker-Bridging-Header.h";
 			};
 			name = Release;
