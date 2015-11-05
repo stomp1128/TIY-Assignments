@@ -79,6 +79,10 @@ class HeroTableViewController: UITableViewController
                 let aHero = Hero(heroDictionary: heroDictionary as! NSDictionary)
                 
                 heroes.append(aHero)
+                heroes.sortInPlace { $0.name < $1.name }
+                
+                
+                
             }
             
             
