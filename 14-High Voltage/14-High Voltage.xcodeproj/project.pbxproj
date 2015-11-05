@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE2202421BD9670D008FF382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202411BD9670D008FF382 /* AppDelegate.swift */; };
+		FE2202471BD9670D008FF382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2202451BD9670D008FF382 /* Main.storyboard */; };
+		FE2202491BD9670D008FF382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2202481BD9670D008FF382 /* Assets.xcassets */; };
+		FE22024C1BD9670D008FF382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE22024A1BD9670D008FF382 /* LaunchScreen.storyboard */; };
+		FE2202541BD96754008FF382 /* ElectricityCalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FE2202561BD96B13008FF382 /* ElectricityCalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FE2202581BD96B59008FF382 /* ElectricityTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FE22025A1BD96B86008FF382 /* ElectricityTypesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FE22025C1BDA6533008FF382 /* CalculatorEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE22023E1BD9670D008FF382 /* 14-High Voltage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "14-High Voltage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2202411BD9670D008FF382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE2202461BD9670D008FF382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE2202481BD9670D008FF382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE22024B1BD9670D008FF382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE22024D1BD9670D008FF382 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityCalculatorTableViewController.swift; path = ../ElectricityCalculatorTableViewController.swift; sourceTree = "<group>"; };
+		FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityCalculatorCell.swift; path = ../ElectricityCalculatorCell.swift; sourceTree = "<group>"; };
+		FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityTypesTableViewController.swift; path = ../ElectricityTypesTableViewController.swift; sourceTree = "<group>"; };
+		FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityTypesCell.swift; path = ../ElectricityTypesCell.swift; sourceTree = "<group>"; };
+		FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorEquations.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE22023B1BD9670D008FF382 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE2202351BD9670D008FF382 = {
+			isa = PBXGroup;
+			children = (
+				FE2202401BD9670D008FF382 /* 14-High Voltage */,
+				FE22023F1BD9670D008FF382 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE22023F1BD9670D008FF382 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE22023E1BD9670D008FF382 /* 14-High Voltage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE2202401BD9670D008FF382 /* 14-High Voltage */ = {
+			isa = PBXGroup;
+			children = (
+				FE2202411BD9670D008FF382 /* AppDelegate.swift */,
+				FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */,
+				FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */,
+				FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */,
+				FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */,
+				FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */,
+				FE2202451BD9670D008FF382 /* Main.storyboard */,
+				FE2202481BD9670D008FF382 /* Assets.xcassets */,
+				FE22024A1BD9670D008FF382 /* LaunchScreen.storyboard */,
+				FE22024D1BD9670D008FF382 /* Info.plist */,
+			);
+			path = "14-High Voltage";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE22023D1BD9670D008FF382 /* 14-High Voltage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE2202501BD9670D008FF382 /* Build configuration list for PBXNativeTarget "14-High Voltage" */;
+			buildPhases = (
+				FE22023A1BD9670D008FF382 /* Sources */,
+				FE22023B1BD9670D008FF382 /* Frameworks */,
+				FE22023C1BD9670D008FF382 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "14-High Voltage";
+			productName = "14-High Voltage";
+			productReference = FE22023E1BD9670D008FF382 /* 14-High Voltage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE2202361BD9670D008FF382 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "The Iron Yard";
+				TargetAttributes = {
+					FE22023D1BD9670D008FF382 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = W89Q7DEDF7;
+					};
+				};
+			};
+			buildConfigurationList = FE2202391BD9670D008FF382 /* Build configuration list for PBXProject "14-High Voltage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE2202351BD9670D008FF382;
+			productRefGroup = FE22023F1BD9670D008FF382 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE22023D1BD9670D008FF382 /* 14-High Voltage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE22023C1BD9670D008FF382 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE22024C1BD9670D008FF382 /* LaunchScreen.storyboard in Resources */,
+				FE2202491BD9670D008FF382 /* Assets.xcassets in Resources */,
+				FE2202471BD9670D008FF382 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE22023A1BD9670D008FF382 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE22025A1BD96B86008FF382 /* ElectricityTypesCell.swift in Sources */,
+				FE2202421BD9670D008FF382 /* AppDelegate.swift in Sources */,
+				FE22025C1BDA6533008FF382 /* CalculatorEquations.swift in Sources */,
+				FE2202561BD96B13008FF382 /* ElectricityCalculatorCell.swift in Sources */,
+				FE2202541BD96754008FF382 /* ElectricityCalculatorTableViewController.swift in Sources */,
+				FE2202581BD96B59008FF382 /* ElectricityTypesTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE2202451BD9670D008FF382 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE2202461BD9670D008FF382 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE22024A1BD9670D008FF382 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE22024B1BD9670D008FF382 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE22024E1BD9670D008FF382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE22024F1BD9670D008FF382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE2202511BD9670D008FF382 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "14-High Voltage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-4-High-Voltage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE2202521BD9670D008FF382 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "14-High Voltage/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-4-High-Voltage";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE2202391BD9670D008FF382 /* Build configuration list for PBXProject "14-High Voltage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE22024E1BD9670D008FF382 /* Debug */,
+				FE22024F1BD9670D008FF382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE2202501BD9670D008FF382 /* Build configuration list for PBXNativeTarget "14-High Voltage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE2202511BD9670D008FF382 /* Debug */,
+				FE2202521BD9670D008FF382 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE2202361BD9670D008FF382 /* Project object */;
+}
