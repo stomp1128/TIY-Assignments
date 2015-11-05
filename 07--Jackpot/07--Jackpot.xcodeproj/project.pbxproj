@@ -11,9 +11,10 @@
 		FE2C53DE1BCD8AD900B4CBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2C53DD1BCD8AD900B4CBF0 /* Assets.xcassets */; };
 		FE2C53E11BCD8AD900B4CBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C53DF1BCD8AD900B4CBF0 /* LaunchScreen.storyboard */; };
 		FE2C53E91BCD8B4100B4CBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		FE2C53EB1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FE6D54DF1BCEC75500AA34DD /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6D54DE1BCEC75500AA34DD /* Ticket.swift */; settings = {ASSET_TAGS = (); }; };
-		FE6D54E11BCEE51000AA34DD /* WinningTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6D54E01BCEE51000AA34DD /* WinningTicketViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FEDEF72A1BD80C64003155D5 /* WinningTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF7291BD80C64003155D5 /* WinningTicketViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FEDEF72C1BD80CB6003155D5 /* TicketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF72B1BD80CB6003155D5 /* TicketsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		FEDEF72E1BD80CFC003155D5 /* TicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF72D1BD80CFC003155D5 /* TicketCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FEDEF7301BD80D3C003155D5 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF72F1BD80D3C003155D5 /* Ticket.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +24,10 @@
 		FE2C53E01BCD8AD900B4CBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE2C53E21BCD8AD900B4CBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickPickTableViewController.swift; sourceTree = "<group>"; };
-		FE6D54DE1BCEC75500AA34DD /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
-		FE6D54E01BCEE51000AA34DD /* WinningTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinningTicketViewController.swift; sourceTree = "<group>"; };
+		FEDEF7291BD80C64003155D5 /* WinningTicketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WinningTicketViewController.swift; path = ../WinningTicketViewController.swift; sourceTree = "<group>"; };
+		FEDEF72B1BD80CB6003155D5 /* TicketsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TicketsTableViewController.swift; path = ../TicketsTableViewController.swift; sourceTree = "<group>"; };
+		FEDEF72D1BD80CFC003155D5 /* TicketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TicketCell.swift; path = ../TicketCell.swift; sourceTree = "<group>"; };
+		FEDEF72F1BD80D3C003155D5 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Ticket.swift; path = ../Ticket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,11 +61,12 @@
 			isa = PBXGroup;
 			children = (
 				FE2C53D61BCD8AD900B4CBF0 /* AppDelegate.swift */,
+				FEDEF72F1BD80D3C003155D5 /* Ticket.swift */,
+				FEDEF72D1BD80CFC003155D5 /* TicketCell.swift */,
+				FEDEF72B1BD80CB6003155D5 /* TicketsTableViewController.swift */,
+				FEDEF7291BD80C64003155D5 /* WinningTicketViewController.swift */,
 				FE2C53DD1BCD8AD900B4CBF0 /* Assets.xcassets */,
 				FE2C53E81BCD8B4100B4CBF0 /* Main.storyboard */,
-				FE6D54E01BCEE51000AA34DD /* WinningTicketViewController.swift */,
-				FE2C53EA1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift */,
-				FE6D54DE1BCEC75500AA34DD /* Ticket.swift */,
 				FE2C53DF1BCD8AD900B4CBF0 /* LaunchScreen.storyboard */,
 				FE2C53E21BCD8AD900B4CBF0 /* Info.plist */,
 			);
@@ -141,10 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE6D54E11BCEE51000AA34DD /* WinningTicketViewController.swift in Sources */,
-				FE2C53EB1BCD8D0D00B4CBF0 /* QuickPickTableViewController.swift in Sources */,
-				FE6D54DF1BCEC75500AA34DD /* Ticket.swift in Sources */,
 				FE2C53D71BCD8AD900B4CBF0 /* AppDelegate.swift in Sources */,
+				FEDEF72C1BD80CB6003155D5 /* TicketsTableViewController.swift in Sources */,
+				FEDEF7301BD80D3C003155D5 /* Ticket.swift in Sources */,
+				FEDEF72A1BD80C64003155D5 /* WinningTicketViewController.swift in Sources */,
+				FEDEF72E1BD80CFC003155D5 /* TicketCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

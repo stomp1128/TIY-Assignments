@@ -4,17 +4,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--Quick Pick Table View Controller-->
+        <!--Tickets Table View Controller-->
         <scene sceneID="spC-7c-xGy">
             <objects>
-                <tableViewController id="DrZ-I9-sAP" customClass="QuickPickTableViewController" customModule="_7__Jackpot" sceneMemberID="viewController">
+                <tableViewController id="DrZ-I9-sAP" customClass="TicketsTableViewController" customModule="_7__Jackpot" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="A3q-WK-59J">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuickPickCell" textLabel="Tkd-j8-bi7" detailTextLabel="32Z-yE-lAM" style="IBUITableViewCellStyleValue1" id="Sc3-xR-MaV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuickPickCell" textLabel="Tkd-j8-bi7" detailTextLabel="32Z-yE-lAM" style="IBUITableViewCellStyleValue1" id="Sc3-xR-MaV" userLabel="TicketCell" customClass="TicketCell" customModule="_7__Jackpot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sc3-xR-MaV" id="yj1-hR-uk0">
@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1251" y="366"/>
         </scene>
-        <!--Number Picker View Controller-->
+        <!--Winning Ticket View Controller-->
         <scene sceneID="Jls-Sv-TQY">
             <objects>
-                <viewController id="gVD-t5-q1c" customClass="NumberPickerViewController" sceneMemberID="viewController">
+                <viewController id="gVD-t5-q1c" customClass="WinningTicketViewController" customModule="_7__Jackpot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GjE-t0-4MR"/>
                         <viewControllerLayoutGuide type="bottom" id="70k-Tx-EeF"/>
