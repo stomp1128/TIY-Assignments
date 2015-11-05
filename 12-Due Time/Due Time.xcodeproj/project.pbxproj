@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FEDEF6B71BD6CB2C003155D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6B61BD6CB2C003155D5 /* AppDelegate.swift */; };
 		FEDEF6BC1BD6CB2C003155D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDEF6BA1BD6CB2C003155D5 /* Main.storyboard */; };
 		FEDEF6BF1BD6CB2C003155D5 /* Due_Time.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6BD1BD6CB2C003155D5 /* Due_Time.xcdatamodeld */; };
 		FEDEF6C11BD6CB2C003155D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDEF6C01BD6CB2C003155D5 /* Assets.xcassets */; };
 		FEDEF6C41BD6CB2C003155D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEDEF6C21BD6CB2C003155D5 /* LaunchScreen.storyboard */; };
-		FEDEF6CD1BD6D01B003155D5 /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6CB1BD6D01B003155D5 /* List+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
-		FEDEF6CE1BD6D01B003155D5 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6CC1BD6D01B003155D5 /* List.swift */; settings = {ASSET_TAGS = (); }; };
-		FEDEF6D01BD6D05F003155D5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6CF1BD6D05F003155D5 /* ListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FEDEF6D41BD6D214003155D5 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6D31BD6D214003155D5 /* ListCell.swift */; settings = {ASSET_TAGS = (); }; };
+		FEDEF6CD1BD6D01B003155D5 /* List+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6CB1BD6D01B003155D5 /* List+CoreDataProperties.swift */; };
+		FEDEF6CE1BD6D01B003155D5 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6CC1BD6D01B003155D5 /* List.swift */; };
+		FEDEF6D01BD6D05F003155D5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6CF1BD6D05F003155D5 /* ListTableViewController.swift */; };
+		FEDEF6D41BD6D214003155D5 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF6D31BD6D214003155D5 /* ListCell.swift */; };
+		FEF6C7D71BEC1FAD00585E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C7D61BEC1FAD00585E02 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FEDEF6B31BD6CB2C003155D5 /* Due Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Due Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEDEF6B61BD6CB2C003155D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEDEF6BB1BD6CB2C003155D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEDEF6BE1BD6CB2C003155D5 /* Due_Time.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Due_Time.xcdatamodel; sourceTree = "<group>"; };
 		FEDEF6C01BD6CB2C003155D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		FEDEF6CC1BD6D01B003155D5 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../List.swift; sourceTree = "<group>"; };
 		FEDEF6CF1BD6D05F003155D5 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListTableViewController.swift; path = ../ListTableViewController.swift; sourceTree = "<group>"; };
 		FEDEF6D31BD6D214003155D5 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListCell.swift; path = ../ListCell.swift; sourceTree = "<group>"; };
+		FEF6C7D61BEC1FAD00585E02 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 				FEDEF6CC1BD6D01B003155D5 /* List.swift */,
 				FEDEF6CF1BD6D05F003155D5 /* ListTableViewController.swift */,
 				FEDEF6D31BD6D214003155D5 /* ListCell.swift */,
-				FEDEF6B61BD6CB2C003155D5 /* AppDelegate.swift */,
+				FEF6C7D61BEC1FAD00585E02 /* AppDelegate.swift */,
 				FEDEF6BA1BD6CB2C003155D5 /* Main.storyboard */,
 				FEDEF6C01BD6CB2C003155D5 /* Assets.xcassets */,
 				FEDEF6C21BD6CB2C003155D5 /* LaunchScreen.storyboard */,
@@ -147,12 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF6C7D71BEC1FAD00585E02 /* AppDelegate.swift in Sources */,
 				FEDEF6BF1BD6CB2C003155D5 /* Due_Time.xcdatamodeld in Sources */,
 				FEDEF6CE1BD6D01B003155D5 /* List.swift in Sources */,
 				FEDEF6CD1BD6D01B003155D5 /* List+CoreDataProperties.swift in Sources */,
 				FEDEF6D41BD6D214003155D5 /* ListCell.swift in Sources */,
 				FEDEF6D01BD6D05F003155D5 /* ListTableViewController.swift in Sources */,
-				FEDEF6B71BD6CB2C003155D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +300,7 @@
 				FEDEF6CA1BD6CB2C003155D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

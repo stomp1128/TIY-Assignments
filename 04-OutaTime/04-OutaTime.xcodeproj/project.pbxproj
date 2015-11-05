@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE3EC4AB1BEBDFBA000DD54E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC4AA1BEBDFBA000DD54E /* AppDelegate.swift */; };
 		FE3EC4AD1BEBDFBA000DD54E /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC4AC1BEBDFBA000DD54E /* DatePickerViewController.swift */; };
 		FE3EC4B21BEBDFBA000DD54E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4B11BEBDFBA000DD54E /* Assets.xcassets */; };
 		FE3EC4B51BEBDFBA000DD54E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4B31BEBDFBA000DD54E /* LaunchScreen.storyboard */; };
 		FE3EC4BD1BEBDFDC000DD54E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4BC1BEBDFDC000DD54E /* Main.storyboard */; };
 		FE3EC4BF1BEBDFE2000DD54E /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4BE1BEBDFE2000DD54E /* digital-7.ttf */; };
-		FE3EC4C31BEBE0F4000DD54E /* TimeCircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC4C21BEBE0F4000DD54E /* TimeCircuitsViewController.swift */; };
+		FEF6C7CF1BEC1D2100585E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C7CE1BEC1D2100585E02 /* AppDelegate.swift */; };
+		FEF6C7D11BEC1E9C00585E02 /* TimeCircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C7D01BEC1E9C00585E02 /* TimeCircuitsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE3EC4A71BEBDFBA000DD54E /* 04-OutaTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "04-OutaTime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE3EC4AA1BEBDFBA000DD54E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3EC4AC1BEBDFBA000DD54E /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		FE3EC4B11BEBDFBA000DD54E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE3EC4B41BEBDFBA000DD54E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3EC4B61BEBDFBA000DD54E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3EC4BC1BEBDFDC000DD54E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FE3EC4BE1BEBDFE2000DD54E /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
-		FE3EC4C21BEBE0F4000DD54E /* TimeCircuitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeCircuitsViewController.swift; path = ../../TimeCircuitsViewController.swift; sourceTree = "<group>"; };
+		FEF6C7CE1BEC1D2100585E02 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FEF6C7D01BEC1E9C00585E02 /* TimeCircuitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeCircuitsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +58,9 @@
 		FE3EC4A91BEBDFBA000DD54E /* 04-OutaTime */ = {
 			isa = PBXGroup;
 			children = (
-				FE3EC4AA1BEBDFBA000DD54E /* AppDelegate.swift */,
-				FE3EC4C21BEBE0F4000DD54E /* TimeCircuitsViewController.swift */,
+				FEF6C7CE1BEC1D2100585E02 /* AppDelegate.swift */,
 				FE3EC4AC1BEBDFBA000DD54E /* DatePickerViewController.swift */,
+				FEF6C7D01BEC1E9C00585E02 /* TimeCircuitsViewController.swift */,
 				FE3EC4BC1BEBDFDC000DD54E /* Main.storyboard */,
 				FE3EC4B11BEBDFBA000DD54E /* Assets.xcassets */,
 				FE3EC4BE1BEBDFE2000DD54E /* digital-7.ttf */,
@@ -143,9 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3EC4C31BEBE0F4000DD54E /* TimeCircuitsViewController.swift in Sources */,
+				FEF6C7D11BEC1E9C00585E02 /* TimeCircuitsViewController.swift in Sources */,
+				FEF6C7CF1BEC1D2100585E02 /* AppDelegate.swift in Sources */,
 				FE3EC4AD1BEBDFBA000DD54E /* DatePickerViewController.swift in Sources */,
-				FE3EC4AB1BEBDFBA000DD54E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +285,7 @@
 				FE3EC4BB1BEBDFBA000DD54E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

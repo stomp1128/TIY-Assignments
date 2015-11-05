@@ -7,20 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE2202421BD9670D008FF382 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202411BD9670D008FF382 /* AppDelegate.swift */; };
 		FE2202471BD9670D008FF382 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2202451BD9670D008FF382 /* Main.storyboard */; };
 		FE2202491BD9670D008FF382 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2202481BD9670D008FF382 /* Assets.xcassets */; };
 		FE22024C1BD9670D008FF382 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE22024A1BD9670D008FF382 /* LaunchScreen.storyboard */; };
-		FE2202541BD96754008FF382 /* ElectricityCalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FE2202561BD96B13008FF382 /* ElectricityCalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */; settings = {ASSET_TAGS = (); }; };
-		FE2202581BD96B59008FF382 /* ElectricityTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		FE22025A1BD96B86008FF382 /* ElectricityTypesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */; settings = {ASSET_TAGS = (); }; };
-		FE22025C1BDA6533008FF382 /* CalculatorEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */; settings = {ASSET_TAGS = (); }; };
+		FE2202541BD96754008FF382 /* ElectricityCalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */; };
+		FE2202561BD96B13008FF382 /* ElectricityCalculatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */; };
+		FE2202581BD96B59008FF382 /* ElectricityTypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */; };
+		FE22025A1BD96B86008FF382 /* ElectricityTypesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */; };
+		FE22025C1BDA6533008FF382 /* CalculatorEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */; };
+		FEF6C7D91BEC1FC900585E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C7D81BEC1FC900585E02 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FE22023E1BD9670D008FF382 /* 14-High Voltage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "14-High Voltage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE2202411BD9670D008FF382 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2202461BD9670D008FF382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE2202481BD9670D008FF382 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE22024B1BD9670D008FF382 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityTypesTableViewController.swift; path = ../ElectricityTypesTableViewController.swift; sourceTree = "<group>"; };
 		FE2202591BD96B86008FF382 /* ElectricityTypesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElectricityTypesCell.swift; path = ../ElectricityTypesCell.swift; sourceTree = "<group>"; };
 		FE22025B1BDA6532008FF382 /* CalculatorEquations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorEquations.swift; sourceTree = "<group>"; };
+		FEF6C7D81BEC1FC900585E02 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		FE2202401BD9670D008FF382 /* 14-High Voltage */ = {
 			isa = PBXGroup;
 			children = (
-				FE2202411BD9670D008FF382 /* AppDelegate.swift */,
+				FEF6C7D81BEC1FC900585E02 /* AppDelegate.swift */,
 				FE2202531BD96754008FF382 /* ElectricityCalculatorTableViewController.swift */,
 				FE2202551BD96B13008FF382 /* ElectricityCalculatorCell.swift */,
 				FE2202571BD96B59008FF382 /* ElectricityTypesTableViewController.swift */,
@@ -147,8 +147,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF6C7D91BEC1FC900585E02 /* AppDelegate.swift in Sources */,
 				FE22025A1BD96B86008FF382 /* ElectricityTypesCell.swift in Sources */,
-				FE2202421BD9670D008FF382 /* AppDelegate.swift in Sources */,
 				FE22025C1BDA6533008FF382 /* CalculatorEquations.swift in Sources */,
 				FE2202561BD96B13008FF382 /* ElectricityCalculatorCell.swift in Sources */,
 				FE2202541BD96754008FF382 /* ElectricityCalculatorTableViewController.swift in Sources */,
