@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Mission-Briefing
+//  OutaTime
 //
 //  Created by Chris Stomp on 10/7/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
