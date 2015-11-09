@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@protocol DatePickerProtocol
+
+- (void)dateWasChosen:(NSDate *)date;
+
+@end
+
+@interface TimeCircuitsViewController : UIViewController <DatePickerProtocol>
+
 
 
 @end
+
+
+
+
+
 

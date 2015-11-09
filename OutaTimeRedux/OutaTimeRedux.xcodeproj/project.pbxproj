@@ -29,6 +29,7 @@
 		FEF6C8951BF120F100585E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEF6C89B1BF121A500585E02 /* DatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerViewController.h; sourceTree = "<group>"; };
 		FEF6C89C1BF121A500585E02 /* DatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerViewController.m; sourceTree = "<group>"; };
+		FEF6C8A01BF12B0D00585E02 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +69,7 @@
 				FEF6C89B1BF121A500585E02 /* DatePickerViewController.h */,
 				FEF6C89C1BF121A500585E02 /* DatePickerViewController.m */,
 				FEF6C88D1BF120F100585E02 /* Main.storyboard */,
+				FEF6C8A01BF12B0D00585E02 /* digital-7.ttf */,
 				FEF6C8901BF120F100585E02 /* Assets.xcassets */,
 				FEF6C8921BF120F100585E02 /* LaunchScreen.storyboard */,
 				FEF6C8951BF120F100585E02 /* Info.plist */,

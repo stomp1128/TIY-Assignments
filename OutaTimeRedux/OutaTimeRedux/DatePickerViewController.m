@@ -10,18 +10,30 @@
 
 @interface DatePickerViewController ()
 
+//@property(nonatomic, strong, nonnull) UIDatePicker *datePicker;
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+
 @end
 
 @implementation DatePickerViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.delegate dateWasChosen:self.datePicker.date];
 }
 
 /*

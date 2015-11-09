@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TimeCircuitsViewController.h"
 
 @interface DatePickerViewController : UIViewController
+
+@property (nonatomic) id<DatePickerProtocol> delegate;
 
 @end
