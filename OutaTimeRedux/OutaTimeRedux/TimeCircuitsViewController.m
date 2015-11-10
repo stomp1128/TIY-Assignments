@@ -10,10 +10,6 @@
 #import "DatePickerViewController.h"
 
 @interface TimeCircuitsViewController ()
-{
-    
-    
-}
 
 @property (weak, nonatomic) IBOutlet UILabel *destinationTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *presentTimeLabel;
@@ -53,12 +49,6 @@ NSString *dateWasChosen(NSDate *);
     datePickerVC.delegate = self;
 }
 
-//func startTimer()
-//{
-//    if timer == nil
-//    {
-//        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateSpeed", userInfo: nil, repeats: true)
-//    }
 - (void) startTimer
     {
         if (self.timer == nil)
@@ -86,20 +76,12 @@ NSString *dateWasChosen(NSDate *);
 }
 
 
-
-
 #pragma mark - Action Handlers
 
-- (IBAction)setDestinationTimeTapped:(UIButton *)sender
-{
-    
-}
 
 - (IBAction)travelBackTapped:(UIButton *)sender
 {
     [self startTimer];
-    
-    
 }
 
 #pragma mark - Date Picker Delegate
