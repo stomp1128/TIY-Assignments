@@ -15,6 +15,7 @@
 		FEF6C92E1BF3B7E100585E02 /* VoltageCalculatorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C92D1BF3B7E100585E02 /* VoltageCalculatorTableViewController.m */; };
 		FEF6C9311BF3B86C00585E02 /* ValueTypesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C9301BF3B86C00585E02 /* ValueTypesTableViewController.m */; };
 		FEF6C9341BF3B9AE00585E02 /* ElectricityConversions.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C9331BF3B9AE00585E02 /* ElectricityConversions.m */; };
+		FEF6C9371BF3EFBD00585E02 /* VoltageCalculatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C9361BF3EFBD00585E02 /* VoltageCalculatorCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		FEF6C9301BF3B86C00585E02 /* ValueTypesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValueTypesTableViewController.m; sourceTree = "<group>"; };
 		FEF6C9321BF3B9AE00585E02 /* ElectricityConversions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ElectricityConversions.h; sourceTree = "<group>"; };
 		FEF6C9331BF3B9AE00585E02 /* ElectricityConversions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ElectricityConversions.m; sourceTree = "<group>"; };
+		FEF6C9351BF3EFBD00585E02 /* VoltageCalculatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoltageCalculatorCell.h; sourceTree = "<group>"; };
+		FEF6C9361BF3EFBD00585E02 /* VoltageCalculatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoltageCalculatorCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +73,11 @@
 				FEF6C92D1BF3B7E100585E02 /* VoltageCalculatorTableViewController.m */,
 				FEF6C92F1BF3B86C00585E02 /* ValueTypesTableViewController.h */,
 				FEF6C9301BF3B86C00585E02 /* ValueTypesTableViewController.m */,
+				FEF6C9351BF3EFBD00585E02 /* VoltageCalculatorCell.h */,
+				FEF6C9361BF3EFBD00585E02 /* VoltageCalculatorCell.m */,
+				FEF6C92A1BF3B75F00585E02 /* Main.storyboard */,
 				FEF6C9321BF3B9AE00585E02 /* ElectricityConversions.h */,
 				FEF6C9331BF3B9AE00585E02 /* ElectricityConversions.m */,
-				FEF6C92A1BF3B75F00585E02 /* Main.storyboard */,
 				FEF6C91D1BF3B62900585E02 /* Assets.xcassets */,
 				FEF6C91F1BF3B62900585E02 /* LaunchScreen.storyboard */,
 				FEF6C9221BF3B62900585E02 /* Info.plist */,
@@ -160,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF6C9371BF3EFBD00585E02 /* VoltageCalculatorCell.m in Sources */,
 				FEF6C92E1BF3B7E100585E02 /* VoltageCalculatorTableViewController.m in Sources */,
 				FEF6C9311BF3B86C00585E02 /* ValueTypesTableViewController.m in Sources */,
 				FEF6C9161BF3B62900585E02 /* AppDelegate.m in Sources */,

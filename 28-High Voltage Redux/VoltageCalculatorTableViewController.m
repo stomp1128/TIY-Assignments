@@ -7,8 +7,19 @@
 //
 
 #import "VoltageCalculatorTableViewController.h"
+#import "ValueTypesTableViewController.h"
 
 @interface VoltageCalculatorTableViewController ()
+
+{
+    NSMutableArray *electricityTypes;
+    NSMutableArray *remainingElectricityTypes;
+}
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *clearBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addValueBarButtonItem;
+
+@property (nonatomic) UITextField *electricityTextField;
 
 @end
 
@@ -16,6 +27,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"High Voltage";
+    
+   
+    electricityTypes = [[NSMutableArray alloc] init];
+    remainingElectricityTypes = [[NSMutableArray alloc] initWithObjects:@"Watts", @"Volts", @"Ohms", @"Amps", nil];
+   
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,24 +50,24 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+//#warning Incomplete implementation, return the number of sections
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+//#warning Incomplete implementation, return the number of rows
+    return electricityTypes.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"ElectricityCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -85,14 +103,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    ValueTypesTableViewController *valuesViewController = segue.destinationViewController;
+    UIPopoverPresentationController *controller = valuesViewController.popoverPresentationController;
+    controller.delegate = self;
+    valuesViewController.types = remainingElectricityTypes;
 }
-*/
+
 
 @end

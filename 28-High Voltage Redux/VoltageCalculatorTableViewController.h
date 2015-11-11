@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VoltageCalculatorTableViewController : UITableViewController
+@interface VoltageCalculatorTableViewController : UITableViewController<UIPopoverControllerDelegate>
 
 @end

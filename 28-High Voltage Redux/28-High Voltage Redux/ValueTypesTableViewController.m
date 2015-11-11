@@ -10,12 +10,15 @@
 
 @interface ValueTypesTableViewController ()
 
+
 @end
 
 @implementation ValueTypesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _types = [[NSMutableArray alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
