@@ -11,6 +11,10 @@
 
 @interface MovieDetailTableViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIImageView *movieImage;
+@property (weak, nonatomic) IBOutlet UITextView *plotTextField;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @property (nonatomic) Movie *movie;
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "MovieDetailTableViewController.h"
-#import "MovieImageTableViewCell.h"
+#import "Movie.h"
+
 
 @interface MovieDetailTableViewController ()
 
@@ -18,9 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //self.plotLabel.text = self.movie.plot;
-    //UIImage *image = [UIImage imageWithData:self.movie.posterImageData];
-    //self.movieImage.image = image;
+    self.plotTextField.text = self.movie.plot;
+    UIImage *image = [UIImage imageWithData:self.movie.posterImageData];
+    self.movieImage.image = image;
+    self.titleLabel.text = self.movie.title;
 
 }
 
@@ -28,29 +30,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-    return 1;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    MovieImageTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieImageTableViewCell" forIndexPath:indexPath];
-    
-    UIImage *image = [UIImage imageWithData:self.movie.posterImageData];
-    cell.movieImage.image = image;
-    
-    return cell;
-}
-
 
 /*
 // Override to support conditional editing of the table view.
