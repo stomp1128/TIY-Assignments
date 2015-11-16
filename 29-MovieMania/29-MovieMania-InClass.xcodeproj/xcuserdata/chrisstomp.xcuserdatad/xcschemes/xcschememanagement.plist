@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>29-MovieMania.xcscheme</key>
+		<key>29-MovieMania-InClass.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>FEF6C9401BF5070700585E02</key>
+		<key>FEF6C9691BF5461100585E02</key>
 		<dict>
 			<key>primary</key>
 			<true/>
