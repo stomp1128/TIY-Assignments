@@ -9,7 +9,7 @@
 #import "MovieListTableViewController.h"
 #import "MovieCell.h"
 #import "ChooseMovieViewController.h"
-#import "MovieDetailViewController.h"
+#import "MovieDetailTableViewController.h"
 //#import "Movie.h"
 
 @interface MovieListTableViewController () <UITableViewDelegate>
@@ -114,7 +114,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Movie *aMovie = movies[indexPath.row];
-    MovieDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MovieDetail"];
+    MovieDetailTableViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MovieDetail"];
     detailVC.movie = aMovie;
     
     [self.navigationController pushViewController:detailVC animated:YES];
