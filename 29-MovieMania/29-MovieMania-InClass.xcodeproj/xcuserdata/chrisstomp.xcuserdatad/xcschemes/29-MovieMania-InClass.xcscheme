@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FEF6C9401BF5070700585E02"
-               BuildableName = "29-MovieMania.app"
-               BlueprintName = "29-MovieMania"
-               ReferencedContainer = "container:29-MovieMania.xcodeproj">
+               BlueprintIdentifier = "FEF6C9691BF5461100585E02"
+               BuildableName = "29-MovieMania-InClass.app"
+               BlueprintName = "29-MovieMania-InClass"
+               ReferencedContainer = "container:29-MovieMania-InClass.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEF6C9401BF5070700585E02"
-            BuildableName = "29-MovieMania.app"
-            BlueprintName = "29-MovieMania"
-            ReferencedContainer = "container:29-MovieMania.xcodeproj">
+            BlueprintIdentifier = "FEF6C9691BF5461100585E02"
+            BuildableName = "29-MovieMania-InClass.app"
+            BlueprintName = "29-MovieMania-InClass"
+            ReferencedContainer = "container:29-MovieMania-InClass.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEF6C9401BF5070700585E02"
-            BuildableName = "29-MovieMania.app"
-            BlueprintName = "29-MovieMania"
-            ReferencedContainer = "container:29-MovieMania.xcodeproj">
+            BlueprintIdentifier = "FEF6C9691BF5461100585E02"
+            BuildableName = "29-MovieMania-InClass.app"
+            BlueprintName = "29-MovieMania-InClass"
+            ReferencedContainer = "container:29-MovieMania-InClass.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEF6C9401BF5070700585E02"
-            BuildableName = "29-MovieMania.app"
-            BlueprintName = "29-MovieMania"
-            ReferencedContainer = "container:29-MovieMania.xcodeproj">
+            BlueprintIdentifier = "FEF6C9691BF5461100585E02"
+            BuildableName = "29-MovieMania-InClass.app"
+            BlueprintName = "29-MovieMania-InClass"
+            ReferencedContainer = "container:29-MovieMania-InClass.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
