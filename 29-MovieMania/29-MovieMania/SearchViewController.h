@@ -11,5 +11,10 @@
 @interface SearchViewController : UIViewController
 
 
+@property (nonatomic) NSMutableArray *movies;
+
+
+- (void)search;
+
 @end
 

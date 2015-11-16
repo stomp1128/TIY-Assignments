@@ -34,4 +34,11 @@
 }
 */
 
+#pragma mark - Action Handlers
+
+- (IBAction)backButtonTapped:(UIBarButtonItem *)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 @end

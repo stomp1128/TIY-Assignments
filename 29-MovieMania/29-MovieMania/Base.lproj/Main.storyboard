@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Search View Controller-->
@@ -16,10 +17,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ngg-Ex-Pqi">
+                                <rect key="frame" x="120" y="113" width="360" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c73-U8-7KE">
+                                <rect key="frame" x="270" y="167" width="60" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2al-Kt-Hdx"/>
+                                    <segue destination="9Q4-hX-pUI" kind="showDetail" id="hpY-DI-67N"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.34956774469632246" blue="0.25106473511967609" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ngg-Ex-Pqi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.6" id="84O-8n-btQ"/>
+                            <constraint firstItem="Ngg-Ex-Pqi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OIT-Ng-O9m"/>
+                            <constraint firstItem="c73-U8-7KE" firstAttribute="centerX" secondItem="Ngg-Ex-Pqi" secondAttribute="centerX" id="SbT-FP-eUm"/>
+                            <constraint firstItem="c73-U8-7KE" firstAttribute="top" secondItem="Ngg-Ex-Pqi" secondAttribute="bottom" constant="24" id="WZm-a5-Sc1"/>
+                            <constraint firstItem="Ngg-Ex-Pqi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="tiA-al-6kE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aEp-tr-Mhd"/>
+                    <connections>
+                        <outlet property="movieTitleTextField" destination="Ngg-Ex-Pqi" id="0PK-dM-C33"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,10 +70,17 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cm5-Uq-88p">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Y2d-Kl-W4Q">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="NyW-UD-9W6" id="ndf-xq-2bW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Lp-JW-OQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="349"/>
+            <point key="canvasLocation" x="2458" y="349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c9g-wa-3AA">
@@ -62,6 +100,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2p-2V-NAk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="385" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0V8-Er-THi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Q4-hX-pUI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fck-kv-GyX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NyW-UD-9W6" kind="relationship" relationship="rootViewController" id="Hzz-lg-Cpf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ws6-15-oWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1793" y="349"/>
         </scene>
     </scenes>
 </document>
