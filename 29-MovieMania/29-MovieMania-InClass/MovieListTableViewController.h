@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
 @interface MovieListTableViewController : UITableViewController
+
+@property (nonatomic) Movie *movie;
 
 @end

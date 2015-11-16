@@ -7,13 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
-@interface MovieDetailViewController : UIViewController
+@interface MovieDetailViewController : UIViewController <UIScrollViewDelegate>
+{
+    
+    UIScrollView *myScrollView;
+    
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *movieImage;
-@property (weak, nonatomic) IBOutlet UILabel *plot;
+@property (weak, nonatomic) IBOutlet UILabel *plotLabel;
 
-@property (nonatomic) NSDictionary *movie;
+@property (nonatomic) Movie *movie;
 
 
 @end

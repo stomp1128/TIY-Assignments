@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
 
 @interface MovieCell : UITableViewCell
 
@@ -14,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *movieTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *year;
 @property (weak, nonatomic) IBOutlet UILabel *rated;
+@property (weak, nonatomic) IBOutlet UILabel *ratingLabel;
 
 @end

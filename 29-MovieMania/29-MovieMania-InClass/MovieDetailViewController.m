@@ -7,6 +7,7 @@
 //
 
 #import "MovieDetailViewController.h"
+#import "Movie.h"
 
 @interface MovieDetailViewController () 
 
@@ -18,15 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.movie = [[NSDictionary alloc] init];
-    
-    NSDictionary *aMovie = _movie;
-    _plot.text = [aMovie valueForKey:@"Plot"];
-    NSURL *poster = [NSURL URLWithString:aMovie[@"Poster"]];
-    NSData *imageData = [NSData dataWithContentsOfURL:poster];
-    UIImage *image = [UIImage imageWithData:imageData];
-    _movieImage.image = image;
-    
+
+    self.plotLabel.text = self.movie.plot;
+    UIImage *image = [UIImage imageWithData:self.movie.posterImageData];
+    self.movieImage.image = image;
 }
 
 - (void)didReceiveMemoryWarning {

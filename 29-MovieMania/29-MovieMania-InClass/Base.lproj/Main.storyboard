@@ -63,15 +63,22 @@
                                                 </mask>
                                             </variation>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXO-5P-75B">
-                                            <rect key="frame" x="112" y="34" width="33" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXO-5P-75B">
+                                            <rect key="frame" x="112" y="34" width="34" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaK-iN-kWO">
-                                            <rect key="frame" x="112" y="58" width="45" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaK-iN-kWO">
+                                            <rect key="frame" x="112" y="58" width="49" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMDB Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtD-tx-LJa">
+                                            <rect key="frame" x="112" y="82" width="95" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,10 +92,12 @@
                                         <constraint firstItem="xaK-iN-kWO" firstAttribute="leading" secondItem="YXO-5P-75B" secondAttribute="leading" id="Koy-Mf-s2q"/>
                                         <constraint firstItem="Vd0-Oh-nFJ" firstAttribute="top" secondItem="wec-7W-pgh" secondAttribute="top" id="OrX-NS-2nw"/>
                                         <constraint firstItem="xaK-iN-kWO" firstAttribute="top" secondItem="YXO-5P-75B" secondAttribute="bottom" constant="3" id="YTI-8q-J4O"/>
+                                        <constraint firstItem="HtD-tx-LJa" firstAttribute="top" secondItem="xaK-iN-kWO" secondAttribute="bottom" constant="3" id="cPi-eb-2yK"/>
                                         <constraint firstItem="wec-7W-pgh" firstAttribute="centerY" secondItem="Z8R-Ep-9Ip" secondAttribute="centerY" id="gTN-tU-xBZ"/>
                                         <constraint firstItem="YXO-5P-75B" firstAttribute="leading" secondItem="Vd0-Oh-nFJ" secondAttribute="leading" id="gtn-io-UKj"/>
                                         <constraint firstItem="YXO-5P-75B" firstAttribute="top" secondItem="Vd0-Oh-nFJ" secondAttribute="bottom" constant="8" id="mPy-mp-8ju"/>
                                         <constraint firstItem="wec-7W-pgh" firstAttribute="leading" secondItem="Z8R-Ep-9Ip" secondAttribute="leadingMargin" id="nay-yi-C7l"/>
+                                        <constraint firstItem="HtD-tx-LJa" firstAttribute="leading" secondItem="xaK-iN-kWO" secondAttribute="leading" id="nm2-zO-BU3"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
@@ -102,6 +111,7 @@
                                     <outlet property="movieImage" destination="wec-7W-pgh" id="0FE-7x-Vn5"/>
                                     <outlet property="movieTitleLabel" destination="Vd0-Oh-nFJ" id="Mbg-gu-pgZ"/>
                                     <outlet property="rated" destination="xaK-iN-kWO" id="cpG-bg-ePh"/>
+                                    <outlet property="ratingLabel" destination="HtD-tx-LJa" id="yPd-bK-PLt"/>
                                     <outlet property="year" destination="YXO-5P-75B" id="UNG-yp-dKb"/>
                                 </connections>
                             </tableViewCell>
@@ -141,17 +151,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSI-WV-gF0">
-                                <rect key="frame" x="276" y="123" width="48" height="30"/>
+                                <rect key="frame" x="274" y="123" width="52" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Search"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="searchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbm-N5-3uZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gw-ui-w8R">
-                                <rect key="frame" x="276" y="156" width="48" height="30"/>
+                                <rect key="frame" x="275" y="156" width="51" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Cancel"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D4a-CE-VtD"/>
                                 </connections>
@@ -163,7 +179,7 @@
                             </searchBar>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90588235294117647" green="0.23921568627450981" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0gw-ui-w8R" firstAttribute="top" secondItem="NSI-WV-gF0" secondAttribute="bottom" constant="3" id="2q4-lb-mLZ"/>
                             <constraint firstItem="NDy-1F-NEL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9gb-Bb-1nM"/>
@@ -182,13 +198,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="5FN-O5-k9c"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="movieSearchBar" destination="NDy-1F-NEL" id="Hfd-IT-Vy8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2745" y="-68"/>
+            <point key="canvasLocation" x="2125" y="-92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wkL-f2-PFO">
@@ -214,6 +232,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TEY-Yw-JZc" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="60"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fZs-6N-3pl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -226,7 +246,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l3u-0f-N1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="-68"/>
+            <point key="canvasLocation" x="2125" y="-504"/>
         </scene>
         <!--Movie Detail View Controller-->
         <scene sceneID="R26-1K-UtL">
@@ -240,31 +260,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Asw-7k-EiK">
-                                <rect key="frame" x="32" y="104" width="232" height="256"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Asw-7k-EiK">
+                                <rect key="frame" x="32" y="84" width="232" height="256"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="232" id="EeC-cy-BwL"/>
                                     <constraint firstAttribute="height" constant="256" id="IH4-jb-XT3"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMX-ff-Ckr">
-                                <rect key="frame" x="32" y="418" width="526" height="138"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="nMX-ff-Ckr">
+                                <rect key="frame" x="32" y="360" width="250" height="212"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="Czi-qI-UOQ"/>
-                                    <constraint firstAttribute="width" constant="526" id="SvR-u4-YCl"/>
+                                    <constraint firstAttribute="width" constant="250" id="SvR-u4-YCl"/>
+                                    <constraint firstAttribute="height" constant="212" id="qpw-lD-xWs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Czi-qI-UOQ"/>
+                                    </mask>
+                                </variation>
                             </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.23921568630000001" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="nMX-ff-Ckr" firstAttribute="top" secondItem="Asw-7k-EiK" secondAttribute="bottom" constant="58" id="9Dk-Sq-Lii"/>
-                            <constraint firstItem="Asw-7k-EiK" firstAttribute="top" secondItem="TrS-Dk-C1J" secondAttribute="bottom" constant="40" id="9af-nZ-uqm"/>
+                            <constraint firstItem="nMX-ff-Ckr" firstAttribute="top" secondItem="Asw-7k-EiK" secondAttribute="bottom" constant="20" id="9Dk-Sq-Lii"/>
+                            <constraint firstItem="Asw-7k-EiK" firstAttribute="top" secondItem="TrS-Dk-C1J" secondAttribute="bottom" constant="20" id="9af-nZ-uqm"/>
                             <constraint firstItem="Asw-7k-EiK" firstAttribute="leading" secondItem="j8j-uV-cDD" secondAttribute="leadingMargin" constant="12" id="fM4-eG-Hjp"/>
                             <constraint firstItem="nMX-ff-Ckr" firstAttribute="leading" secondItem="j8j-uV-cDD" secondAttribute="leadingMargin" constant="12" id="vfE-Ne-1eA"/>
                         </constraints>
@@ -277,12 +303,12 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="movieImage" destination="Asw-7k-EiK" id="M4q-pu-fWq"/>
-                        <outlet property="plot" destination="nMX-ff-Ckr" id="TaT-Ix-zQh"/>
+                        <outlet property="plotLabel" destination="nMX-ff-Ckr" id="02s-Lk-0gR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGj-mM-8Nr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="754"/>
+            <point key="canvasLocation" x="2125" y="698"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Njw-Wc-uS3">
@@ -303,7 +329,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="701-Gt-Iss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2103" y="313"/>
+            <point key="canvasLocation" x="2125" y="310"/>
         </scene>
     </scenes>
 </document>

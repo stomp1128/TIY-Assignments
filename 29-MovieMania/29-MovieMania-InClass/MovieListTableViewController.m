@@ -10,6 +10,7 @@
 #import "MovieCell.h"
 #import "ChooseMovieViewController.h"
 #import "MovieDetailViewController.h"
+//#import "Movie.h"
 
 @interface MovieListTableViewController () <UITableViewDelegate>
 {
@@ -25,12 +26,7 @@
     
     movies = [[NSMutableArray alloc] init];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    }
 
 
 - (void)didReceiveMemoryWarning {
@@ -59,22 +55,21 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
     
-    NSDictionary *aMovie = movies[indexPath.row];
-    cell.movieTitleLabel.text = [aMovie valueForKey:@"Title"];//step 17 set cell based on dictionary in json
-//    NSURL *poster = [NSURL URLWithString:aMovie[@"Poster"]];
-//    NSURLSession *session = [NSURLSession sharedSession];
-//    NSURLSessionDataTask *task = [session dataTaskWithURL
-//    cell.imageView.image = image;
-    NSURL *poster = [NSURL URLWithString:aMovie[@"Poster"]];
-    NSData *imageData = [NSData dataWithContentsOfURL:poster];
-    UIImage *image = [UIImage imageWithData:imageData];
+    Movie *aMovie = movies[indexPath.row];
+    cell.movieTitleLabel.text = aMovie.title;
+    NSURL *poster = [NSURL URLWithString:aMovie.posterString];
+    
+    aMovie.posterImageData = [NSData dataWithContentsOfURL:poster];
+    UIImage *image = [UIImage imageWithData:aMovie.posterImageData];
     cell.movieImage.image = image;
     
-    NSString *year = [aMovie valueForKey:@"Year"];
-    NSString *rated = [aMovie valueForKey:@"Rated"];
+    NSString *year = aMovie.year;
+    NSString *rated = aMovie.rated;
+    NSString *rating = aMovie.imdbRating;
     
-    cell.year.text = [NSString stringWithFormat:@"Year: %@", year];
+    cell.year.text = [NSString stringWithFormat:@"Released: %@", year];
     cell.rated.text = [NSString stringWithFormat:@"Rated: %@", rated];
+    cell.ratingLabel.text = [NSString stringWithFormat:@"IMDB Rating: %@", rating];
     
     
     return cell;
@@ -98,31 +93,6 @@
 }
 
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 
 #pragma mark - Navigation
@@ -140,21 +110,10 @@
     }
 }
 
-//- (void)tableView:(UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-//
-//{
-//    
-//    let aHero = heroes[indexPath.row]
-//    let vc = storyboard?.instantiateViewControllerWithIdentifier("HeroDetailViewController") as! HeroDetailViewController
-//    vc.hero = aHero
-//    navigationController?.pushViewController(vc, animated: true)
-//    
-//    
-//}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *aMovie = movies[indexPath.row];
+    Movie *aMovie = movies[indexPath.row];
     MovieDetailViewController *detailVC = [self.storyboard instantiateViewControllerWithIdentifier: @"MovieDetail"];
     detailVC.movie = aMovie;
     

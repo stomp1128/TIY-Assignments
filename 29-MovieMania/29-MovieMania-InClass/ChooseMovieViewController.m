@@ -7,6 +7,7 @@
 //
 
 #import "ChooseMovieViewController.h"
+#import "Movie.h"
 
 @interface ChooseMovieViewController () <NSURLSessionDataDelegate, UISearchBarDelegate>
 {
@@ -83,8 +84,9 @@ NSMutableData *receivedData;
     {
         NSLog(@"Download successful");
         NSDictionary *movieInfo = [NSJSONSerialization JSONObjectWithData:receivedData options:0 error:nil];
-//        self.movies = [[NSMutableArray alloc] initWithObjects:movieInfo, nil];
-        [self.movies addObject:movieInfo];
+        Movie *aMovie = [Movie movieWithDictionary:movieInfo];
+     //  self.movies = [[NSMutableArray alloc] initWithObjects:movieInfo, nil];
+        [self.movies addObject:aMovie];
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         
     }

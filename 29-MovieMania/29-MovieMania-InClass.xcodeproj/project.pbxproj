@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE801C1B1BFA1BE4008396A2 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = FE801C1A1BFA1BE4008396A2 /* Movie.m */; };
 		FEB2596A1BF64570009B5936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEB259681BF64570009B5936 /* Main.storyboard */; };
 		FEB2596D1BF8F852009B5936 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB2596C1BF8F852009B5936 /* MovieDetailViewController.m */; };
 		FEF6C96F1BF5461100585E02 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C96E1BF5461100585E02 /* main.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE801C191BFA1BE4008396A2 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		FE801C1A1BFA1BE4008396A2 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
 		FEB259691BF64570009B5936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEB2596B1BF8F852009B5936 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		FEB2596C1BF8F852009B5936 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 				FEF6C9741BF5461100585E02 /* ChooseMovieViewController.m */,
 				FEB2596B1BF8F852009B5936 /* MovieDetailViewController.h */,
 				FEB2596C1BF8F852009B5936 /* MovieDetailViewController.m */,
+				FE801C191BFA1BE4008396A2 /* Movie.h */,
+				FE801C1A1BFA1BE4008396A2 /* Movie.m */,
 				FEF6C9791BF5461100585E02 /* Assets.xcassets */,
 				FEF6C97B1BF5461100585E02 /* LaunchScreen.storyboard */,
 				FEF6C97E1BF5461100585E02 /* Info.plist */,
@@ -167,6 +172,7 @@
 			files = (
 				FEB2596D1BF8F852009B5936 /* MovieDetailViewController.m in Sources */,
 				FEF6C9861BF5467800585E02 /* MovieListTableViewController.m in Sources */,
+				FE801C1B1BFA1BE4008396A2 /* Movie.m in Sources */,
 				FEF6C9891BF5498000585E02 /* MovieCell.m in Sources */,
 				FEF6C9751BF5461100585E02 /* ChooseMovieViewController.m in Sources */,
 				FEF6C9721BF5461100585E02 /* AppDelegate.m in Sources */,
