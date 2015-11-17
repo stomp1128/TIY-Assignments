@@ -12,8 +12,10 @@
 		FE801C5C1BFB917A008396A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE801C5B1BFB917A008396A2 /* Assets.xcassets */; };
 		FE801C5F1BFB917A008396A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE801C5D1BFB917A008396A2 /* LaunchScreen.storyboard */; };
 		FE801C671BFB9188008396A2 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801C661BFB9188008396A2 /* ClockView.swift */; };
-		FE801C691BFB929D008396A2 /* TimezonesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801C681BFB929D008396A2 /* TimezonesTableViewController.swift */; };
+		FE801C691BFB929D008396A2 /* ClocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801C681BFB929D008396A2 /* ClocksTableViewController.swift */; };
 		FE801C6B1BFB953F008396A2 /* ClockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801C6A1BFB953F008396A2 /* ClockCell.swift */; };
+		FE801C711BFBA899008396A2 /* TimeZoneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801C701BFBA899008396A2 /* TimeZoneTableViewController.swift */; };
+		FE801C731BFBB7E0008396A2 /* TimeZoneListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE801C721BFBB7E0008396A2 /* TimeZoneListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,10 @@
 		FE801C5E1BFB917A008396A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE801C601BFB917A008396A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE801C661BFB9188008396A2 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
-		FE801C681BFB929D008396A2 /* TimezonesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimezonesTableViewController.swift; sourceTree = "<group>"; };
+		FE801C681BFB929D008396A2 /* ClocksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClocksTableViewController.swift; sourceTree = "<group>"; };
 		FE801C6A1BFB953F008396A2 /* ClockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockCell.swift; sourceTree = "<group>"; };
+		FE801C701BFBA899008396A2 /* TimeZoneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimeZoneTableViewController.swift; path = ../TimeZoneTableViewController.swift; sourceTree = "<group>"; };
+		FE801C721BFBB7E0008396A2 /* TimeZoneListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeZoneListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +63,11 @@
 			isa = PBXGroup;
 			children = (
 				FE801C541BFB917A008396A2 /* AppDelegate.swift */,
-				FE801C661BFB9188008396A2 /* ClockView.swift */,
-				FE801C681BFB929D008396A2 /* TimezonesTableViewController.swift */,
+				FE801C681BFB929D008396A2 /* ClocksTableViewController.swift */,
 				FE801C6A1BFB953F008396A2 /* ClockCell.swift */,
+				FE801C701BFBA899008396A2 /* TimeZoneTableViewController.swift */,
+				FE801C721BFBB7E0008396A2 /* TimeZoneListCell.swift */,
+				FE801C661BFB9188008396A2 /* ClockView.swift */,
 				FE801C581BFB917A008396A2 /* Main.storyboard */,
 				FE801C5B1BFB917A008396A2 /* Assets.xcassets */,
 				FE801C5D1BFB917A008396A2 /* LaunchScreen.storyboard */,
@@ -142,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE801C731BFBB7E0008396A2 /* TimeZoneListCell.swift in Sources */,
 				FE801C671BFB9188008396A2 /* ClockView.swift in Sources */,
-				FE801C691BFB929D008396A2 /* TimezonesTableViewController.swift in Sources */,
+				FE801C711BFBA899008396A2 /* TimeZoneTableViewController.swift in Sources */,
+				FE801C691BFB929D008396A2 /* ClocksTableViewController.swift in Sources */,
 				FE801C6B1BFB953F008396A2 /* ClockCell.swift in Sources */,
 				FE801C551BFB917A008396A2 /* AppDelegate.swift in Sources */,
 			);
@@ -293,6 +301,7 @@
 				FE801C651BFB917A008396A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

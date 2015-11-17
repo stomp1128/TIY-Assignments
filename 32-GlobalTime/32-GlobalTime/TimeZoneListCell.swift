@@ -1,5 +1,5 @@
 //
-//  ClockCell.swift
+//  TimeZoneListCell.swift
 //  32-GlobalTime
 //
 //  Created by Chris Stomp on 11/17/15.
@@ -8,14 +8,9 @@
 
 import UIKit
 
-class ClockCell: UITableViewCell
-{
-    
-    @IBOutlet weak var clockView: ClockView!
-    @IBOutlet weak var timeZoneLabel: UILabel!
+class TimeZoneListCell: UITableViewCell {
 
-    override func awakeFromNib()
-    {
+    override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
