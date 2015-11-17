@@ -23,6 +23,10 @@
     UIImage *image = [UIImage imageWithData:self.movie.posterImageData];
     self.movieImage.image = image;
     self.titleLabel.text = self.movie.title;
+    self.genreLabel.text = self.movie.genre;
+    self.runtimeLabel.text = self.movie.runtime;
+    self.directorLabel.text = self.movie.director;
+    self.actorsLabel.text = self.movie.actors;
 
 }
 
