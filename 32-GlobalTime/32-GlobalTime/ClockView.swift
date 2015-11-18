@@ -94,6 +94,8 @@ class ClockView: UIView
         CGContextSetFillColorWithColor(cxt, clockBgColor.CGColor)
         CGContextFillPath(cxt)
         
+        
+        
         // clock's center
         var radius: CGFloat = 6.0
         let center2 = CGRect(x: boundsCenter.x - radius, y: boundsCenter.y - radius, width: 2 * radius, height: 2 * radius)

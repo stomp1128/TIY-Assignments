@@ -11,9 +11,8 @@ import Foundation
 
 protocol TimeZoneTableViewControllerDelegate 
 {
-    func timeZoneWasChosen(chosenCharacter: String)
+    func timeZoneWasChosen(chosenTimeZone: String)
 }
-
 
 class ClocksTableViewController: UITableViewController, UIPopoverControllerDelegate, TimeZoneTableViewControllerDelegate
 {
@@ -28,12 +27,9 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -63,49 +59,58 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
         return cell
     }
     
-
     
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.Delete
+        {
+            visibleTimeZones.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
+    }
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "ShowTimeZonesSegue"
+            
         {
-            let destinationVC = segue.destinationViewController as! TimeZoneTableViewController
-            destinationVC.timeZones = remainingTimeZones
+            let DestViewController = segue.destinationViewController as! UINavigationController
+            let targetController = DestViewController.topViewController as! TimeZoneTableViewController
+            //let destinationVC = segue.destinationViewController as! TimeZoneTableViewController
+            targetController.timeZones = remainingTimeZones
            // destinationVC.popoverPresentationController?.delegate = self
-            destinationVC.delegate = self
-            //let contentHeight = 34.0 * CGFloat(remainingTimeZones.count) //tells how tall popover should be
-            //destinationVC.preferredContentSize = CGSizeMake(200.0, contentHeight)
+            targetController.delegate = self
+            
+//            UINavigationController *navC = segue.destinationViewController;
+//            ChooseMovieViewController *chooseMovieVC = navC.viewControllers[0];
         }
     }
     
     
-    //Mark: - UIPopoverPresentationController Delegate // step 30
+    //MARK: - UIPopoverPresentationController Delegate
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
-        //step 30
+        
     {
         return .None //swift automatically knows that .None is a member of UIModalPresentaionStyle so you dont need to type it
     }
     
-    func timeZoneWasChosen(chosenTimeZone: String) //
+    func timeZoneWasChosen(chosenTimeZone: String) 
     {
-        navigationController?.dismissViewControllerAnimated(true, completion: nil) //step 37
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
         visibleTimeZones.append(chosenTimeZone)
         
         let rowToRemove = (remainingTimeZones as NSArray).indexOfObject(chosenTimeZone)
         remainingTimeZones.removeAtIndex(rowToRemove)
         if remainingTimeZones.count == 0
         {
-            plusButton.enabled = false //this needs to be added to storyboard and IBAction created in CCTV
+            plusButton.enabled = false  
         }
-        
         
         tableView?.reloadData()
     }
-
-
-
+    
 }

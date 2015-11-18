@@ -10,20 +10,20 @@
         <scene sceneID="qjp-k6-1O3">
             <objects>
                 <tableViewController id="DFW-5h-4wx" customClass="ClocksTableViewController" customModule="_2_GlobalTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="28" sectionFooterHeight="28" id="gcK-1r-76v">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" id="gcK-1r-76v">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClockCell" rowHeight="160" id="RLY-8J-rQp" customClass="ClockCell" customModule="_2_GlobalTime" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="160"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ClockCell" rowHeight="130" id="RLY-8J-rQp" customClass="ClockCell" customModule="_2_GlobalTime" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RLY-8J-rQp" id="yfx-Kp-ooH">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="RLY-8J-rQp" id="yfx-Kp-ooH">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="129"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWN-8w-wVr" customClass="ClockView" customModule="_2_GlobalTime" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vWN-8w-wVr" customClass="ClockView" customModule="_2_GlobalTime" customModuleProvider="target">
                                             <rect key="frame" x="18" y="40" width="80" height="80"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,7 +32,7 @@
                                                 <constraint firstAttribute="height" constant="80" id="WdU-L6-3NM"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timezone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRr-fZ-IfN">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Timezone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YRr-fZ-IfN">
                                             <rect key="frame" x="158" y="69" width="143" height="21"/>
                                             <animations/>
                                             <constraints>
@@ -76,9 +76,7 @@
                     <navigationItem key="navigationItem" id="YyC-p7-aoz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xaz-90-DFK">
                             <connections>
-                                <segue destination="Kdf-1y-W6m" kind="popoverPresentation" identifier="ShowTimeZonesSegue" popoverAnchorBarButtonItem="Xaz-90-DFK" id="TZ5-d8-AnH">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="fQQ-l0-5w9" kind="presentation" identifier="ShowTimeZonesSegue" id="A8a-Qi-gPL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -100,8 +98,8 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeZoneListCell" id="Z6d-RS-3FW">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timeZoneListCell" rowHeight="44" id="Z6d-RS-3FW">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z6d-RS-3FW" id="mbZ-t7-TBb">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -117,12 +115,19 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="vpj-ge-e5A"/>
+                    <navigationItem key="navigationItem" id="vpj-ge-e5A">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="kPM-es-29a">
+                            <connections>
+                                <action selector="cancelTapped:" destination="Kdf-1y-W6m" id="5fy-DM-x8t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Lj-R8-a5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="72"/>
+            <point key="canvasLocation" x="2660" y="72"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qdx-3u-fBP">
@@ -142,6 +147,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRm-Vv-vFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="72"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wtq-LE-4Uf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fQQ-l0-5w9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2L-sh-N6i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kdf-1y-W6m" kind="relationship" relationship="rootViewController" id="yXd-sE-lUt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vgV-mN-zuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="72"/>
         </scene>
     </scenes>
 </document>

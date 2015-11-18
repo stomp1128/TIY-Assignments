@@ -21,7 +21,7 @@ class TimeZoneTableViewController: UITableViewController
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,12 +52,17 @@ class TimeZoneTableViewController: UITableViewController
         return cell
     }
     
-
+   
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) //step 36
     {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         delegate?.timeZoneWasChosen((timeZones?[indexPath.row])!)
     }
+    
+    @IBAction func cancelTapped(sender: UIBarButtonItem)
+    {
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
 
+    }
 
 }
