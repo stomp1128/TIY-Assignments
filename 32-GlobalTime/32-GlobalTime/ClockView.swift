@@ -30,6 +30,7 @@ class ClockView: UIView
             animationTimer!.frameInterval = 8
             animationTimer!.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSRunLoopCommonModes)
         }
+        
     }
     var time: NSDate?
     var seconds: Int = 0

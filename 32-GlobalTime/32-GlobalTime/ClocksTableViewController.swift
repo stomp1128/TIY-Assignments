@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import QuartzCore
 
 protocol TimeZoneTableViewControllerDelegate 
 {
@@ -20,14 +21,16 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
     let allTimeZones = NSTimeZone.knownTimeZoneNames()
     var remainingTimeZones = NSTimeZone.knownTimeZoneNames()
     
-        
+    var animationTimer: CADisplayLink?
+
+    
     @IBOutlet weak var plusButton: UIBarButtonItem!
     
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,6 +62,7 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
         return cell
     }
     
+    // MARK: - Editing
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
     {
@@ -66,9 +70,20 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
         {
             visibleTimeZones.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            animationTimer?.invalidate()
+
         }
     }
-
+    
+//    override func editButtonItem() -> UIBarButtonItem
+//    {
+//        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+//        {
+//               if editing = true
+//        }
+//    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
