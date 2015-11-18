@@ -30,6 +30,10 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
+        
+        
         
     }
     
@@ -62,6 +66,15 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
         return cell
     }
     
+    override func setEditing(editing: Bool, animated: Bool)
+    {
+        super.setEditing(editing, animated: animated)
+        plusButton.enabled = !editing
+        
+    }
+        
+    
+    
     // MARK: - Editing
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
@@ -70,19 +83,20 @@ class ClocksTableViewController: UITableViewController, UIPopoverControllerDeleg
         {
             visibleTimeZones.removeAtIndex(indexPath.row)
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+//            if visibleTimeZones.count == 0
+//            {
+//                setEditing(false, animated: true)
+//            }
+            if editing
+            {
+                setEditing(false, animated: true)
+            }
+            
+            
             animationTimer?.invalidate()
-
+            
         }
     }
-    
-//    override func editButtonItem() -> UIBarButtonItem
-//    {
-//        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-//        {
-//               if editing = true
-//        }
-//    }
-    
     
     // MARK: - Navigation
 
