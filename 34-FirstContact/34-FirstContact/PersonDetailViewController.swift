@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactDetailViewController: UIViewController
+class PersonDetailViewController: UIViewController
 {
 
     override func viewDidLoad()

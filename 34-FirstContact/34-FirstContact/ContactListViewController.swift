@@ -16,12 +16,13 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var tableView: UITableView!
     
     let realm = try! Realm()
-    var people: Results<Contact>!
+    var people: Results<Person>!
+    var currentCreateAction: UIAlertAction!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        people = realm.objects(Contact).sorted("name")
+        people = realm.objects(Person).sorted("name")
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,7 +39,54 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     {
         return people.count
     }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath)
+        let aPerson = people[indexPath.row]
+        cell.textLabel?.text = aPerson.name
+        cell.detailTextLabel?.text = "\(aPerson.friendCount)"
+        
+        return cell
+    }
+    
+    @IBAction func addFriend(sender: UIBarButtonItem)
+    {
+        let alertController = UIAlertController(title: "Add Person", message: "Type the person's name.", preferredStyle: UIAlertControllerStyle.Alert)
+        currentCreateAction = UIAlertAction(title: "Create", style: .Default) { (action) -> Void in
+            let personName = alertController.textFields?.first?.text
+            let newPerson = Person()
+            newPerson.name = personName!
+            
+            try! self.realm.write({ () -> Void in
+                self.realm.add(newPerson) //saves person object to realm
+                self.tableView.reloadData() //reload to have person appear
+            })
+            
+        }
+        
+        alertController.addAction(currentCreateAction)//add createAction from above to the alert controller
+        currentCreateAction.enabled = false  //set to false to start so button is off as default
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        alertController.addTextFieldWithConfigurationHandler {(textField) -> Void in
+            
+            textField.placeholder = "Name"
+            textField.addTarget(self, action: "personNameFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged) //runs every time the text field changes
+            
+        }
+        
+        self.presentViewController(alertController, animated: true, completion: nil) //causes pop up to appear
+    }
+    
+    func personNameFieldDidChange(sender: UITextField)
+    {
+        self.currentCreateAction.enabled = sender.text?.characters.count > 0 //set to false above in alert controller
+    }
 
 
 }
+
+
+
+
 

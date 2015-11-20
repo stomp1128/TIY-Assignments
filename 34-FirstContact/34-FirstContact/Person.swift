@@ -8,10 +8,10 @@
 import Foundation
 import RealmSwift
 
-class Contact: Object
+class Person: Object
 {
     dynamic var name = ""
     dynamic var friendCount = 0
-    let people = List<Contact>() //use list to define many relationships, one to many
+    let people = List<Person>() //use list to define many relationships, one to many
 
 }
