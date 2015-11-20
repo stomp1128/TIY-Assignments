@@ -30,7 +30,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int //step 4
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int 
     {
         return 1
     }
@@ -45,7 +45,7 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath)
         let aPerson = people[indexPath.row]
         cell.textLabel?.text = aPerson.name
-        cell.detailTextLabel?.text = "\(aPerson.friendCount)"
+        cell.detailTextLabel?.text = "\(aPerson.contactCount)"
         
         return cell
     }
@@ -78,9 +78,32 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         self.presentViewController(alertController, animated: true, completion: nil) //causes pop up to appear
     }
     
+    @IBAction func changeSortCriteria(sender: UISegmentedControl)
+    {
+        if sender.selectedSegmentIndex == 0
+        {
+            people = people.sorted("name")
+        }
+        else
+        {
+            people = people.sorted("contactCount", ascending: false)
+        }
+        
+        tableView.reloadData()
+    }
+
+    
     func personNameFieldDidChange(sender: UITextField)
     {
         self.currentCreateAction.enabled = sender.text?.characters.count > 0 //set to false above in alert controller
+    }
+
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let personDetailVC = storyboard?.instantiateViewControllerWithIdentifier("PersonDetailViewController") as! PersonDetailViewController
+        personDetailVC.person = people[indexPath.row]
+        navigationController?.pushViewController(personDetailVC, animated: true)
     }
 
 

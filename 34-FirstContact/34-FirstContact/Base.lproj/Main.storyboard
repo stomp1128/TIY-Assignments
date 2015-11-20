@@ -26,6 +26,9 @@
                                     <segment title="Friends"/>
                                     <segment title="Family"/>
                                 </segments>
+                                <connections>
+                                    <action selector="changeSortCriteria:" destination="BYZ-38-t0r" eventType="valueChanged" id="4Sa-es-ODS"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k12-hR-Hme">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
@@ -104,7 +107,7 @@
         <!--Person Detail View Controller-->
         <scene sceneID="LGm-XM-9VS">
             <objects>
-                <viewController id="jJz-2n-Fct" customClass="PersonDetailViewController" customModule="_4_FirstContact" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonDetailViewController" id="jJz-2n-Fct" customClass="PersonDetailViewController" customModule="_4_FirstContact" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hfQ-MQ-HUV"/>
                         <viewControllerLayoutGuide type="bottom" id="7aL-Ma-G0A"/>
@@ -154,6 +157,10 @@
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="contactCountLabel" destination="41A-Nn-SIZ" id="s2l-M3-GVB"/>
+                        <outlet property="tableView" destination="Ufc-pW-XSp" id="6tR-zL-Seb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYz-Qt-Il9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
