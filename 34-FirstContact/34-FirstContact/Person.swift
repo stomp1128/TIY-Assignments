@@ -13,7 +13,7 @@ class Person: Object
     
 {
     dynamic var name = ""
-    dynamic var contactCount = 0
+    dynamic var friendCount = 0
     let people = List<Person>()
 }
 

@@ -23,6 +23,13 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
     {
         super.viewDidLoad()
         people = realm.objects(Person).sorted("name")
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem();
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(true)
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,10 +52,11 @@ class ContactListViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath)
         let aPerson = people[indexPath.row]
         cell.textLabel?.text = aPerson.name
-        cell.detailTextLabel?.text = "\(aPerson.contactCount)"
+        cell.detailTextLabel?.text = "\(aPerson.friendCount)"
         
         return cell
     }
+    
     
     @IBAction func addFriend(sender: UIBarButtonItem)
     {
