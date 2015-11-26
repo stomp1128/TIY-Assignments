@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE3D235A1C04F46A0076C016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23591C04F46A0076C016 /* AppDelegate.swift */; };
+		FE3D235F1C04F46A0076C016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D235D1C04F46A0076C016 /* Main.storyboard */; };
+		FE3D23621C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23601C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld */; };
+		FE3D23641C04F46A0076C016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23631C04F46A0076C016 /* Assets.xcassets */; };
+		FE3D23671C04F46A0076C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23651C04F46A0076C016 /* LaunchScreen.storyboard */; };
+		FE3D236F1C07758D0076C016 /* VenueListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D236E1C07758D0076C016 /* VenueListTableViewController.swift */; };
+		FE3D23711C0775F10076C016 /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23701C0775F10076C016 /* VenueDetailViewController.swift */; };
+		FE3D23731C07760E0076C016 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23721C07760E0076C016 /* Venue.swift */; };
+		FE3D23751C0776280076C016 /* API Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23741C0776280076C016 /* API Controller.swift */; };
+		FE3D23791C07774E0076C016 /* VenueSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23781C07774E0076C016 /* VenueSearchTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE3D23561C04F46A0076C016 /* 37-VenueMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "37-VenueMenu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3D23591C04F46A0076C016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE3D235E1C04F46A0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE3D23611C04F46A0076C016 /* _7_VenueMenu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _7_VenueMenu.xcdatamodel; sourceTree = "<group>"; };
+		FE3D23631C04F46A0076C016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE3D23661C04F46A0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE3D23681C04F46A0076C016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3D236E1C07758D0076C016 /* VenueListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueListTableViewController.swift; sourceTree = "<group>"; };
+		FE3D23701C0775F10076C016 /* VenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
+		FE3D23721C07760E0076C016 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		FE3D23741C0776280076C016 /* API Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API Controller.swift"; sourceTree = "<group>"; };
+		FE3D23781C07774E0076C016 /* VenueSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueSearchTableViewController.swift; path = ../VenueSearchTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE3D23531C04F46A0076C016 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE3D234D1C04F46A0076C016 = {
+			isa = PBXGroup;
+			children = (
+				FE3D23581C04F46A0076C016 /* 37-VenueMenu */,
+				FE3D23571C04F46A0076C016 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE3D23571C04F46A0076C016 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D23561C04F46A0076C016 /* 37-VenueMenu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE3D23581C04F46A0076C016 /* 37-VenueMenu */ = {
+			isa = PBXGroup;
+			children = (
+				FE3D23591C04F46A0076C016 /* AppDelegate.swift */,
+				FE3D235D1C04F46A0076C016 /* Main.storyboard */,
+				FE3D236E1C07758D0076C016 /* VenueListTableViewController.swift */,
+				FE3D23781C07774E0076C016 /* VenueSearchTableViewController.swift */,
+				FE3D23701C0775F10076C016 /* VenueDetailViewController.swift */,
+				FE3D23721C07760E0076C016 /* Venue.swift */,
+				FE3D23741C0776280076C016 /* API Controller.swift */,
+				FE3D23631C04F46A0076C016 /* Assets.xcassets */,
+				FE3D23651C04F46A0076C016 /* LaunchScreen.storyboard */,
+				FE3D23681C04F46A0076C016 /* Info.plist */,
+				FE3D23601C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld */,
+			);
+			path = "37-VenueMenu";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE3D23551C04F46A0076C016 /* 37-VenueMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE3D236B1C04F46A0076C016 /* Build configuration list for PBXNativeTarget "37-VenueMenu" */;
+			buildPhases = (
+				FE3D23521C04F46A0076C016 /* Sources */,
+				FE3D23531C04F46A0076C016 /* Frameworks */,
+				FE3D23541C04F46A0076C016 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "37-VenueMenu";
+			productName = "37-VenueMenu";
+			productReference = FE3D23561C04F46A0076C016 /* 37-VenueMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE3D234E1C04F46A0076C016 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "The Iron Yard";
+				TargetAttributes = {
+					FE3D23551C04F46A0076C016 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = W89Q7DEDF7;
+					};
+				};
+			};
+			buildConfigurationList = FE3D23511C04F46A0076C016 /* Build configuration list for PBXProject "37-VenueMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE3D234D1C04F46A0076C016;
+			productRefGroup = FE3D23571C04F46A0076C016 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE3D23551C04F46A0076C016 /* 37-VenueMenu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE3D23541C04F46A0076C016 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3D23671C04F46A0076C016 /* LaunchScreen.storyboard in Resources */,
+				FE3D23641C04F46A0076C016 /* Assets.xcassets in Resources */,
+				FE3D235F1C04F46A0076C016 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE3D23521C04F46A0076C016 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3D236F1C07758D0076C016 /* VenueListTableViewController.swift in Sources */,
+				FE3D23731C07760E0076C016 /* Venue.swift in Sources */,
+				FE3D235A1C04F46A0076C016 /* AppDelegate.swift in Sources */,
+				FE3D23751C0776280076C016 /* API Controller.swift in Sources */,
+				FE3D23621C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */,
+				FE3D23711C0775F10076C016 /* VenueDetailViewController.swift in Sources */,
+				FE3D23791C07774E0076C016 /* VenueSearchTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE3D235D1C04F46A0076C016 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE3D235E1C04F46A0076C016 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE3D23651C04F46A0076C016 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE3D23661C04F46A0076C016 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE3D23691C04F46A0076C016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE3D236A1C04F46A0076C016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE3D236C1C04F46A0076C016 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "37-VenueMenu/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-7-VenueMenu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE3D236D1C04F46A0076C016 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "37-VenueMenu/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.-7-VenueMenu";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE3D23511C04F46A0076C016 /* Build configuration list for PBXProject "37-VenueMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3D23691C04F46A0076C016 /* Debug */,
+				FE3D236A1C04F46A0076C016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE3D236B1C04F46A0076C016 /* Build configuration list for PBXNativeTarget "37-VenueMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3D236C1C04F46A0076C016 /* Debug */,
+				FE3D236D1C04F46A0076C016 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FE3D23601C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FE3D23611C04F46A0076C016 /* _7_VenueMenu.xcdatamodel */,
+			);
+			currentVersion = FE3D23611C04F46A0076C016 /* _7_VenueMenu.xcdatamodel */;
+			path = _7_VenueMenu.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FE3D234E1C04F46A0076C016 /* Project object */;
+}
