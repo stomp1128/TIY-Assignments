@@ -1,5 +1,5 @@
 //
-//  VenueListTableViewController.swift
+//  SearchTableViewController.swift
 //  37-VenueMenu
 //
 //  Created by Chris Stomp on 11/29/15.
@@ -9,36 +9,29 @@
 import UIKit
 import CoreData
 
-class VenueListTableViewController: UITableViewController
+protocol APIControllerProtocol
 {
+    func didReceiveAPIResults(results: NSArray)
+}
+
+class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate
+    
+{
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var venues = [NSManagedObject]()
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var api: APIController!
+   
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        title = "Venue Menu"
-        
-        let fetchRequest = NSFetchRequest(entityName: "Counter")
-        
-        // Execute the fetch request, and cast the results to an array of LogItem objects
-        do {
-            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Venue]
-            venues = fetchResults!
-        }
-        catch {
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
-
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,43 +50,36 @@ class VenueListTableViewController: UITableViewController
         // #warning Incomplete implementation, return the number of rows
         return venues.count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("venueListCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
-        let aVenue = venues[indexPath.row]
-        
-        cell.textLabel!.text =
-            aVenue.valueForKey("name") as? String
-        
+        // Configure the cell...
 
         return cell
     }
     
-
-    
+   
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    
+    */
 
+    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete
-        {
-            
-            let aVenue = venues[indexPath.row]
-            venues.removeAtIndex(indexPath.row)
-            managedObjectContext.deleteObject(aVenue)
-            saveContext()
+        if editingStyle == .Delete {
+            // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-
+        } else if editingStyle == .Insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -110,33 +96,25 @@ class VenueListTableViewController: UITableViewController
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+    
+    // MARK: - API Controller Protocol
+    
+    func didReceiveAPIResults(response: NSArray)
     {
-        if segue.identifier == "SearchViewSegue"
-        {
-            let destinationVC = segue.destinationViewController as! UINavigationController
-            let searchVC = destinationVC.viewControllers[0] as! SearchTableViewController
-            //searchVC.delegate = self
-        }
+        dispatch_async(dispatch_get_main_queue(), {
+            self.venues = Venue.venuesWithJson(results)
+            self.tableView.reloadData()
+            //UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
     }
     
-    // MARK: - Private
-    
-    func saveContext()
-    {
-        do {
-            try managedObjectContext.save()
-        }
-        catch {
-            let nserror = error as NSError
-            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
-            abort()
-        }
-    }
-
-
 }

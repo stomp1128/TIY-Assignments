@@ -14,6 +14,9 @@
 		FE3D23B61C0B866E0076C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23B41C0B866E0076C016 /* LaunchScreen.storyboard */; };
 		FE3D23BE1C0B872D0076C016 /* VenueListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */; };
 		FE3D23C01C0B8DF40076C016 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23BF1C0B8DF40076C016 /* Venue.swift */; };
+		FE3D23C21C0B920F0076C016 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23C11C0B920F0076C016 /* SearchTableViewController.swift */; };
+		FE3D23C41C0BA4F40076C016 /* API Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23C31C0BA4F40076C016 /* API Controller.swift */; };
+		FE3D23C61C0BA5170076C016 /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23C51C0BA5170076C016 /* VenueDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		FE3D23B71C0B866E0076C016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueListTableViewController.swift; path = ../VenueListTableViewController.swift; sourceTree = "<group>"; };
 		FE3D23BF1C0B8DF40076C016 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		FE3D23C11C0B920F0076C016 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		FE3D23C31C0BA4F40076C016 /* API Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API Controller.swift"; sourceTree = "<group>"; };
+		FE3D23C51C0BA5170076C016 /* VenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				FE3D23A81C0B866E0076C016 /* AppDelegate.swift */,
 				FE3D23AC1C0B866E0076C016 /* Main.storyboard */,
 				FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */,
+				FE3D23C11C0B920F0076C016 /* SearchTableViewController.swift */,
+				FE3D23C51C0BA5170076C016 /* VenueDetailViewController.swift */,
+				FE3D23C31C0BA4F40076C016 /* API Controller.swift */,
 				FE3D23BF1C0B8DF40076C016 /* Venue.swift */,
 				FE3D23B21C0B866E0076C016 /* Assets.xcassets */,
 				FE3D23B41C0B866E0076C016 /* LaunchScreen.storyboard */,
@@ -144,6 +153,9 @@
 			files = (
 				FE3D23BE1C0B872D0076C016 /* VenueListTableViewController.swift in Sources */,
 				FE3D23C01C0B8DF40076C016 /* Venue.swift in Sources */,
+				FE3D23C21C0B920F0076C016 /* SearchTableViewController.swift in Sources */,
+				FE3D23C41C0BA4F40076C016 /* API Controller.swift in Sources */,
+				FE3D23C61C0BA5170076C016 /* VenueDetailViewController.swift in Sources */,
 				FE3D23A91C0B866E0076C016 /* AppDelegate.swift in Sources */,
 				FE3D23B11C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */,
 			);
@@ -293,6 +305,7 @@
 				FE3D23BC1C0B866E0076C016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
