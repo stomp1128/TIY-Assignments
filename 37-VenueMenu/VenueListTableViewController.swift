@@ -1,23 +1,44 @@
 //
-//  VenueSearchTableViewController.swift
+//  VenueListTableViewController.swift
 //  37-VenueMenu
 //
-//  Created by Chris Stomp on 11/26/15.
+//  Created by Chris Stomp on 11/29/15.
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
 import UIKit
+import CoreData
 
-class VenueSearchTableViewController: UITableViewController {
+class VenueListTableViewController: UITableViewController
+{
+    
+    var venues = [Venue]()
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        title = "Venue Menu"
+        
+        let fetchRequest = NSFetchRequest(entityName: "Counter")
+        
+        // Execute the fetch request, and cast the results to an array of LogItem objects
+        do {
+            let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Venue]
+            venues = fetchResults!
+        }
+        catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,43 +50,50 @@ class VenueSearchTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return venues.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("venueListCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let aVenue = venues[indexPath.row]
+        
+        cell.textLabel!.text =
+            aVenue.valueForKey("name") as? String
+        
 
         return cell
     }
-    */
+    
 
-    /*
+    
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
+        if editingStyle == .Delete
+        {
+            
+            let aVenue = venues[indexPath.row]
+            venues.removeAtIndex(indexPath.row)
+            managedObjectContext.deleteObject(aVenue)
+            saveContext()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
@@ -91,5 +119,20 @@ class VenueSearchTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // MARK: - Private
+    
+    func saveContext()
+    {
+        do {
+            try managedObjectContext.save()
+        }
+        catch {
+            let nserror = error as NSError
+            NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
+            abort()
+        }
+    }
+
 
 }

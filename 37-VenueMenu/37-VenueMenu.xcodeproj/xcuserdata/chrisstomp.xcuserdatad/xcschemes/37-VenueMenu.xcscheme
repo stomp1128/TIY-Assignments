@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE3D23551C04F46A0076C016"
+               BlueprintIdentifier = "FE3D23A41C0B866E0076C016"
                BuildableName = "37-VenueMenu.app"
                BlueprintName = "37-VenueMenu"
                ReferencedContainer = "container:37-VenueMenu.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE3D23551C04F46A0076C016"
+            BlueprintIdentifier = "FE3D23A41C0B866E0076C016"
             BuildableName = "37-VenueMenu.app"
             BlueprintName = "37-VenueMenu"
             ReferencedContainer = "container:37-VenueMenu.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE3D23551C04F46A0076C016"
+            BlueprintIdentifier = "FE3D23A41C0B866E0076C016"
             BuildableName = "37-VenueMenu.app"
             BlueprintName = "37-VenueMenu"
             ReferencedContainer = "container:37-VenueMenu.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE3D23551C04F46A0076C016"
+            BlueprintIdentifier = "FE3D23A41C0B866E0076C016"
             BuildableName = "37-VenueMenu.app"
             BlueprintName = "37-VenueMenu"
             ReferencedContainer = "container:37-VenueMenu.xcodeproj">

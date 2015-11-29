@@ -7,35 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE3D235A1C04F46A0076C016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23591C04F46A0076C016 /* AppDelegate.swift */; };
-		FE3D235F1C04F46A0076C016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D235D1C04F46A0076C016 /* Main.storyboard */; };
-		FE3D23621C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23601C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld */; };
-		FE3D23641C04F46A0076C016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23631C04F46A0076C016 /* Assets.xcassets */; };
-		FE3D23671C04F46A0076C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23651C04F46A0076C016 /* LaunchScreen.storyboard */; };
-		FE3D236F1C07758D0076C016 /* VenueListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D236E1C07758D0076C016 /* VenueListTableViewController.swift */; };
-		FE3D23711C0775F10076C016 /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23701C0775F10076C016 /* VenueDetailViewController.swift */; };
-		FE3D23731C07760E0076C016 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23721C07760E0076C016 /* Venue.swift */; };
-		FE3D23751C0776280076C016 /* API Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23741C0776280076C016 /* API Controller.swift */; };
-		FE3D23791C07774E0076C016 /* VenueSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23781C07774E0076C016 /* VenueSearchTableViewController.swift */; };
+		FE3D23A91C0B866E0076C016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23A81C0B866E0076C016 /* AppDelegate.swift */; };
+		FE3D23AE1C0B866E0076C016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23AC1C0B866E0076C016 /* Main.storyboard */; };
+		FE3D23B11C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23AF1C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld */; };
+		FE3D23B31C0B866E0076C016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23B21C0B866E0076C016 /* Assets.xcassets */; };
+		FE3D23B61C0B866E0076C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23B41C0B866E0076C016 /* LaunchScreen.storyboard */; };
+		FE3D23BE1C0B872D0076C016 /* VenueListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */; };
+		FE3D23C01C0B8DF40076C016 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23BF1C0B8DF40076C016 /* Venue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE3D23561C04F46A0076C016 /* 37-VenueMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "37-VenueMenu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE3D23591C04F46A0076C016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE3D235E1C04F46A0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FE3D23611C04F46A0076C016 /* _7_VenueMenu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _7_VenueMenu.xcdatamodel; sourceTree = "<group>"; };
-		FE3D23631C04F46A0076C016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FE3D23661C04F46A0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FE3D23681C04F46A0076C016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FE3D236E1C07758D0076C016 /* VenueListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueListTableViewController.swift; sourceTree = "<group>"; };
-		FE3D23701C0775F10076C016 /* VenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
-		FE3D23721C07760E0076C016 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
-		FE3D23741C0776280076C016 /* API Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API Controller.swift"; sourceTree = "<group>"; };
-		FE3D23781C07774E0076C016 /* VenueSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueSearchTableViewController.swift; path = ../VenueSearchTableViewController.swift; sourceTree = "<group>"; };
+		FE3D23A51C0B866E0076C016 /* 37-VenueMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "37-VenueMenu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3D23A81C0B866E0076C016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FE3D23AD1C0B866E0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE3D23B01C0B866E0076C016 /* _7_VenueMenu.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _7_VenueMenu.xcdatamodel; sourceTree = "<group>"; };
+		FE3D23B21C0B866E0076C016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE3D23B51C0B866E0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE3D23B71C0B866E0076C016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueListTableViewController.swift; path = ../VenueListTableViewController.swift; sourceTree = "<group>"; };
+		FE3D23BF1C0B8DF40076C016 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FE3D23531C04F46A0076C016 /* Frameworks */ = {
+		FE3D23A21C0B866E0076C016 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -45,36 +39,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE3D234D1C04F46A0076C016 = {
+		FE3D239C1C0B866E0076C016 = {
 			isa = PBXGroup;
 			children = (
-				FE3D23581C04F46A0076C016 /* 37-VenueMenu */,
-				FE3D23571C04F46A0076C016 /* Products */,
+				FE3D23A71C0B866E0076C016 /* 37-VenueMenu */,
+				FE3D23A61C0B866E0076C016 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FE3D23571C04F46A0076C016 /* Products */ = {
+		FE3D23A61C0B866E0076C016 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE3D23561C04F46A0076C016 /* 37-VenueMenu.app */,
+				FE3D23A51C0B866E0076C016 /* 37-VenueMenu.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FE3D23581C04F46A0076C016 /* 37-VenueMenu */ = {
+		FE3D23A71C0B866E0076C016 /* 37-VenueMenu */ = {
 			isa = PBXGroup;
 			children = (
-				FE3D23591C04F46A0076C016 /* AppDelegate.swift */,
-				FE3D235D1C04F46A0076C016 /* Main.storyboard */,
-				FE3D236E1C07758D0076C016 /* VenueListTableViewController.swift */,
-				FE3D23781C07774E0076C016 /* VenueSearchTableViewController.swift */,
-				FE3D23701C0775F10076C016 /* VenueDetailViewController.swift */,
-				FE3D23721C07760E0076C016 /* Venue.swift */,
-				FE3D23741C0776280076C016 /* API Controller.swift */,
-				FE3D23631C04F46A0076C016 /* Assets.xcassets */,
-				FE3D23651C04F46A0076C016 /* LaunchScreen.storyboard */,
-				FE3D23681C04F46A0076C016 /* Info.plist */,
-				FE3D23601C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld */,
+				FE3D23A81C0B866E0076C016 /* AppDelegate.swift */,
+				FE3D23AC1C0B866E0076C016 /* Main.storyboard */,
+				FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */,
+				FE3D23BF1C0B8DF40076C016 /* Venue.swift */,
+				FE3D23B21C0B866E0076C016 /* Assets.xcassets */,
+				FE3D23B41C0B866E0076C016 /* LaunchScreen.storyboard */,
+				FE3D23B71C0B866E0076C016 /* Info.plist */,
+				FE3D23AF1C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld */,
 			);
 			path = "37-VenueMenu";
 			sourceTree = "<group>";
@@ -82,13 +73,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE3D23551C04F46A0076C016 /* 37-VenueMenu */ = {
+		FE3D23A41C0B866E0076C016 /* 37-VenueMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE3D236B1C04F46A0076C016 /* Build configuration list for PBXNativeTarget "37-VenueMenu" */;
+			buildConfigurationList = FE3D23BA1C0B866E0076C016 /* Build configuration list for PBXNativeTarget "37-VenueMenu" */;
 			buildPhases = (
-				FE3D23521C04F46A0076C016 /* Sources */,
-				FE3D23531C04F46A0076C016 /* Frameworks */,
-				FE3D23541C04F46A0076C016 /* Resources */,
+				FE3D23A11C0B866E0076C016 /* Sources */,
+				FE3D23A21C0B866E0076C016 /* Frameworks */,
+				FE3D23A31C0B866E0076C016 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -96,26 +87,26 @@
 			);
 			name = "37-VenueMenu";
 			productName = "37-VenueMenu";
-			productReference = FE3D23561C04F46A0076C016 /* 37-VenueMenu.app */;
+			productReference = FE3D23A51C0B866E0076C016 /* 37-VenueMenu.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FE3D234E1C04F46A0076C016 /* Project object */ = {
+		FE3D239D1C0B866E0076C016 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "The Iron Yard";
 				TargetAttributes = {
-					FE3D23551C04F46A0076C016 = {
+					FE3D23A41C0B866E0076C016 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = W89Q7DEDF7;
 					};
 				};
 			};
-			buildConfigurationList = FE3D23511C04F46A0076C016 /* Build configuration list for PBXProject "37-VenueMenu" */;
+			buildConfigurationList = FE3D23A01C0B866E0076C016 /* Build configuration list for PBXProject "37-VenueMenu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -123,59 +114,56 @@
 				en,
 				Base,
 			);
-			mainGroup = FE3D234D1C04F46A0076C016;
-			productRefGroup = FE3D23571C04F46A0076C016 /* Products */;
+			mainGroup = FE3D239C1C0B866E0076C016;
+			productRefGroup = FE3D23A61C0B866E0076C016 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE3D23551C04F46A0076C016 /* 37-VenueMenu */,
+				FE3D23A41C0B866E0076C016 /* 37-VenueMenu */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FE3D23541C04F46A0076C016 /* Resources */ = {
+		FE3D23A31C0B866E0076C016 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3D23671C04F46A0076C016 /* LaunchScreen.storyboard in Resources */,
-				FE3D23641C04F46A0076C016 /* Assets.xcassets in Resources */,
-				FE3D235F1C04F46A0076C016 /* Main.storyboard in Resources */,
+				FE3D23B61C0B866E0076C016 /* LaunchScreen.storyboard in Resources */,
+				FE3D23B31C0B866E0076C016 /* Assets.xcassets in Resources */,
+				FE3D23AE1C0B866E0076C016 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FE3D23521C04F46A0076C016 /* Sources */ = {
+		FE3D23A11C0B866E0076C016 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3D236F1C07758D0076C016 /* VenueListTableViewController.swift in Sources */,
-				FE3D23731C07760E0076C016 /* Venue.swift in Sources */,
-				FE3D235A1C04F46A0076C016 /* AppDelegate.swift in Sources */,
-				FE3D23751C0776280076C016 /* API Controller.swift in Sources */,
-				FE3D23621C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */,
-				FE3D23711C0775F10076C016 /* VenueDetailViewController.swift in Sources */,
-				FE3D23791C07774E0076C016 /* VenueSearchTableViewController.swift in Sources */,
+				FE3D23BE1C0B872D0076C016 /* VenueListTableViewController.swift in Sources */,
+				FE3D23C01C0B8DF40076C016 /* Venue.swift in Sources */,
+				FE3D23A91C0B866E0076C016 /* AppDelegate.swift in Sources */,
+				FE3D23B11C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE3D235D1C04F46A0076C016 /* Main.storyboard */ = {
+		FE3D23AC1C0B866E0076C016 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE3D235E1C04F46A0076C016 /* Base */,
+				FE3D23AD1C0B866E0076C016 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FE3D23651C04F46A0076C016 /* LaunchScreen.storyboard */ = {
+		FE3D23B41C0B866E0076C016 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FE3D23661C04F46A0076C016 /* Base */,
+				FE3D23B51C0B866E0076C016 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -183,7 +171,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FE3D23691C04F46A0076C016 /* Debug */ = {
+		FE3D23B81C0B866E0076C016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -227,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		FE3D236A1C04F46A0076C016 /* Release */ = {
+		FE3D23B91C0B866E0076C016 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -264,7 +252,7 @@
 			};
 			name = Release;
 		};
-		FE3D236C1C04F46A0076C016 /* Debug */ = {
+		FE3D23BB1C0B866E0076C016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -275,7 +263,7 @@
 			};
 			name = Debug;
 		};
-		FE3D236D1C04F46A0076C016 /* Release */ = {
+		FE3D23BC1C0B866E0076C016 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -289,37 +277,37 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FE3D23511C04F46A0076C016 /* Build configuration list for PBXProject "37-VenueMenu" */ = {
+		FE3D23A01C0B866E0076C016 /* Build configuration list for PBXProject "37-VenueMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE3D23691C04F46A0076C016 /* Debug */,
-				FE3D236A1C04F46A0076C016 /* Release */,
+				FE3D23B81C0B866E0076C016 /* Debug */,
+				FE3D23B91C0B866E0076C016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE3D236B1C04F46A0076C016 /* Build configuration list for PBXNativeTarget "37-VenueMenu" */ = {
+		FE3D23BA1C0B866E0076C016 /* Build configuration list for PBXNativeTarget "37-VenueMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE3D236C1C04F46A0076C016 /* Debug */,
-				FE3D236D1C04F46A0076C016 /* Release */,
+				FE3D23BB1C0B866E0076C016 /* Debug */,
+				FE3D23BC1C0B866E0076C016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FE3D23601C04F46A0076C016 /* _7_VenueMenu.xcdatamodeld */ = {
+		FE3D23AF1C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FE3D23611C04F46A0076C016 /* _7_VenueMenu.xcdatamodel */,
+				FE3D23B01C0B866E0076C016 /* _7_VenueMenu.xcdatamodel */,
 			);
-			currentVersion = FE3D23611C04F46A0076C016 /* _7_VenueMenu.xcdatamodel */;
+			currentVersion = FE3D23B01C0B866E0076C016 /* _7_VenueMenu.xcdatamodel */;
 			path = _7_VenueMenu.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = FE3D234E1C04F46A0076C016 /* Project object */;
+	rootObject = FE3D239D1C0B866E0076C016 /* Project object */;
 }
