@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Table View Controller-->
@@ -43,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="1184" y="265"/>
         </scene>
-        <!--View Controller-->
+        <!--Venue Detail View Controller-->
         <scene sceneID="aQQ-sR-Fg6">
             <objects>
-                <viewController id="xvz-nU-xaD" sceneMemberID="viewController">
+                <viewController id="xvz-nU-xaD" customClass="VenueDetailViewController" customModule="_7_VenueMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g8W-fs-o9N"/>
                         <viewControllerLayoutGuide type="bottom" id="g8i-pi-5yd"/>
@@ -54,25 +55,77 @@
                     <view key="view" contentMode="scaleToFill" id="FWk-dY-lch">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7x9-ZP-kos">
+                                <rect key="frame" x="0.0" y="330" width="600" height="270"/>
+                                <animations/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmu-JV-NNl">
+                                <rect key="frame" x="20" y="103" width="45" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2f-gy-4zQ">
+                                <rect key="frame" x="20" y="164" width="63" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-pK-spv">
+                                <rect key="frame" x="20" y="225" width="49" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q2f-gy-4zQ" firstAttribute="leading" secondItem="Qmu-JV-NNl" secondAttribute="leading" id="5by-9N-inR"/>
+                            <constraint firstItem="NlA-pK-spv" firstAttribute="top" secondItem="q2f-gy-4zQ" secondAttribute="bottom" constant="40" id="62T-Sy-MAS"/>
+                            <constraint firstItem="Qmu-JV-NNl" firstAttribute="leading" secondItem="FWk-dY-lch" secondAttribute="leading" constant="20" id="Ews-SF-t93"/>
+                            <constraint firstItem="Qmu-JV-NNl" firstAttribute="top" secondItem="g8W-fs-o9N" secondAttribute="bottom" constant="39" id="H7D-hf-eyg"/>
+                            <constraint firstItem="g8i-pi-5yd" firstAttribute="top" secondItem="7x9-ZP-kos" secondAttribute="bottom" id="Jmt-Km-sFt"/>
+                            <constraint firstItem="7x9-ZP-kos" firstAttribute="centerX" secondItem="FWk-dY-lch" secondAttribute="centerX" id="Rgf-Cb-if4"/>
+                            <constraint firstAttribute="trailing" secondItem="7x9-ZP-kos" secondAttribute="trailing" id="kiE-UT-2Yp"/>
+                            <constraint firstItem="7x9-ZP-kos" firstAttribute="height" secondItem="FWk-dY-lch" secondAttribute="height" multiplier="0.45" id="kkw-Cx-Pnp"/>
+                            <constraint firstItem="q2f-gy-4zQ" firstAttribute="top" secondItem="Qmu-JV-NNl" secondAttribute="bottom" constant="40" id="t1L-IT-2ah"/>
+                            <constraint firstItem="NlA-pK-spv" firstAttribute="leading" secondItem="q2f-gy-4zQ" secondAttribute="leading" id="vDg-Em-cGg"/>
+                            <constraint firstItem="7x9-ZP-kos" firstAttribute="leading" secondItem="FWk-dY-lch" secondAttribute="leading" id="zrl-LO-eE6"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="tuI-eI-1VY"/>
+                    <navigationItem key="navigationItem" id="tuI-eI-1VY">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kl8-U6-gIL">
+                            <connections>
+                                <action selector="cancelTapped:" destination="xvz-nU-xaD" id="Tx9-Kd-1Hp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="q2f-gy-4zQ" id="g5b-lY-mD6"/>
+                        <outlet property="mapView" destination="7x9-ZP-kos" id="zg0-AT-puz"/>
+                        <outlet property="nameLabel" destination="Qmu-JV-NNl" id="GHS-UL-8FA"/>
+                        <outlet property="ratingLabel" destination="NlA-pK-spv" id="25F-D1-Fkg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGJ-3W-Th2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1184" y="984"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Search Table View Controller-->
         <scene sceneID="uCy-VP-Yyj">
             <objects>
-                <tableViewController id="rtL-0r-mB5" sceneMemberID="viewController">
+                <tableViewController id="rtL-0r-mB5" customClass="SearchTableViewController" customModule="_7_VenueMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="208-pi-Oek">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableFooterView" contentMode="redraw" id="AuP-QE-ZPL">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="AuP-QE-ZPL">
                             <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <animations/>
@@ -81,13 +134,42 @@
                                 <outlet property="delegate" destination="rtL-0r-mB5" id="vuS-3T-GGO"/>
                             </connections>
                         </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="g4A-AI-2NU" style="IBUITableViewCellStyleDefault" id="LTQ-dN-aHf">
+                                <rect key="frame" x="0.0" y="136" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LTQ-dN-aHf" id="sRR-km-gjX">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="g4A-AI-2NU">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="rtL-0r-mB5" id="bLb-M9-JlK"/>
                             <outlet property="delegate" destination="rtL-0r-mB5" id="QJR-NE-2Fz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kv4-ts-M5D"/>
+                    <navigationItem key="navigationItem" id="kv4-ts-M5D">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Est-kU-Von">
+                            <connections>
+                                <action selector="cancelTapped:" destination="rtL-0r-mB5" id="8kd-0V-bQt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="AuP-QE-ZPL" id="cbh-e2-iBI"/>
                         <outlet property="searchDisplayController" destination="mRb-Sw-znm" id="q7N-4L-atv"/>
                     </connections>
                 </tableViewController>

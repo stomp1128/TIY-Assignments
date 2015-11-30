@@ -21,7 +21,7 @@ class VenueListTableViewController: UITableViewController
         
         title = "Venue Menu"
         
-        let fetchRequest = NSFetchRequest(entityName: "Counter")
+        let fetchRequest = NSFetchRequest(entityName: "Venue")
         
         // Execute the fetch request, and cast the results to an array of LogItem objects
         do {
@@ -55,7 +55,8 @@ class VenueListTableViewController: UITableViewController
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return venues.count
+        //return venues.count
+        return 10
     }
 
     

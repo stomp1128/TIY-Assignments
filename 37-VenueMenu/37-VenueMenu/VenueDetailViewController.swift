@@ -7,13 +7,26 @@
 //
 
 import UIKit
+import MapKit
+import CoreData
 
-class VenueDetailViewController: UIViewController {
+class VenueDetailViewController: UIViewController
+{
+    var annotations = [MKPointAnnotation]()
+    var placemarks = [CLPlacemark]()
+    var venuesDetail = [NSManagedObject]()
+    
+    
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var ratingLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+     
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +44,9 @@ class VenueDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func cancelTapped(sender: UIBarButtonItem) {
+    }
+    
 
 }

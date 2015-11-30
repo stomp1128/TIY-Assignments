@@ -14,14 +14,15 @@ protocol APIControllerProtocol
     func didReceiveAPIResults(results: NSArray)
 }
 
-class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate
+class SearchTableViewController: UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate, APIControllerProtocol
     
 {
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
     var venues = [NSManagedObject]()
     var api: APIController!
-   
+    
 
     override func viewDidLoad()
     {
@@ -53,10 +54,12 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("SearchResultCell", forIndexPath: indexPath)
 
-        // Configure the cell...
-
+        let aVenue = venues[indexPath.row]
+        
+        cell.textLabel!.text = aVenue.valueForKey("name") as? String
+        
         return cell
     }
     
@@ -108,13 +111,19 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate, UIS
     
     // MARK: - API Controller Protocol
     
-    func didReceiveAPIResults(response: NSArray)
+    func didReceiveAPIResults(results: NSArray)
     {
+        
         dispatch_async(dispatch_get_main_queue(), {
             self.venues = Venue.venuesWithJson(results)
             self.tableView.reloadData()
-            //UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
+    }
+    
+    @IBAction func cancelTapped(sender: UIBarButtonItem)
+    {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
