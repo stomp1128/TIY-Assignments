@@ -9,33 +9,52 @@
 import UIKit
 
 class TodoTableViewController: UITableViewController {
-
+    var todoItems: [TodoItem] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshList()
     }
-
-    // MARK: - Table view data source
-
+    
+    func refreshList() {
+        todoItems = TodoList.sharedInstance.allItems()
+        
+        if (todoItems.count >= 64) {
+            self.navigationItem.rightBarButtonItem!.enabled = false // disable 'add' button
+        }
+        tableView.reloadData()
+    }
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return todoItems.count
     }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("todoCell", forIndexPath: indexPath) // retrieve the prototype cell (subtitle style)
+        let todoItem = todoItems[indexPath.row] as TodoItem
+        cell.textLabel?.text = todoItem.title as String!
+        if (todoItem.isOverdue) { // the current time is later than the to-do item's deadline
+            cell.detailTextLabel?.textColor = UIColor.redColor()
+        } else {
+            cell.detailTextLabel?.textColor = UIColor.blackColor() // we need to reset this because a cell with red subtitle may be returned by dequeueReusableCellWithIdentifier:indexPath:
+        }
+        
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "'Due' MMM dd 'at' h:mm a" // example: "Due Jan 01 at 12:00 PM"
+        cell.detailTextLabel?.text = dateFormatter.stringFromDate(todoItem.deadline)
+        return cell
+    }
+    
+
+    
+    
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

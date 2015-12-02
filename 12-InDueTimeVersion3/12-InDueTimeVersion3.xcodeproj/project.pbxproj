@@ -14,6 +14,8 @@
 		FE3D242E1C0E3E6D0076C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D242C1C0E3E6D0076C016 /* LaunchScreen.storyboard */; };
 		FE3D24361C0E3F0A0076C016 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D24351C0E3F0A0076C016 /* TodoTableViewController.swift */; };
 		FE3D24381C0E3F470076C016 /* TodoSchedulingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D24371C0E3F470076C016 /* TodoSchedulingViewController.swift */; };
+		FE3D243A1C0E438E0076C016 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D24391C0E438E0076C016 /* TodoItem.swift */; };
+		FE3D243C1C0E444E0076C016 /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D243B1C0E444E0076C016 /* TodoList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FE3D242F1C0E3E6D0076C016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3D24351C0E3F0A0076C016 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
 		FE3D24371C0E3F470076C016 /* TodoSchedulingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoSchedulingViewController.swift; sourceTree = "<group>"; };
+		FE3D24391C0E438E0076C016 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		FE3D243B1C0E444E0076C016 /* TodoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				FE3D24271C0E3E6D0076C016 /* Main.storyboard */,
 				FE3D24351C0E3F0A0076C016 /* TodoTableViewController.swift */,
 				FE3D24371C0E3F470076C016 /* TodoSchedulingViewController.swift */,
+				FE3D24391C0E438E0076C016 /* TodoItem.swift */,
+				FE3D243B1C0E444E0076C016 /* TodoList.swift */,
 				FE3D242A1C0E3E6D0076C016 /* Assets.xcassets */,
 				FE3D242C1C0E3E6D0076C016 /* LaunchScreen.storyboard */,
 				FE3D242F1C0E3E6D0076C016 /* Info.plist */,
@@ -142,8 +148,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE3D243A1C0E438E0076C016 /* TodoItem.swift in Sources */,
 				FE3D24381C0E3F470076C016 /* TodoSchedulingViewController.swift in Sources */,
 				FE3D24261C0E3E6D0076C016 /* ViewController.swift in Sources */,
+				FE3D243C1C0E444E0076C016 /* TodoList.swift in Sources */,
 				FE3D24361C0E3F0A0076C016 /* TodoTableViewController.swift in Sources */,
 				FE3D24241C0E3E6D0076C016 /* AppDelegate.swift in Sources */,
 			);
