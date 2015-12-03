@@ -16,6 +16,7 @@
 		FE3D24101C0E259D0076C016 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D240E1C0E259D0076C016 /* List.swift */; };
 		FE3D24121C0E26120076C016 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D24111C0E26120076C016 /* ListTableViewController.swift */; };
 		FE3D24141C0E26FA0076C016 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D24131C0E26FA0076C016 /* ListCell.swift */; };
+		FE3D24161C0E3D310076C016 /* TodoSchedulingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D24151C0E3D310076C016 /* TodoSchedulingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FE3D240E1C0E259D0076C016 /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = List.swift; path = ../List.swift; sourceTree = "<group>"; };
 		FE3D24111C0E26120076C016 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		FE3D24131C0E26FA0076C016 /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		FE3D24151C0E3D310076C016 /* TodoSchedulingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoSchedulingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				FE3D23F61C0E23D70076C016 /* AppDelegate.swift */,
 				FE3D23FA1C0E23D70076C016 /* Main.storyboard */,
 				FE3D24111C0E26120076C016 /* ListTableViewController.swift */,
+				FE3D24151C0E3D310076C016 /* TodoSchedulingViewController.swift */,
 				FE3D24131C0E26FA0076C016 /* ListCell.swift */,
 				FE3D24001C0E23D70076C016 /* Assets.xcassets */,
 				FE3D24021C0E23D70076C016 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE3D23FF1C0E23D70076C016 /* _2_InDueTimeRedux.xcdatamodeld in Sources */,
+				FE3D24161C0E3D310076C016 /* TodoSchedulingViewController.swift in Sources */,
 				FE3D240F1C0E259D0076C016 /* List+CoreDataProperties.swift in Sources */,
 				FE3D23F71C0E23D70076C016 /* AppDelegate.swift in Sources */,
 				FE3D24121C0E26120076C016 /* ListTableViewController.swift in Sources */,
@@ -301,6 +305,7 @@
 				FE3D240A1C0E23D70076C016 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
