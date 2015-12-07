@@ -25,7 +25,7 @@ class APIController
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
             
-            print("Task completed") //useful for debugging
+            print("Task completed") //for debugging
             if error != nil
             {
                 print(error!.localizedDescription)
@@ -75,7 +75,7 @@ func searchImages ()
 
     }
 
-func parseJSON(data: NSData) -> NSDictionary? //step 11 create a function to parse json
+func parseJSON(data: NSData) -> NSDictionary? //create a function to parse json
 {
     do
     {

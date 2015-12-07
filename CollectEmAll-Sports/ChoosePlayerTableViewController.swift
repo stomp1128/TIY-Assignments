@@ -13,26 +13,14 @@ class ChoosePlayerTableViewController: UITableViewController
 
 {
     var delegate: ChoosePlayerTableViewControllerDelegate?
-    
-    //var remainingPlayers = [Player]()
     var remainingPlayers: [Player] = []
     
-
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
        remainingPlayers.sortInPlace({ $0.jerseyNumber < $1.jerseyNumber })
-        
-//        var api: APIController!
-//        api = APIController(delegate: self) 
-//        api.searchSportsRadarFor()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,46 +51,18 @@ class ChoosePlayerTableViewController: UITableViewController
         
         return cell
     }
-    
 
-   
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-    
-    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         delegate?.playerWasChosen(remainingPlayers[indexPath.row])
-        
-        
-        
-//        let aPlayer = players[indexPath.row]
-//        let vc = storyboard?.instantiateViewControllerWithIdentifier("ShowCardCollection") as! CardCollectionViewController
-//        vc.player = aPlayer
-//        navigationController?.pushViewController(vc, animated: true)
-
     }
 
     
-        
     @IBAction func cancelButtonTapped(sender: UIBarButtonItem!)
     {
        dismissViewControllerAnimated(true, completion: nil)
     }
-    
     
 }
 

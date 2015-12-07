@@ -30,7 +30,7 @@ class CardCollectionViewController: UICollectionViewController, ChoosePlayerTabl
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        title = "2016 Florida State Seminoles"
+        title = "2015 Florida State Seminoles"
         //navigationItem.leftBarButtonItem = editButtonItem()
         
         api = APIController(delegate: self)
@@ -58,16 +58,6 @@ class CardCollectionViewController: UICollectionViewController, ChoosePlayerTabl
                 destinationVC.delegate = self
                 
             }
-            
-//            if segue.identifier == "ShowDetailView"
-//            {
-//                
-//                let destinationVC = segue.destinationViewController as! PlayerDetailViewController
-//                destinationVC.visiblePlayers = self.visiblePlayers
-//                dismissViewControllerAnimated(true, completion: nil)
-//            }
-        
-        
         }
     
 
@@ -89,25 +79,14 @@ class CardCollectionViewController: UICollectionViewController, ChoosePlayerTabl
         
         
         let player = visiblePlayers[indexPath.item]
-        cell.nameLabel.text = player.name //step 17
+        cell.nameLabel.text = player.name 
         //cell.imageView.image =
-        
         
        return cell
     }
     
    
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    
-     //Uncomment this method to specify if the specified item should be selected
+    //Uncomment this method to specify if the specified item should be selected
     override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool
     {
         let aPlayer = visiblePlayers[indexPath.item]
@@ -115,53 +94,27 @@ class CardCollectionViewController: UICollectionViewController, ChoosePlayerTabl
         vc.player = aPlayer
         navigationController?.pushViewController(vc, animated: true)
         
-        if editing
-        {
-            
-        }
-        
-        
-
         return true
     }
     
-//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+//    func collectionView(collectionView: UICollectionView, didDeslectItemAtIndexPath indexPath: NSIndexPath)
 //    {
-//        let city = cities[indexPath.row]
-//        let detailVC = storyboard?.instantiateViewControllerWithIdentifier("WeatherDetail") as! WeatherDetailViewController
-//        detailVC.city = city
-//        navigationController?.pushViewController(detailVC, animated: true)
+//        let cell = collectionView.cellForItemAtIndexPath(indexPath) as UICollectionViewCell?
+//        
 //    }
 
     
-
-    
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?)
-    {
-        
-    }
-
-    
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle
-        //step 30
+        
     {
         return .None //swift automatically knows that .None is a member of UIModalPresentaionStyle so you dont need to type it
     }
     
     //Mark: - CharacterListTableViewController Delegate
     
-    func playerWasChosen(chosenPlayer: Player) //step 35
+    func playerWasChosen(chosenPlayer: Player)
     {
-        navigationController?.dismissViewControllerAnimated(true, completion: nil) //step 37
+        navigationController?.dismissViewControllerAnimated(true, completion: nil)
         visiblePlayers.append(chosenPlayer)
         
         let rowToRemove = (remainingPlayers as NSArray).indexOfObject(chosenPlayer)
@@ -170,7 +123,6 @@ class CardCollectionViewController: UICollectionViewController, ChoosePlayerTabl
         {
             plusButton.enabled = false        
         }
-        
         
         collectionView?.reloadData()
     }
