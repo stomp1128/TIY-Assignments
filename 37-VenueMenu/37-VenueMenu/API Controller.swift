@@ -6,64 +6,59 @@
 //  Copyright © 2015 The Iron Yard. All rights reserved.
 //
 
-import Foundation
+
 
 import Foundation
 
 class APIController
 {
-    var delegate: APIControllerProtocol
-    var task: NSURLSessionDataTask!
+    var foursquareDelegate: FoursquareAPIResultsProtocol?
     
-    init(delegate: APIControllerProtocol)
+    init(foursquareDelegate: FoursquareAPIResultsProtocol)
     {
-        self.delegate = delegate
+        self.foursquareDelegate = foursquareDelegate
     }
     
-    func searchFourSquareFor (searchTerm: String)
+    func searchFoursquareFor(searchTerm: String)
     {
-        
         let location = "Orlando, FL"
-        let formattedLocation = location.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())
-        let fourSquareSearchTerm = searchTerm.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet()) //taking the search term converting them to be used in the URL
-       
-        
-        let url = NSURL(string: "https://api.foursquare.com/v2/venues/search?client_id=5DYRGESK3DXK4QO3Q322A2UH1FKT15DVRYOFJPFG3ZHV5W1T&client_secret=QGFP202XJG1W4WPRUGD003X5FZV2REFBVGIXCXRIMUSFFUAG&v=20151128&near=\(formattedLocation)&query=\(fourSquareSearchTerm)")
-        
+        let escapedLocation = location.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let escapedSearchTerm = searchTerm.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let urlPath = "https://api.foursquare.com/v2/venues/search?client_id=NRAGZOUVAULDIWOJAAEW3Y4LYKZDVC5CHU3HFD2YV11SFCI0&client_secret=TKCOVTJQEGBGBYTFSAMP0LOJHEACRO52CCYWGODPZBLTCME4&v=20130815&near=\(escapedLocation!)&query=\(escapedSearchTerm!)"
+        let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-            
-            print("Task completed") //useful for debugging
             if error != nil
             {
                 print(error!.localizedDescription)
             }
             else
             {
-                if let dictionary = parseJSON(data!) //must use self because we are inside of a closure
+                if let dictionary = self.parseJSON(data!)
                 {
-                    if let results : NSArray = dictionary["response"] /*get value of response key */ as? NSArray //step 12 if we get dictionary us this to view results key
+                    if let responseDictionary: NSDictionary = dictionary["response"] as? NSDictionary
                     {
-                        self.delegate.didReceiveAPIResults(results)
+                        self.foursquareDelegate!.didReceiveFoursquareAPIResults(responseDictionary)
                     }
+                    
                 }
             }
         })
-        
-        task.resume() //used to start the process coded above
+        task.resume()
     }
-}
-
-func parseJSON(data: NSData) -> NSDictionary? //step 11 create a function to parse json
-{
-    do
+    
+    
+    func parseJSON(data: NSData) -> NSDictionary?
     {
-        let dictionary: NSDictionary! = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
-        return dictionary
-    }
-    catch let error as NSError
-    {
-        print(error)
-        return nil
+        do
+        {
+            let dictionary: NSDictionary! = try NSJSONSerialization.JSONObjectWithData(data, options: []) as! NSDictionary
+            return dictionary
+        }
+        catch let error as NSError
+        {
+            print(error)
+            return nil
+        }
     }
 }

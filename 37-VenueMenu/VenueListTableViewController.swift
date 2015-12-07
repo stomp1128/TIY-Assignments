@@ -9,21 +9,22 @@
 import UIKit
 import CoreData
 
-class VenueListTableViewController: UITableViewController
+protocol VenueSearchDelegate
 {
-    
-    var venues = [NSManagedObject]()
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    func venueWasSelected(venue: NSManagedObject)
+}
 
+class VenueListTableViewController: UITableViewController, VenueSearchDelegate
+{
+    var venues = Array<NSManagedObject>()
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        title = "Venue Menu"
+        title = "Favorite Venues"
         
         let fetchRequest = NSFetchRequest(entityName: "Venue")
-        
-        // Execute the fetch request, and cast the results to an array of LogItem objects
         do {
             let fetchResults = try managedObjectContext.executeFetchRequest(fetchRequest) as? [Venue]
             venues = fetchResults!
@@ -33,111 +34,107 @@ class VenueListTableViewController: UITableViewController
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
-
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        
     }
-
-    override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
         return 1
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        //return venues.count
-        return 10
-    }
-
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("venueListCell", forIndexPath: indexPath)
-
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return venues.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("VenueTableViewCell", forIndexPath: indexPath) as! VenueTableViewCell
+        
         let aVenue = venues[indexPath.row]
+        cell.venueLabel.text = aVenue.valueForKey("name") as? String
+        cell.ratingLabel.text = aVenue.valueForKey("rating") as? String
         
-        cell.textLabel!.text =
-            aVenue.valueForKey("name") as? String
-        
-
         return cell
     }
     
-
-    
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool
+    {
         return true
     }
     
-
-    // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete
         {
-            
             let aVenue = venues[indexPath.row]
             venues.removeAtIndex(indexPath.row)
             managedObjectContext.deleteObject(aVenue)
             saveContext()
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-
-        }    
+        }
     }
     
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
-        if segue.identifier == "SearchViewSegue"
+        if segue.identifier == "ShowSearchModal"
         {
-            let destinationVC = segue.destinationViewController as! UINavigationController
-            let searchVC = destinationVC.viewControllers[0] as! SearchTableViewController
-            //searchVC.delegate = self
+            let destVC = segue.destinationViewController as! UINavigationController
+            let modalVC = destVC.viewControllers[0] as! VenueSearchViewController
+            modalVC.delegate = self
         }
     }
     
-    // MARK: - Private
-    
-    func saveContext()
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-        do {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let venueDetailVC = storyboard?.instantiateViewControllerWithIdentifier("VenueDetailViewController") as! VenueDetailViewController
+        venueDetailVC.indexRow = indexPath.row
+        venueDetailVC.venuesDetail = venues
+        navigationController?.pushViewController(venueDetailVC, animated: true)
+    }
+    
+    
+    // MARK: - Add Contact Delegate
+    
+    func venueWasSelected(venue: NSManagedObject)
+    {
+        //        let aVenue = NSEntityDescription.insertNewObjectForEntityForName("Venue", inManagedObjectContext: managedObjectContext) as! Venue
+        //        let venueEntity = NSEntityDescription.entityForName("Venue", inManagedObjectContext: managedObjectContext)
+        //        let aVenue = NSManagedObject(entity: venueEntity!, insertIntoManagedObjectContext: managedObjectContext)
+        managedObjectContext.insertObject(venue)
+        venues.append(venue)
+        saveContext()
+        tableView.reloadData()
+    }
+    
+    
+    // MARK: - Private functions
+    
+    private func saveContext()
+    {
+        do
+        {
             try managedObjectContext.save()
         }
-        catch {
+        catch
+        {
             let nserror = error as NSError
             NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
             abort()
         }
     }
-
-
+    
 }

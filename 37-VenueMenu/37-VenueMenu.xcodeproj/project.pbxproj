@@ -13,10 +13,12 @@
 		FE3D23B31C0B866E0076C016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23B21C0B866E0076C016 /* Assets.xcassets */; };
 		FE3D23B61C0B866E0076C016 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23B41C0B866E0076C016 /* LaunchScreen.storyboard */; };
 		FE3D23BE1C0B872D0076C016 /* VenueListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */; };
-		FE3D23C01C0B8DF40076C016 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23BF1C0B8DF40076C016 /* Venue.swift */; };
-		FE3D23C21C0B920F0076C016 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23C11C0B920F0076C016 /* SearchTableViewController.swift */; };
 		FE3D23C41C0BA4F40076C016 /* API Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23C31C0BA4F40076C016 /* API Controller.swift */; };
 		FE3D23C61C0BA5170076C016 /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23C51C0BA5170076C016 /* VenueDetailViewController.swift */; };
+		FE5D46861C1627710030ECC3 /* Venue+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D46841C1627710030ECC3 /* Venue+CoreDataProperties.swift */; };
+		FE5D46871C1627710030ECC3 /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D46851C1627710030ECC3 /* Venue.swift */; };
+		FE5D46891C1629BB0030ECC3 /* VenueSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D46881C1629BB0030ECC3 /* VenueSearchViewController.swift */; };
+		FE5D468B1C162F1F0030ECC3 /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5D468A1C162F1F0030ECC3 /* VenueTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,12 @@
 		FE3D23B51C0B866E0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3D23B71C0B866E0076C016 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VenueListTableViewController.swift; path = ../VenueListTableViewController.swift; sourceTree = "<group>"; };
-		FE3D23BF1C0B8DF40076C016 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
-		FE3D23C11C0B920F0076C016 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		FE3D23C31C0BA4F40076C016 /* API Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "API Controller.swift"; sourceTree = "<group>"; };
 		FE3D23C51C0BA5170076C016 /* VenueDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
+		FE5D46841C1627710030ECC3 /* Venue+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Venue+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FE5D46851C1627710030ECC3 /* Venue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		FE5D46881C1629BB0030ECC3 /* VenueSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueSearchViewController.swift; sourceTree = "<group>"; };
+		FE5D468A1C162F1F0030ECC3 /* VenueTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +52,8 @@
 		FE3D239C1C0B866E0076C016 = {
 			isa = PBXGroup;
 			children = (
+				FE5D46841C1627710030ECC3 /* Venue+CoreDataProperties.swift */,
+				FE5D46851C1627710030ECC3 /* Venue.swift */,
 				FE3D23A71C0B866E0076C016 /* 37-VenueMenu */,
 				FE3D23A61C0B866E0076C016 /* Products */,
 			);
@@ -67,10 +73,10 @@
 				FE3D23A81C0B866E0076C016 /* AppDelegate.swift */,
 				FE3D23AC1C0B866E0076C016 /* Main.storyboard */,
 				FE3D23BD1C0B872D0076C016 /* VenueListTableViewController.swift */,
-				FE3D23C11C0B920F0076C016 /* SearchTableViewController.swift */,
+				FE5D468A1C162F1F0030ECC3 /* VenueTableViewCell.swift */,
+				FE5D46881C1629BB0030ECC3 /* VenueSearchViewController.swift */,
 				FE3D23C51C0BA5170076C016 /* VenueDetailViewController.swift */,
 				FE3D23C31C0BA4F40076C016 /* API Controller.swift */,
-				FE3D23BF1C0B8DF40076C016 /* Venue.swift */,
 				FE3D23B21C0B866E0076C016 /* Assets.xcassets */,
 				FE3D23B41C0B866E0076C016 /* LaunchScreen.storyboard */,
 				FE3D23B71C0B866E0076C016 /* Info.plist */,
@@ -152,12 +158,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE3D23BE1C0B872D0076C016 /* VenueListTableViewController.swift in Sources */,
-				FE3D23C01C0B8DF40076C016 /* Venue.swift in Sources */,
-				FE3D23C21C0B920F0076C016 /* SearchTableViewController.swift in Sources */,
 				FE3D23C41C0BA4F40076C016 /* API Controller.swift in Sources */,
+				FE5D468B1C162F1F0030ECC3 /* VenueTableViewCell.swift in Sources */,
+				FE5D46891C1629BB0030ECC3 /* VenueSearchViewController.swift in Sources */,
+				FE5D46871C1627710030ECC3 /* Venue.swift in Sources */,
 				FE3D23C61C0BA5170076C016 /* VenueDetailViewController.swift in Sources */,
 				FE3D23A91C0B866E0076C016 /* AppDelegate.swift in Sources */,
 				FE3D23B11C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */,
+				FE5D46861C1627710030ECC3 /* Venue+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
