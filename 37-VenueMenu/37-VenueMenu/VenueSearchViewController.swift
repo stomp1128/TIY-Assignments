@@ -58,11 +58,12 @@ class VenueSearchViewController: UIViewController, UITableViewDataSource, UITabl
     
     func didReceiveFoursquareAPIResults(results: NSDictionary)
     {
+        dispatch_async(dispatch_get_main_queue(), {
         var venuesArray = [NSManagedObject]()
         venuesArray = Venue.searchResultsJSON(results)
         self.venues = venuesArray
         
-        tableView.reloadData()
+            self.tableView.reloadData() })
     }
     
     // MARK: - Table view data source
