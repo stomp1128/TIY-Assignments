@@ -70,9 +70,9 @@ class VenueDetailViewController: UIViewController
         self.mapView.addAnnotation(objectAnnotation)
     }
     
-    @IBAction func cancelTapped(sender: UIButton)
+    @IBAction func cancelTapped(sender: UIBarButtonItem)
     {
-        dismissViewControllerAnimated(true, completion: nil)
+        self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
     }
 
 

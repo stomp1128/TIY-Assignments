@@ -95,21 +95,21 @@
                                 <animations/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qmu-JV-NNl">
-                                <rect key="frame" x="20" y="59" width="45" height="21"/>
+                                <rect key="frame" x="20" y="103" width="45" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2f-gy-4zQ">
-                                <rect key="frame" x="20" y="120" width="63" height="21"/>
+                                <rect key="frame" x="20" y="164" width="63" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-pK-spv">
-                                <rect key="frame" x="20" y="181" width="49" height="21"/>
+                                <rect key="frame" x="20" y="225" width="49" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -133,8 +133,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tuI-eI-1VY">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kl8-U6-gIL"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Kl8-U6-gIL">
+                            <connections>
+                                <action selector="cancelTapped:" destination="xvz-nU-xaD" id="7Pd-Os-pXK"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addressLabel" destination="q2f-gy-4zQ" id="g5b-lY-mD6"/>
                         <outlet property="mapView" destination="7x9-ZP-kos" id="zg0-AT-puz"/>

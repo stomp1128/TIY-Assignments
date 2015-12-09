@@ -103,7 +103,8 @@ class VenueSearchViewController: UIViewController, UITableViewDataSource, UITabl
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem)
     {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-        self.dismissViewControllerAnimated(true, completion: nil)
+//        self.dismissViewControllerAnimated(true, completion: nil)
+        
     }
     
 }
