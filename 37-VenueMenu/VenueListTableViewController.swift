@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+/*Cocoa Pods Installed for https://github.com/prolificinteractive/NavigationControllerBlurTransition/tree/master/Example/NavigationControllerBlurTransition*/
+
+
 protocol VenueSearchDelegate
 {
     func venueWasSelected(venue: NSManagedObject)
@@ -111,9 +114,7 @@ class VenueListTableViewController: UITableViewController, VenueSearchDelegate
     
     func venueWasSelected(venue: NSManagedObject)
     {
-        //        let aVenue = NSEntityDescription.insertNewObjectForEntityForName("Venue", inManagedObjectContext: managedObjectContext) as! Venue
-        //        let venueEntity = NSEntityDescription.entityForName("Venue", inManagedObjectContext: managedObjectContext)
-        //        let aVenue = NSManagedObject(entity: venueEntity!, insertIntoManagedObjectContext: managedObjectContext)
+        
         managedObjectContext.insertObject(venue)
         venues.append(venue)
         saveContext()

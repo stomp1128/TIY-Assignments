@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1EBEDE98CAA93D721E5DE1 /* Pods_37_VenueMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11359764C626EBA5318836D2 /* Pods_37_VenueMenu.framework */; };
 		FE3D23A91C0B866E0076C016 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23A81C0B866E0076C016 /* AppDelegate.swift */; };
 		FE3D23AE1C0B866E0076C016 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3D23AC1C0B866E0076C016 /* Main.storyboard */; };
 		FE3D23B11C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE3D23AF1C0B866E0076C016 /* _7_VenueMenu.xcdatamodeld */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11359764C626EBA5318836D2 /* Pods_37_VenueMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_37_VenueMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86DC3A76EBB63882F36A90FB /* Pods-37-VenueMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-37-VenueMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-37-VenueMenu/Pods-37-VenueMenu.release.xcconfig"; sourceTree = "<group>"; };
+		B90EFA3FD834BF0810004344 /* Pods-37-VenueMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-37-VenueMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-37-VenueMenu/Pods-37-VenueMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		FE3D23A51C0B866E0076C016 /* 37-VenueMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "37-VenueMenu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3D23A81C0B866E0076C016 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE3D23AD1C0B866E0076C016 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,12 +47,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB1EBEDE98CAA93D721E5DE1 /* Pods_37_VenueMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C66CB1C82821A324CCDFC2D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B90EFA3FD834BF0810004344 /* Pods-37-VenueMenu.debug.xcconfig */,
+				86DC3A76EBB63882F36A90FB /* Pods-37-VenueMenu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E347DB4190505308E595B131 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11359764C626EBA5318836D2 /* Pods_37_VenueMenu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE3D239C1C0B866E0076C016 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +78,8 @@
 				FE5D46851C1627710030ECC3 /* Venue.swift */,
 				FE3D23A71C0B866E0076C016 /* 37-VenueMenu */,
 				FE3D23A61C0B866E0076C016 /* Products */,
+				3C66CB1C82821A324CCDFC2D /* Pods */,
+				E347DB4190505308E595B131 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,9 +116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE3D23BA1C0B866E0076C016 /* Build configuration list for PBXNativeTarget "37-VenueMenu" */;
 			buildPhases = (
+				D1E77F3FF31249AA466C2E2A /* Check Pods Manifest.lock */,
 				FE3D23A11C0B866E0076C016 /* Sources */,
 				FE3D23A21C0B866E0076C016 /* Frameworks */,
 				FE3D23A31C0B866E0076C016 /* Resources */,
+				43CA34D8FC5C3D236645725F /* Embed Pods Frameworks */,
+				1E8ADB9FDC42509C7CBED472 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +178,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E8ADB9FDC42509C7CBED472 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-37-VenueMenu/Pods-37-VenueMenu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43CA34D8FC5C3D236645725F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-37-VenueMenu/Pods-37-VenueMenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1E77F3FF31249AA466C2E2A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE3D23A11C0B866E0076C016 /* Sources */ = {
@@ -274,6 +349,7 @@
 		};
 		FE3D23BB1C0B866E0076C016 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B90EFA3FD834BF0810004344 /* Pods-37-VenueMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "37-VenueMenu/Info.plist";
@@ -285,6 +361,7 @@
 		};
 		FE3D23BC1C0B866E0076C016 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86DC3A76EBB63882F36A90FB /* Pods-37-VenueMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "37-VenueMenu/Info.plist";
