@@ -18,16 +18,18 @@
 		FE3EC4351BEA905C000DD54E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC4341BEA905C000DD54E /* LoginViewController.swift */; };
 		FE3EC4371BEA906C000DD54E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3EC4361BEA906C000DD54E /* RegisterViewController.swift */; };
 		FE3EC4441BEAA748000DD54E /* RocketRacoon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4431BEAA748000DD54E /* RocketRacoon.png */; };
-		FE3EC44A1BEAA76A000DD54E /* Gamora.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4491BEAA76A000DD54E /* Gamora.png */; };
-		FE3EC4541BEAB7AF000DD54E /* Thor.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4531BEAB7AF000DD54E /* Thor.png */; };
 		FE3EC4561BEAB80E000DD54E /* IronMan.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4551BEAB80E000DD54E /* IronMan.png */; };
-		FE3EC4581BEAB8CB000DD54E /* StarLord.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4571BEAB8CB000DD54E /* StarLord.png */; };
-		FE3EC45A1BEAB93C000DD54E /* CaptainAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4591BEAB93C000DD54E /* CaptainAmerica.png */; };
-		FE3EC45C1BEAB9EB000DD54E /* DraxTheDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC45B1BEAB9EB000DD54E /* DraxTheDestroyer.png */; };
 		FE3EC4641BEABB41000DD54E /* Hulk.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4631BEABB41000DD54E /* Hulk.png */; };
-		FE3EC4681BEAC2FC000DD54E /* whiteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4671BEAC2FC000DD54E /* whiteStar.png */; };
 		FE3EC46A1BEAE176000DD54E /* Groot.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC4691BEAE176000DD54E /* Groot.png */; };
+		FE3EC46C1BEB91EA000DD54E /* BlackStar.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC46B1BEB91EA000DD54E /* BlackStar.png */; };
+		FE3EC46E1BEB91F7000DD54E /* GoldStar.png in Resources */ = {isa = PBXBuildFile; fileRef = FE3EC46D1BEB91F7000DD54E /* GoldStar.png */; };
 		FE7B5B741BE2D3DA000ECB43 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = FE7B5B731BE2D3DA000ECB43 /* heroes.json */; };
+		FE801C751BFCF665008396A2 /* Avengers.png in Resources */ = {isa = PBXBuildFile; fileRef = FE801C741BFCF665008396A2 /* Avengers.png */; };
+		FE801C811BFD1D19008396A2 /* DraxTheDestroyer.png in Resources */ = {isa = PBXBuildFile; fileRef = FE801C801BFD1D19008396A2 /* DraxTheDestroyer.png */; };
+		FE801C831BFD1DD9008396A2 /* Gamora.png in Resources */ = {isa = PBXBuildFile; fileRef = FE801C821BFD1DD9008396A2 /* Gamora.png */; };
+		FE801C851BFD1E16008396A2 /* CaptainAmerica.png in Resources */ = {isa = PBXBuildFile; fileRef = FE801C841BFD1E16008396A2 /* CaptainAmerica.png */; };
+		FE801C871BFD1F62008396A2 /* Thor.png in Resources */ = {isa = PBXBuildFile; fileRef = FE801C861BFD1F62008396A2 /* Thor.png */; };
+		FE801C891BFD1FC1008396A2 /* StarLord.png in Resources */ = {isa = PBXBuildFile; fileRef = FE801C881BFD1FC1008396A2 /* StarLord.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,16 +49,18 @@
 		FE3EC4341BEA905C000DD54E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FE3EC4361BEA906C000DD54E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FE3EC4431BEAA748000DD54E /* RocketRacoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RocketRacoon.png; sourceTree = "<group>"; };
-		FE3EC4491BEAA76A000DD54E /* Gamora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gamora.png; sourceTree = "<group>"; };
-		FE3EC4531BEAB7AF000DD54E /* Thor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Thor.png; sourceTree = "<group>"; };
 		FE3EC4551BEAB80E000DD54E /* IronMan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IronMan.png; sourceTree = "<group>"; };
-		FE3EC4571BEAB8CB000DD54E /* StarLord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarLord.png; sourceTree = "<group>"; };
-		FE3EC4591BEAB93C000DD54E /* CaptainAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaptainAmerica.png; sourceTree = "<group>"; };
-		FE3EC45B1BEAB9EB000DD54E /* DraxTheDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DraxTheDestroyer.png; sourceTree = "<group>"; };
 		FE3EC4631BEABB41000DD54E /* Hulk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hulk.png; sourceTree = "<group>"; };
-		FE3EC4671BEAC2FC000DD54E /* whiteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteStar.png; sourceTree = "<group>"; };
 		FE3EC4691BEAE176000DD54E /* Groot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Groot.png; sourceTree = "<group>"; };
+		FE3EC46B1BEB91EA000DD54E /* BlackStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackStar.png; sourceTree = "<group>"; };
+		FE3EC46D1BEB91F7000DD54E /* GoldStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoldStar.png; sourceTree = "<group>"; };
 		FE7B5B731BE2D3DA000ECB43 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
+		FE801C741BFCF665008396A2 /* Avengers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Avengers.png; sourceTree = "<group>"; };
+		FE801C801BFD1D19008396A2 /* DraxTheDestroyer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DraxTheDestroyer.png; sourceTree = "<group>"; };
+		FE801C821BFD1DD9008396A2 /* Gamora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gamora.png; sourceTree = "<group>"; };
+		FE801C841BFD1E16008396A2 /* CaptainAmerica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CaptainAmerica.png; sourceTree = "<group>"; };
+		FE801C861BFD1F62008396A2 /* Thor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Thor.png; sourceTree = "<group>"; };
+		FE801C881BFD1FC1008396A2 /* StarLord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarLord.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,16 +125,18 @@
 				FE7B5B731BE2D3DA000ECB43 /* heroes.json */,
 				FE1657131BCC2AAD00A71ACD /* Info.plist */,
 				FE3EC4311BEA7E84000DD54E /* S.H.I.E.L.D. Hero Tracker-Bridging-Header.h */,
-				FE3EC4531BEAB7AF000DD54E /* Thor.png */,
+				FE801C741BFCF665008396A2 /* Avengers.png */,
 				FE3EC4551BEAB80E000DD54E /* IronMan.png */,
+				FE801C841BFD1E16008396A2 /* CaptainAmerica.png */,
+				FE801C861BFD1F62008396A2 /* Thor.png */,
 				FE3EC4691BEAE176000DD54E /* Groot.png */,
 				FE3EC4431BEAA748000DD54E /* RocketRacoon.png */,
-				FE3EC45B1BEAB9EB000DD54E /* DraxTheDestroyer.png */,
-				FE3EC4571BEAB8CB000DD54E /* StarLord.png */,
-				FE3EC4491BEAA76A000DD54E /* Gamora.png */,
+				FE801C801BFD1D19008396A2 /* DraxTheDestroyer.png */,
+				FE801C881BFD1FC1008396A2 /* StarLord.png */,
+				FE801C821BFD1DD9008396A2 /* Gamora.png */,
 				FE3EC4631BEABB41000DD54E /* Hulk.png */,
-				FE3EC4591BEAB93C000DD54E /* CaptainAmerica.png */,
-				FE3EC4671BEAC2FC000DD54E /* whiteStar.png */,
+				FE3EC46B1BEB91EA000DD54E /* BlackStar.png */,
+				FE3EC46D1BEB91F7000DD54E /* GoldStar.png */,
 			);
 			path = "S.H.I.E.L.D. Hero Tracker";
 			sourceTree = "<group>";
@@ -197,20 +203,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE3EC4541BEAB7AF000DD54E /* Thor.png in Resources */,
 				FE3EC4441BEAA748000DD54E /* RocketRacoon.png in Resources */,
-				FE3EC45A1BEAB93C000DD54E /* CaptainAmerica.png in Resources */,
+				FE801C831BFD1DD9008396A2 /* Gamora.png in Resources */,
+				FE3EC46E1BEB91F7000DD54E /* GoldStar.png in Resources */,
 				FE3EC46A1BEAE176000DD54E /* Groot.png in Resources */,
+				FE801C811BFD1D19008396A2 /* DraxTheDestroyer.png in Resources */,
 				FE3EC4561BEAB80E000DD54E /* IronMan.png in Resources */,
-				FE3EC4581BEAB8CB000DD54E /* StarLord.png in Resources */,
-				FE3EC44A1BEAA76A000DD54E /* Gamora.png in Resources */,
-				FE3EC4681BEAC2FC000DD54E /* whiteStar.png in Resources */,
+				FE801C851BFD1E16008396A2 /* CaptainAmerica.png in Resources */,
+				FE801C871BFD1F62008396A2 /* Thor.png in Resources */,
 				FE3EC4641BEABB41000DD54E /* Hulk.png in Resources */,
 				FE1657121BCC2AAD00A71ACD /* LaunchScreen.storyboard in Resources */,
+				FE801C891BFD1FC1008396A2 /* StarLord.png in Resources */,
+				FE801C751BFCF665008396A2 /* Avengers.png in Resources */,
 				FE7B5B741BE2D3DA000ECB43 /* heroes.json in Resources */,
 				FE16570F1BCC2AAD00A71ACD /* Assets.xcassets in Resources */,
+				FE3EC46C1BEB91EA000DD54E /* BlackStar.png in Resources */,
 				FE19BDC11BCD587000EA9ABC /* Main.storyboard in Resources */,
-				FE3EC45C1BEAB9EB000DD54E /* DraxTheDestroyer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
