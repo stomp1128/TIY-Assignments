@@ -32,12 +32,11 @@ class CalculatorViewController: UIViewController
     
     
     @IBAction func operatorButtonTapped(sender: UIButton)
+    
+    if operand1 != ""
     {
-        if brain.operand1 != ""
-        {
-            let symbol = sender.currentTitle
-            brain.addOperate(symbol!)
-        }
+        let symbol = sender.currentTitle
+        brain.addOperate(symbol!)
     }
 
     @IBAction func numberButtonTapped(sender: UIButton)
@@ -50,11 +49,12 @@ class CalculatorViewController: UIViewController
         
     }
     
-    @IBAction func clearButtonTapped(sender: UIButton)
-    {
+  //  @IBAction func clearButtonTapped(sender: UIButton)
+    
+     /*   {
             let clear = sender.currentTitle
             displayWindow.text = String(0)
-    }
+        }*/
     
     @IBAction func equalButtonTapped(sender: UIButton)
     {

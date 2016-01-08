@@ -119,5 +119,5 @@ class CalculatorBrain
             let resultAsIntArr = String(result).componentsSeparatedByString(".")
             return String(resultAsIntArr[0])
         }
-    }*/
-}
+    }
+} */
