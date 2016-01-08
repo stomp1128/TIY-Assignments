@@ -33,13 +33,10 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
         
         title = "Forecaster"
         
-        didReceiveZip("32801")
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        //didReceiveZip("32801")
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,8 +54,6 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return cities.count
-        
-        
     }
 
     
@@ -114,7 +109,7 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
     func didReceiveAPIResults(results: NSArray)
     {
         dispatch_async(dispatch_get_main_queue(), {
-//            self.cities.append(City.citiesWithJson(results))
+            self.cities.append(City.citiesWithJson(results))
             
             let city = City.citiesWithJson(results)
             self.cities.append(city)
