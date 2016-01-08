@@ -109,10 +109,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    if ([segue.identifierisEqualToString:@"ShowValueTypePopoverSegue"])
+    {
     
-    ValueTypesTableViewController *valuesViewController = segue.destinationViewController;
-    UIPopoverPresentationController *controller = valuesViewController.popoverPresentationController;
-    controller.delegate = self;
+    ValueTypesTableViewController *valuesViewController = (ValueTypesTableViewController *)[segue.destinationViewController];
+    UIPopoverPresentationController *controller = valuesViewController.popoverPresentationController.delegate = self;
     valuesViewController.types = remainingElectricityTypes;
 }
 
