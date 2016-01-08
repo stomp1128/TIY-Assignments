@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE6B6B4F1BD54DD300844783 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6B6B4D1BD54DD300844783 /* Main.storyboard */; };
+		FE6B6B511BD54DD300844783 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE6B6B501BD54DD300844783 /* Assets.xcassets */; };
+		FE6B6B541BD54DD300844783 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE6B6B521BD54DD300844783 /* LaunchScreen.storyboard */; };
+		FE6B6B5C1BD550CD00844783 /* SiteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B6B5B1BD550CD00844783 /* SiteTableViewController.swift */; };
+		FE6B6B601BD5635700844783 /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6B6B5F1BD5635700844783 /* Sites.swift */; };
+		FE6B6B6A1BD5881A00844783 /* sites.json in Resources */ = {isa = PBXBuildFile; fileRef = FE6B6B691BD5881A00844783 /* sites.json */; };
+		FEDEF7321BD81327003155D5 /* SiteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDEF7311BD81327003155D5 /* SiteDetailViewController.swift */; };
+		FEF6C7D51BEC1F8F00585E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6C7D41BEC1F8F00585E02 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FE6B6B461BD54DD300844783 /* The Grail Diary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Grail Diary.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE6B6B4E1BD54DD300844783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE6B6B501BD54DD300844783 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE6B6B531BD54DD300844783 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FE6B6B551BD54DD300844783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6B6B5B1BD550CD00844783 /* SiteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SiteTableViewController.swift; path = ../SiteTableViewController.swift; sourceTree = "<group>"; };
+		FE6B6B5F1BD5635700844783 /* Sites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sites.swift; sourceTree = "<group>"; };
+		FE6B6B691BD5881A00844783 /* sites.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sites.json; sourceTree = "<group>"; };
+		FEDEF7311BD81327003155D5 /* SiteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SiteDetailViewController.swift; path = ../SiteDetailViewController.swift; sourceTree = "<group>"; };
+		FEF6C7D41BEC1F8F00585E02 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FE6B6B431BD54DD300844783 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE6B6B3D1BD54DD300844783 = {
+			isa = PBXGroup;
+			children = (
+				FE6B6B481BD54DD300844783 /* The Grail Diary */,
+				FE6B6B471BD54DD300844783 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE6B6B471BD54DD300844783 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE6B6B461BD54DD300844783 /* The Grail Diary.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FE6B6B481BD54DD300844783 /* The Grail Diary */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6C7D41BEC1F8F00585E02 /* AppDelegate.swift */,
+				FEDEF7311BD81327003155D5 /* SiteDetailViewController.swift */,
+				FE6B6B5B1BD550CD00844783 /* SiteTableViewController.swift */,
+				FE6B6B5F1BD5635700844783 /* Sites.swift */,
+				FE6B6B4D1BD54DD300844783 /* Main.storyboard */,
+				FE6B6B501BD54DD300844783 /* Assets.xcassets */,
+				FE6B6B521BD54DD300844783 /* LaunchScreen.storyboard */,
+				FE6B6B551BD54DD300844783 /* Info.plist */,
+				FE6B6B691BD5881A00844783 /* sites.json */,
+			);
+			path = "The Grail Diary";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FE6B6B451BD54DD300844783 /* The Grail Diary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE6B6B581BD54DD300844783 /* Build configuration list for PBXNativeTarget "The Grail Diary" */;
+			buildPhases = (
+				FE6B6B421BD54DD300844783 /* Sources */,
+				FE6B6B431BD54DD300844783 /* Frameworks */,
+				FE6B6B441BD54DD300844783 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "The Grail Diary";
+			productName = "The Grail Diary";
+			productReference = FE6B6B461BD54DD300844783 /* The Grail Diary.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FE6B6B3E1BD54DD300844783 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "The Iron Yard";
+				TargetAttributes = {
+					FE6B6B451BD54DD300844783 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = W89Q7DEDF7;
+					};
+				};
+			};
+			buildConfigurationList = FE6B6B411BD54DD300844783 /* Build configuration list for PBXProject "The Grail Diary" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FE6B6B3D1BD54DD300844783;
+			productRefGroup = FE6B6B471BD54DD300844783 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FE6B6B451BD54DD300844783 /* The Grail Diary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FE6B6B441BD54DD300844783 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE6B6B541BD54DD300844783 /* LaunchScreen.storyboard in Resources */,
+				FE6B6B511BD54DD300844783 /* Assets.xcassets in Resources */,
+				FE6B6B6A1BD5881A00844783 /* sites.json in Resources */,
+				FE6B6B4F1BD54DD300844783 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FE6B6B421BD54DD300844783 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEF6C7D51BEC1F8F00585E02 /* AppDelegate.swift in Sources */,
+				FEDEF7321BD81327003155D5 /* SiteDetailViewController.swift in Sources */,
+				FE6B6B5C1BD550CD00844783 /* SiteTableViewController.swift in Sources */,
+				FE6B6B601BD5635700844783 /* Sites.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FE6B6B4D1BD54DD300844783 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE6B6B4E1BD54DD300844783 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FE6B6B521BD54DD300844783 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE6B6B531BD54DD300844783 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FE6B6B561BD54DD300844783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FE6B6B571BD54DD300844783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FE6B6B591BD54DD300844783 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "The Grail Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.The-Grail-Diary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FE6B6B5A1BD54DD300844783 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "The Grail Diary/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tiy.The-Grail-Diary";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FE6B6B411BD54DD300844783 /* Build configuration list for PBXProject "The Grail Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6B6B561BD54DD300844783 /* Debug */,
+				FE6B6B571BD54DD300844783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE6B6B581BD54DD300844783 /* Build configuration list for PBXNativeTarget "The Grail Diary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE6B6B591BD54DD300844783 /* Debug */,
+				FE6B6B5A1BD54DD300844783 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FE6B6B3E1BD54DD300844783 /* Project object */;
+}

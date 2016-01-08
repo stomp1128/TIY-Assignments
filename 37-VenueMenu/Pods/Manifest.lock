@@ -1,0 +1,10 @@
+PODS:
+  - NavigationControllerBlurTransition (1.0.0)
+
+DEPENDENCIES:
+  - NavigationControllerBlurTransition
+
+SPEC CHECKSUMS:
+  NavigationControllerBlurTransition: 75433a59fe5c74a35cfc0cde147682122343fab0
+
+COCOAPODS: 0.39.0
