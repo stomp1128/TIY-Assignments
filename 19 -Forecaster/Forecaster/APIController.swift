@@ -11,17 +11,14 @@ import Foundation
 class APIController
 
 {
-    
     var delegate: APIControllerProtocol!
     init(delegate: APIControllerProtocol)
     {
         self.delegate = delegate
     }
 
-    
     func searchForCity(zipCode: String)
     {
-    
         let urlPath = "https://maps.googleapis.com/maps/api/geocode/json?address=santa+cruz&components=postal_code:\(zipCode)&sensor=false"
         let url = NSURL(string: urlPath)
         let session = NSURLSession.sharedSession()
@@ -38,20 +35,16 @@ class APIController
                 if let results : NSArray = dictionary["results"] /*get value of results key */ as? NSArray //step 12 if we get dictionary use this to view results key
                 {
                     self.delegate.didReceiveAPIResults(results)
-                   // print(results)
+                   print(results)
                 }
             }
         }
     })
         task.resume() 
     }
-    
        //used to start the process coded above
-        
-        
     
     //MARK: - Weather
-    
     func searchForWeather(city: City)
     {
         let lat = city.lat
@@ -73,14 +66,12 @@ class APIController
                     if let currently : NSDictionary = dictionary["currently"] /*get value of results key */ as? NSDictionary //step 12 if we get dictionary use this to view results key
                     {
                         self.delegate.didReceiveDarkSkyAPIResults(currently, city: city)
-                        //print(data)
                     }
                 }
             }
         })
         task.resume() 
     }
-    
     
     func parseJSON(data: NSData) -> NSDictionary? //step 11 create a function to parse json
     {
@@ -95,6 +86,4 @@ class APIController
             return nil
         }
     }
-
-
 }

@@ -20,11 +20,12 @@ protocol APIControllerProtocol //step 13, add below in class list as well
     func didReceiveDarkSkyAPIResults(results: NSDictionary, city: City)
 }
 
-
 class CityWeatherTableViewController: UITableViewController, APIControllerProtocol, ChooseCityViewControllerDelegate
 {
     var api: APIController!
     var cities = Array<City>()
+    var weather: Weather?
+    var city: City?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,6 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
         
         title = "Forecaster"
         
-        //didReceiveZip("32801")
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
     }
@@ -47,7 +46,6 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -78,9 +76,8 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
             }
             
             cell.temperature.text = String(formattedTemp!)
+            cell.icon?.image = UIImage(named: city.weather!.icon)
         }
-
-        
         return cell
     }
     
@@ -99,17 +96,13 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
             let zipVC = segue.destinationViewController as! ChooseCityViewController
             zipVC.delegate = self
         }
-        
     }
     
-    
-    
     // MARK: - API Controller Protocol
-    
     func didReceiveAPIResults(results: NSArray)
     {
         dispatch_async(dispatch_get_main_queue(), {
-            self.cities.append(City.citiesWithJson(results))
+            //self.cities.append(City.citiesWithJson(results))
             
             let city = City.citiesWithJson(results)
             self.cities.append(city)
@@ -117,10 +110,9 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
             let api = APIController(delegate: self)
             api.searchForWeather(city)
             
-            
-           // print(results)
+           print(results)
             self.tableView.reloadData()
-//            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
     }
     
@@ -138,7 +130,7 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
                     eachCity.weather = weather
                 }
             }
-            // print(results)
+             print(currently)
             self.tableView.reloadData()
             UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         })
@@ -156,7 +148,7 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
     {
         if editingStyle == .Delete {
             
-            let city = cities[indexPath.row]
+            //let city = cities[indexPath.row]
             cities.removeAtIndex(indexPath.row)
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
@@ -164,6 +156,4 @@ class CityWeatherTableViewController: UITableViewController, APIControllerProtoc
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
-
-    
 }

@@ -17,16 +17,13 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
     var delegate: ChooseCityViewControllerDelegate?
     
-//    var  api: APIController!
+    var  api: APIController!
     
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        
         zipTextField.becomeFirstResponder()
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,8 +35,8 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     func validateZipCode(zipCode: String) -> Bool
     {
         var rc = false
-        let characterSet = NSCharacterSet(charactersInString: "0123456789")
-        if zipCode.characters.count == 5/* && zipCode.rangeOfCharacterFromSet(characterSet)?.count == 0*/ && zipTextField.text != ""
+        _ = NSCharacterSet(charactersInString: "0123456789")
+        if zipCode.characters.count == 5 /*&& zipCode.rangeOfCharacterFromSet(characterSet)?.count == 0*/ && zipTextField.text != ""
         {
             rc = true
         }
@@ -83,12 +80,9 @@ class ChooseCityViewController: UIViewController, UITextFieldDelegate
     
     func search(zip: String)
     {
-       // print(zip)
-        
-        
+        // print(zip)
         delegate?.didReceiveZip(zip)
         self.dismissViewControllerAnimated(true, completion: nil)
-
     }
 
 }

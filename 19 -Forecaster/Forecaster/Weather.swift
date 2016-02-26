@@ -15,13 +15,15 @@ class Weather
     var feelsLike: Double
     var chanceOfRain: Double
     var condition: String
+    var icon: String
     
-    init(temperature: Double, feelsLike: Double, chanceOfRain: Double, condition: String)
+    init(temperature: Double, feelsLike: Double, chanceOfRain: Double, condition: String, icon: String)
     {
         self.temperature = temperature
         self.feelsLike = feelsLike
         self.chanceOfRain = chanceOfRain
         self.condition = condition
+        self.icon = icon
     }
     
     static func WeatherWithJson(results: NSDictionary) -> Weather
@@ -31,7 +33,7 @@ class Weather
         var apparentTemperature = 0.0
         var chanceOfRain = 0.0
         var summary = ""
-        
+        var icon = ""
         
         if results.count > 0
         {
@@ -42,9 +44,11 @@ class Weather
             chanceOfRain = results["precipProbability"] as! Double
             
             summary = results["summary"] as! String
+            
+            icon = results["icon"] as! String
         }
         
-        weather = Weather(temperature: temperature, feelsLike: apparentTemperature, chanceOfRain: chanceOfRain, condition: summary)
+        weather = Weather(temperature: temperature, feelsLike: apparentTemperature, chanceOfRain: chanceOfRain, condition: summary, icon: icon)
         return weather
     }
 }
