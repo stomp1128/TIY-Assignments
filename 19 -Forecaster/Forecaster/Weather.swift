@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Weather
-{
+class Weather {
     
     var temperature: Double
     var feelsLike: Double
@@ -17,8 +16,8 @@ class Weather
     var condition: String
     var icon: String
     
-    init(temperature: Double, feelsLike: Double, chanceOfRain: Double, condition: String, icon: String)
-    {
+    init(temperature: Double, feelsLike: Double, chanceOfRain: Double, condition: String, icon: String) {
+        
         self.temperature = temperature
         self.feelsLike = feelsLike
         self.chanceOfRain = chanceOfRain
@@ -26,8 +25,7 @@ class Weather
         self.icon = icon
     }
     
-    static func WeatherWithJson(results: NSDictionary) -> Weather
-    {
+    static func WeatherWithJson(results: NSDictionary) -> Weather {
         var weather: Weather
         var temperature = 0.0
         var apparentTemperature = 0.0
@@ -35,20 +33,17 @@ class Weather
         var summary = ""
         var icon = ""
         
-        if results.count > 0
-        {
+        if results.count > 0 {
+            
             temperature = results["temperature"] as! Double
-
             apparentTemperature = results["apparentTemperature"] as! Double
-                
             chanceOfRain = results["precipProbability"] as! Double
-            
             summary = results["summary"] as! String
-            
             icon = results["icon"] as! String
         }
         
         weather = Weather(temperature: temperature, feelsLike: apparentTemperature, chanceOfRain: chanceOfRain, condition: summary, icon: icon)
+        
         return weather
     }
 }

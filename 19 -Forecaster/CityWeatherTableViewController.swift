@@ -8,14 +8,11 @@
 
 import UIKit
 
-
-protocol ChooseCityViewControllerDelegate
-{
+protocol ChooseCityViewControllerDelegate {
     func didReceiveZip(zip: String)
 }
 
-protocol APIControllerProtocol //step 13, add below in class list as well
-{
+protocol APIControllerProtocol {
     func didReceiveAPIResults(results: NSArray)
     func didReceiveDarkSkyAPIResults(results: NSDictionary, city: City)
 }
@@ -50,20 +47,20 @@ class CityWeatherTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("CityWeatherCell", forIndexPath: indexPath) as! CityWeatherCell
 
         let city = cities[indexPath.row]
         cell.cityLabel?.text = city.cityName
         
-        if city.weather != nil
-        {
+        if city.weather != nil {
+            
             cell.weatherCondition.text = city.weather!.condition
             
             let fullTemp = String(city.weather!.temperature).componentsSeparatedByString(".")
             var formattedTemp = Int(fullTemp[0])
             let decimalPlace = fullTemp[1]
-            if Int(decimalPlace) > 50
-            {
+            if Int(decimalPlace) > 50 {
                 formattedTemp! += 1
             }
             
@@ -73,30 +70,28 @@ class CityWeatherTableViewController: UITableViewController {
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if segue.identifier == "ZipSegue"
-        {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        if segue.identifier == "ZipSegue" {
             let zipVC = segue.destinationViewController as! ChooseCityViewController
             zipVC.delegate = self
         }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
-    {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let city = cities[indexPath.row]
         let detailVC = storyboard?.instantiateViewControllerWithIdentifier("WeatherDetail") as! WeatherDetailViewController
         detailVC.city = city
         navigationController?.pushViewController(detailVC, animated: true)
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath)
-    {
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
         if editingStyle == .Delete {
             
             cities.removeAtIndex(indexPath.row)
-            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
@@ -105,8 +100,7 @@ class CityWeatherTableViewController: UITableViewController {
 
 extension CityWeatherTableViewController: ChooseCityViewControllerDelegate {
     
-    func didReceiveZip(zip: String)
-    {
+    func didReceiveZip(zip: String) {
         self.dismissViewControllerAnimated(true, completion: nil)
         
         api = APIController(delegate: self)
@@ -116,8 +110,8 @@ extension CityWeatherTableViewController: ChooseCityViewControllerDelegate {
 
 extension CityWeatherTableViewController: APIControllerProtocol {
     // MARK: - API Controller Protocol
-    func didReceiveAPIResults(results: NSArray)
-    {
+    func didReceiveAPIResults(results: NSArray) {
+        
         dispatch_async(dispatch_get_main_queue(), {
             //self.cities.append(City.citiesWithJson(results))
             
@@ -133,16 +127,14 @@ extension CityWeatherTableViewController: APIControllerProtocol {
         })
     }
     
-    func didReceiveDarkSkyAPIResults(currently: NSDictionary, city: City)
-    {
+    func didReceiveDarkSkyAPIResults(currently: NSDictionary, city: City) {
         dispatch_async(dispatch_get_main_queue(),
             {
                 let weather = Weather.WeatherWithJson(currently)
                 
-                for eachCity in self.cities
-                {
-                    if city.cityName == eachCity.cityName
-                    {
+                for eachCity in self.cities {
+                    
+                    if city.cityName == eachCity.cityName {
                         eachCity.weather = weather
                     }
                 }

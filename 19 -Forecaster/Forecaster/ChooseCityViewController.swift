@@ -8,81 +8,62 @@
 
 import UIKit
 
-
-class ChooseCityViewController: UIViewController, UITextFieldDelegate
-    
-{
-    
+class ChooseCityViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var zipTextField: UITextField!
     
     var delegate: ChooseCityViewControllerDelegate?
-    
     var  api: APIController!
     
-
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         zipTextField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    
-    func validateZipCode(zipCode: String) -> Bool
-    {
+    func validateZipCode(zipCode: String) -> Bool {
         var rc = false
-        _ = NSCharacterSet(charactersInString: "0123456789")
-        if zipCode.characters.count == 5 /*&& zipCode.rangeOfCharacterFromSet(characterSet)?.count == 0*/ && zipTextField.text != ""
-        {
+        
+        let characterSet = NSCharacterSet(charactersInString: "0123456789")
+        
+        if  zipCode.characters.count == 5 &&
+            zipCode.rangeOfCharacterFromSet(characterSet)?.count != 0 &&
+            zipTextField.text != "" {
             rc = true
         }
-        else
-        {
+        else {
             zipTextField.text = ""
             zipTextField.placeholder = "Enter a valid zip"
         }
-
         return rc
     }
 
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool
-    {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         var rc = false
         
-        if validateZipCode(zipTextField.text!)
-        {
+        if validateZipCode(zipTextField.text!) {
             rc = true
             search(zipTextField.text!)
         }
-        
         return rc
     }
     
     // MARK: - Action Handlers
-    
-    @IBAction func findCity(sender: UIButton)
-    {
-        if validateZipCode(zipTextField.text!)
-        {
+    @IBAction func findCity(sender: UIButton) {
+        
+        if validateZipCode(zipTextField.text!) {
             search(zipTextField.text!)
         }
     }
     
-    @IBAction func cancel(sender: UIButton)
-    {
+    @IBAction func cancel(sender: UIButton) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func search(zip: String)
-    {
-        // print(zip)
+    func search(zip: String) {
         delegate?.didReceiveZip(zip)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
 }
